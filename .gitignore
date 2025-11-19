@@ -52,3 +52,29 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+#VS code
+.vscode/
+
+#Visual Studio
+.vs/
+*.suo
+*.sln.GhostDoc.xml
+[Cc]odeAnalysisLog.xml
+[Mm]ultiToolTask.xml
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+.Spotlight-V100
+.Trashes
+
+# Windows image file caches
+[Dd]esktop.ini
+
+# Linux thumbnail caches
+.thumbnails
+
+# macOS user-specific files
+.localized
