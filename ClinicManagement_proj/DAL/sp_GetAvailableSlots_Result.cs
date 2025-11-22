@@ -13,11 +13,13 @@ namespace ClinicManagement_proj.DAL
     
     public partial class sp_GetAvailableSlots_Result
     {
+        public int DoctorId { get; set; }
         public string DoctorName { get; set; }
         public string Specialization { get; set; }
         public string DoctorSchedule { get; set; }
         public Nullable<System.DateTime> RequestedDate { get; set; }
-        public Nullable<System.DateTime> BookedSlots { get; set; }
+        public Nullable<System.DateTime> BookedSlotStart { get; set; }
+        public Nullable<System.DateTime> BookedSlotEnd { get; set; }
         public Nullable<int> SlotDuration { get; set; }
     }
 }

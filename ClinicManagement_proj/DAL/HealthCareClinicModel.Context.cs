@@ -66,13 +66,13 @@ namespace ClinicManagement_proj.DAL
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_BookAppointment_Result>("sp_BookAppointment", patientIdParameter, doctorIdParameter, createdByParameter, descriptionParameter, appointmentDateParameter, durationParameter);
         }
     
-        public virtual ObjectResult<string> sp_CancelAppointment(Nullable<int> appointmentId)
+        public virtual ObjectResult<sp_CancelAppointment_Result> sp_CancelAppointment(Nullable<int> appointmentId)
         {
             var appointmentIdParameter = appointmentId.HasValue ?
                 new ObjectParameter("AppointmentId", appointmentId) :
                 new ObjectParameter("AppointmentId", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("sp_CancelAppointment", appointmentIdParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_CancelAppointment_Result>("sp_CancelAppointment", appointmentIdParameter);
         }
     
         public virtual ObjectResult<sp_GetAvailableSlots_Result> sp_GetAvailableSlots(Nullable<int> doctorId, Nullable<System.DateTime> date)

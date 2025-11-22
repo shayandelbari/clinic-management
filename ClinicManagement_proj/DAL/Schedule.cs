@@ -18,5 +18,7 @@ namespace ClinicManagement_proj.DAL
         public int DoctorId { get; set; }
         public string Schedule1 { get; set; }
         public System.DateTime EffectiveDate { get; set; }
+    
+        public virtual Doctor Doctor { get; set; }
     }
 }

@@ -15,17 +15,17 @@ namespace ClinicManagement_proj.DAL
     public partial class Appointment
     {
         public int Id { get; set; }
-        public Nullable<int> PatientId { get; set; }
-        public Nullable<int> DoctorId { get; set; }
-        public Nullable<int> CreatedBy { get; set; }
+        public int PatientId { get; set; }
+        public int DoctorId { get; set; }
+        public int CreatedBy { get; set; }
         public string Description { get; set; }
         public System.DateTime AppointmentDate { get; set; }
         public string Status { get; set; }
         public int Duration { get; set; }
         public System.DateTime ModifiedDate { get; set; }
     
-        public virtual User User { get; set; }
         public virtual Doctor Doctor { get; set; }
         public virtual Patient Patient { get; set; }
+        public virtual User User { get; set; }
     }
 }

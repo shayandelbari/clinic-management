@@ -10,17 +10,13 @@
 namespace ClinicManagement_proj.DAL
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class vw_DoctorWorkloadStats
+    public partial class sp_CancelAppointment_Result
     {
-        public int DoctorId { get; set; }
+        public int AppointmentId { get; set; }
+        public string PatientName { get; set; }
         public string DoctorName { get; set; }
-        public string Specialization { get; set; }
-        public Nullable<int> PendingAppointments { get; set; }
-        public Nullable<int> ConfirmedAppointments { get; set; }
-        public Nullable<int> CompletedAppointments { get; set; }
-        public Nullable<int> CancelledAppointments { get; set; }
-        public Nullable<int> TotalScheduledMinutes { get; set; }
+        public System.DateTime AppointmentDate { get; set; }
+        public string Message { get; set; }
     }
 }

@@ -19,5 +19,6 @@ namespace ClinicManagement_proj.DAL
         public string CurrentSchedule { get; set; }
         public System.DateTime EffectiveDate { get; set; }
         public string Availability { get; set; }
+        public int ScheduleId { get; set; }
     }
 }

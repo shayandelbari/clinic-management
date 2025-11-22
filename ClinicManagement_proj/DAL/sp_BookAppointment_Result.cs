@@ -19,5 +19,6 @@ namespace ClinicManagement_proj.DAL
         public System.DateTime AppointmentDate { get; set; }
         public int Duration { get; set; }
         public string Status { get; set; }
+        public string Description { get; set; }
     }
 }
