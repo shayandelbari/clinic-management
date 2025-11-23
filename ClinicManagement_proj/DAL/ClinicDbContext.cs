@@ -14,7 +14,7 @@ namespace ClinicManagement_proj.DAL
         public ClinicDbContext() : base("data source=.;initial catalog=HealthCareClinicDB;integrated security=True;encrypt=False;MultipleActiveResultSets=True;App=EntityFramework")
         {
             Database.SetInitializer(new ClinicDbContextInitializer());
-        } 
+        }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
