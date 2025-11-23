@@ -16,6 +16,7 @@ namespace ClinicManagement_proj.UI
         private DoctorManagementController doctorManagementController;
         private SchedulingController schedulingController;
         private PatientRegistrationController patientRegistrationController;
+        private AppointmentManagementController appointmentManagementController;
         private ReportsController reportsController;
 
         public AdminDashboard()
@@ -41,6 +42,7 @@ namespace ClinicManagement_proj.UI
             schedulingController = new SchedulingController(pnlDoctorScheduling);
             patientRegistrationController = new PatientRegistrationController(pnlPatientRegistration);
             reportsController = new ReportsController(pnlReports);
+            appointmentManagementController = new AppointmentManagementController(pnlAppointmentManagement);
         }
 
         /// <summary>
@@ -53,6 +55,7 @@ namespace ClinicManagement_proj.UI
             navigationManager.RegisterPanel(btnDoctorScheduling, schedulingController);
             navigationManager.RegisterPanel(btnPatientRegistration, patientRegistrationController);
             navigationManager.RegisterPanel(btnReports, reportsController);
+            navigationManager.RegisterPanel(btnAppointmentManagement, appointmentManagementController);
 
             navigationManager.InitializeAll();
             navigationManager.NavigateTo(btnUserManagement);
@@ -76,6 +79,7 @@ namespace ClinicManagement_proj.UI
             ImageHelper.StyleButton(btnPatientRegistration, 30, 30);
             ImageHelper.StyleButton(btnReports, 30, 30);
             ImageHelper.StyleButton(btnUserManagement, 30, 30);
+            ImageHelper.StyleButton(btnAppointmentManagement, 30, 30);
 
             btnNotifications.Image = ImageHelper.ResizeImage(btnNotifications.Image, 25, 25);
             btnNotifications.ImageAlign = ContentAlignment.MiddleCenter;
@@ -112,6 +116,11 @@ namespace ClinicManagement_proj.UI
         private void btnPatientRegistration_Click(object sender, EventArgs e)
         {
             navigationManager.NavigateTo(btnPatientRegistration);
+        }
+
+        private void btnAppointmentManagement_Click(object sender, EventArgs e)
+        {
+            navigationManager.NavigateTo(btnAppointmentManagement);
         }
 
         private void AdminDashboard_ResizeEnd(object sender, EventArgs e)
