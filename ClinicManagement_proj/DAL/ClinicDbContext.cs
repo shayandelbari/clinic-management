@@ -21,7 +21,7 @@ namespace ClinicManagement_proj.DAL
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Appointment>().HasKey(a => new { a.Id });
-            modelBuilder.Entity<Doctor>().HasKey(d => new { d.Id });
+            modelBuilder.Entity<Doctor>().HasKey(d => new { d.UserId });
             modelBuilder.Entity<Patient>().HasKey(p => new { p.Id });
             modelBuilder.Entity<Schedule>().HasKey(s => new { s.Id });
             modelBuilder.Entity<User>().HasKey(u => new { u.Id });
@@ -44,9 +44,9 @@ namespace ClinicManagement_proj.DAL
             context.Users.Add(new User { Id = 6, Username = "receptionist2", PasswordHash = "dHsKcdUmGyLbbM2LlD8u5L7RmODA7o4S9Aab9y4tcTCj21Ut", Role = "Receptionist" });
 
             // Doctors
-            context.Doctors.Add(new Doctor { Id = 2, UserId = 2, FirstName = "John", LastName = "Who", Specialization = "General Practice", Availability = "Monday-Friday 9AM-5PM" });
-            context.Doctors.Add(new Doctor { Id = 3, UserId = 3, FirstName = "Sarah", LastName = "Smith", Specialization = "Cardiology", Availability = "Monday-Thursday 8AM-4PM" });
-            context.Doctors.Add(new Doctor { Id = 4, UserId = 4, FirstName = "Michael", LastName = "Jones", Specialization = "Pediatrics", Availability = "Tuesday-Saturday 10AM-6PM" });
+            context.Doctors.Add(new Doctor { UserId = 2, FirstName = "John", LastName = "Who", Specialization = "General Practice", Availability = "Monday-Friday 9AM-5PM" });
+            context.Doctors.Add(new Doctor { UserId = 3, FirstName = "Sarah", LastName = "Smith", Specialization = "Cardiology", Availability = "Monday-Thursday 8AM-4PM" });
+            context.Doctors.Add(new Doctor { UserId = 4, FirstName = "Michael", LastName = "Jones", Specialization = "Pediatrics", Availability = "Tuesday-Saturday 10AM-6PM" });
 
             // Patients
             context.Patients.Add(new Patient { Id = 1, FirstName = "Emma", LastName = "Wilson", DateOfBirth = new DateTime(1985, 3, 15), MedicalNumber = "WILE85031500 01", PhoneNumber = "555-0101", Email = "emma.wilson@email.com" });

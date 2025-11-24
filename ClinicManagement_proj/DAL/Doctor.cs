@@ -21,7 +21,7 @@ namespace ClinicManagement_proj.DAL
             this.Schedules = new HashSet<Schedule>();
         }
     
-        public int Id { get; set; }
+        public int z { get; set; }
         public int UserId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

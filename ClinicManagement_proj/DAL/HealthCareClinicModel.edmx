@@ -322,9 +322,9 @@ warning 6002: The table/view 'HealthCareClinicDB.dbo.vw_UpcomingAppointments' do
         </EntityType>
         <EntityType Name="Doctor">
           <Key>
-            <PropertyRef Name="Id" />
+            <PropertyRef Name="z" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="z" Type="Int32" Nullable="false" />
           <Property Name="UserId" Type="Int32" Nullable="false" />
           <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
@@ -447,7 +447,7 @@ warning 6002: The table/view 'HealthCareClinicDB.dbo.vw_UpcomingAppointments' do
           <End Role="Appointment" Type="Self.Appointment" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Doctor">
-              <PropertyRef Name="Id" />
+              <PropertyRef Name="z" />
             </Principal>
             <Dependent Role="Appointment">
               <PropertyRef Name="DoctorId" />
@@ -495,7 +495,7 @@ warning 6002: The table/view 'HealthCareClinicDB.dbo.vw_UpcomingAppointments' do
           <End Role="Schedule" Type="Self.Schedule" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Doctor">
-              <PropertyRef Name="Id" />
+              <PropertyRef Name="z" />
             </Principal>
             <Dependent Role="Schedule">
               <PropertyRef Name="DoctorId" />
@@ -610,7 +610,7 @@ warning 6002: The table/view 'HealthCareClinicDB.dbo.vw_UpcomingAppointments' do
           <EntitySetMapping Name="Doctors">
             <EntityTypeMapping TypeName="HealthCareClinicDBModel.Doctor">
               <MappingFragment StoreEntitySet="Doctor">
-                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="z" ColumnName="Id" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />

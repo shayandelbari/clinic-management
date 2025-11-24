@@ -4,11 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="5bb0c7c09c4a4ce7862402cdfc668b79" Name="Diagram1" ZoomLevel="112">
+      <Diagram DiagramId="5bb0c7c09c4a4ce7862402cdfc668b79" Name="Diagram1" ZoomLevel="94">
         <EntityTypeShape EntityType="HealthCareClinicDBModel.Appointment" Width="1.5" PointX="5.25" PointY="3.125" IsExpanded="true" />
         <EntityTypeShape EntityType="HealthCareClinicDBModel.Doctor" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
         <EntityTypeShape EntityType="HealthCareClinicDBModel.Patient" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="HealthCareClinicDBModel.Schedule" Width="1.5" PointX="5.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthCareClinicDBModel.Schedule" Width="1.5" PointX="4.875" PointY="7.5" IsExpanded="true" />
         <EntityTypeShape EntityType="HealthCareClinicDBModel.User" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="HealthCareClinicDBModel.vw_DoctorCurrentSchedule" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="HealthCareClinicDBModel.vw_DoctorWorkloadStats" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />

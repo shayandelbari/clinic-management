@@ -47,6 +47,11 @@ namespace ClinicManagement_proj.UI
             this.btnReports = new System.Windows.Forms.Button();
             this.pnlMainContent = new System.Windows.Forms.Panel();
             this.pnlAppointmentManagement = new System.Windows.Forms.Panel();
+            this.grpApptMgmt = new System.Windows.Forms.GroupBox();
+            this.layoutApptMgmt = new System.Windows.Forms.TableLayoutPanel();
+            this.btnApptCreate = new System.Windows.Forms.Button();
+            this.btnApptDelete = new System.Windows.Forms.Button();
+            this.btnApptCancel = new System.Windows.Forms.Button();
             this.pnlPatientRegistration = new System.Windows.Forms.Panel();
             this.dgvRegPatients = new System.Windows.Forms.DataGridView();
             this.grpPatientRegistration = new System.Windows.Forms.GroupBox();
@@ -149,15 +154,12 @@ namespace ClinicManagement_proj.UI
             this.dgvAppointments = new System.Windows.Forms.DataGridView();
             this.grpAppointmentForm = new System.Windows.Forms.GroupBox();
             this.lblAppointmentPlaceholder = new System.Windows.Forms.Label();
-            this.grpApptMgmt = new System.Windows.Forms.GroupBox();
-            this.layoutApptMgmt = new System.Windows.Forms.TableLayoutPanel();
-            this.btnApptCreate = new System.Windows.Forms.Button();
-            this.btnApptDelete = new System.Windows.Forms.Button();
-            this.btnApptCancel = new System.Windows.Forms.Button();
             this.pnlSidebar.SuspendLayout();
             this.pnlSidebarHeader.SuspendLayout();
             this.pnlMainContent.SuspendLayout();
             this.pnlAppointmentManagement.SuspendLayout();
+            this.grpApptMgmt.SuspendLayout();
+            this.layoutApptMgmt.SuspendLayout();
             this.pnlPatientRegistration.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegPatients)).BeginInit();
             this.grpPatientRegistration.SuspendLayout();
@@ -184,8 +186,6 @@ namespace ClinicManagement_proj.UI
             this.grpNotifications.SuspendLayout();
             this.pnlNotifications.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).BeginInit();
-            this.grpApptMgmt.SuspendLayout();
-            this.layoutApptMgmt.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblHeader
@@ -397,6 +397,95 @@ namespace ClinicManagement_proj.UI
             this.pnlAppointmentManagement.Size = new System.Drawing.Size(1341, 581);
             this.pnlAppointmentManagement.TabIndex = 5;
             this.pnlAppointmentManagement.Visible = false;
+            // 
+            // grpApptMgmt
+            // 
+            this.grpApptMgmt.Controls.Add(this.layoutApptMgmt);
+            this.grpApptMgmt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpApptMgmt.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpApptMgmt.Location = new System.Drawing.Point(0, 0);
+            this.grpApptMgmt.Margin = new System.Windows.Forms.Padding(2);
+            this.grpApptMgmt.Name = "grpApptMgmt";
+            this.grpApptMgmt.Padding = new System.Windows.Forms.Padding(25);
+            this.grpApptMgmt.Size = new System.Drawing.Size(1341, 581);
+            this.grpApptMgmt.TabIndex = 7;
+            this.grpApptMgmt.TabStop = false;
+            this.grpApptMgmt.Text = "Create Appointment";
+            // 
+            // layoutApptMgmt
+            // 
+            this.layoutApptMgmt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.layoutApptMgmt.ColumnCount = 4;
+            this.layoutApptMgmt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.layoutApptMgmt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.layoutApptMgmt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.layoutApptMgmt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.layoutApptMgmt.Controls.Add(this.btnApptCreate, 3, 0);
+            this.layoutApptMgmt.Controls.Add(this.btnApptDelete, 2, 0);
+            this.layoutApptMgmt.Controls.Add(this.btnApptCancel, 1, 0);
+            this.layoutApptMgmt.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.AddColumns;
+            this.layoutApptMgmt.Location = new System.Drawing.Point(25, 499);
+            this.layoutApptMgmt.Margin = new System.Windows.Forms.Padding(2);
+            this.layoutApptMgmt.Name = "layoutApptMgmt";
+            this.layoutApptMgmt.RowCount = 1;
+            this.layoutApptMgmt.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.layoutApptMgmt.Size = new System.Drawing.Size(1291, 57);
+            this.layoutApptMgmt.TabIndex = 10;
+            // 
+            // btnApptCreate
+            // 
+            this.btnApptCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnApptCreate.AutoSize = true;
+            this.btnApptCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btnApptCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnApptCreate.Font = new System.Drawing.Font("Lucida Sans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApptCreate.ForeColor = System.Drawing.Color.White;
+            this.btnApptCreate.Location = new System.Drawing.Point(1034, 2);
+            this.btnApptCreate.Margin = new System.Windows.Forms.Padding(2);
+            this.btnApptCreate.Name = "btnApptCreate";
+            this.btnApptCreate.Size = new System.Drawing.Size(255, 53);
+            this.btnApptCreate.TabIndex = 5;
+            this.btnApptCreate.Text = "Create";
+            this.btnApptCreate.UseVisualStyleBackColor = false;
+            // 
+            // btnApptDelete
+            // 
+            this.btnApptDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnApptDelete.AutoSize = true;
+            this.btnApptDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.btnApptDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnApptDelete.Font = new System.Drawing.Font("Lucida Sans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApptDelete.ForeColor = System.Drawing.Color.White;
+            this.btnApptDelete.Location = new System.Drawing.Point(776, 2);
+            this.btnApptDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnApptDelete.Name = "btnApptDelete";
+            this.btnApptDelete.Size = new System.Drawing.Size(254, 53);
+            this.btnApptDelete.TabIndex = 7;
+            this.btnApptDelete.Text = "Delete";
+            this.btnApptDelete.UseVisualStyleBackColor = false;
+            // 
+            // btnApptCancel
+            // 
+            this.btnApptCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnApptCancel.AutoSize = true;
+            this.btnApptCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(165)))), ((int)(((byte)(166)))));
+            this.btnApptCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnApptCancel.Font = new System.Drawing.Font("Lucida Sans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApptCancel.ForeColor = System.Drawing.Color.White;
+            this.btnApptCancel.Location = new System.Drawing.Point(518, 2);
+            this.btnApptCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnApptCancel.Name = "btnApptCancel";
+            this.btnApptCancel.Size = new System.Drawing.Size(254, 53);
+            this.btnApptCancel.TabIndex = 4;
+            this.btnApptCancel.Text = "Cancel";
+            this.btnApptCancel.UseVisualStyleBackColor = false;
             // 
             // pnlPatientRegistration
             // 
@@ -1894,95 +1983,6 @@ namespace ClinicManagement_proj.UI
             this.lblAppointmentPlaceholder.Size = new System.Drawing.Size(100, 23);
             this.lblAppointmentPlaceholder.TabIndex = 0;
             // 
-            // grpApptMgmt
-            // 
-            this.grpApptMgmt.Controls.Add(this.layoutApptMgmt);
-            this.grpApptMgmt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grpApptMgmt.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpApptMgmt.Location = new System.Drawing.Point(0, 0);
-            this.grpApptMgmt.Margin = new System.Windows.Forms.Padding(2);
-            this.grpApptMgmt.Name = "grpApptMgmt";
-            this.grpApptMgmt.Padding = new System.Windows.Forms.Padding(25);
-            this.grpApptMgmt.Size = new System.Drawing.Size(1341, 581);
-            this.grpApptMgmt.TabIndex = 7;
-            this.grpApptMgmt.TabStop = false;
-            this.grpApptMgmt.Text = "Create Appointment";
-            // 
-            // layoutApptMgmt
-            // 
-            this.layoutApptMgmt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.layoutApptMgmt.ColumnCount = 4;
-            this.layoutApptMgmt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.layoutApptMgmt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.layoutApptMgmt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.layoutApptMgmt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.layoutApptMgmt.Controls.Add(this.btnApptCreate, 3, 0);
-            this.layoutApptMgmt.Controls.Add(this.btnApptDelete, 2, 0);
-            this.layoutApptMgmt.Controls.Add(this.btnApptCancel, 1, 0);
-            this.layoutApptMgmt.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.AddColumns;
-            this.layoutApptMgmt.Location = new System.Drawing.Point(25, 499);
-            this.layoutApptMgmt.Margin = new System.Windows.Forms.Padding(2);
-            this.layoutApptMgmt.Name = "layoutApptMgmt";
-            this.layoutApptMgmt.RowCount = 1;
-            this.layoutApptMgmt.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.layoutApptMgmt.Size = new System.Drawing.Size(1291, 57);
-            this.layoutApptMgmt.TabIndex = 10;
-            // 
-            // btnApptCreate
-            // 
-            this.btnApptCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnApptCreate.AutoSize = true;
-            this.btnApptCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btnApptCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnApptCreate.Font = new System.Drawing.Font("Lucida Sans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApptCreate.ForeColor = System.Drawing.Color.White;
-            this.btnApptCreate.Location = new System.Drawing.Point(1034, 2);
-            this.btnApptCreate.Margin = new System.Windows.Forms.Padding(2);
-            this.btnApptCreate.Name = "btnApptCreate";
-            this.btnApptCreate.Size = new System.Drawing.Size(255, 53);
-            this.btnApptCreate.TabIndex = 5;
-            this.btnApptCreate.Text = "Create";
-            this.btnApptCreate.UseVisualStyleBackColor = false;
-            // 
-            // btnApptDelete
-            // 
-            this.btnApptDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnApptDelete.AutoSize = true;
-            this.btnApptDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.btnApptDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnApptDelete.Font = new System.Drawing.Font("Lucida Sans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApptDelete.ForeColor = System.Drawing.Color.White;
-            this.btnApptDelete.Location = new System.Drawing.Point(776, 2);
-            this.btnApptDelete.Margin = new System.Windows.Forms.Padding(2);
-            this.btnApptDelete.Name = "btnApptDelete";
-            this.btnApptDelete.Size = new System.Drawing.Size(254, 53);
-            this.btnApptDelete.TabIndex = 7;
-            this.btnApptDelete.Text = "Delete";
-            this.btnApptDelete.UseVisualStyleBackColor = false;
-            // 
-            // btnApptCancel
-            // 
-            this.btnApptCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnApptCancel.AutoSize = true;
-            this.btnApptCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(165)))), ((int)(((byte)(166)))));
-            this.btnApptCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnApptCancel.Font = new System.Drawing.Font("Lucida Sans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApptCancel.ForeColor = System.Drawing.Color.White;
-            this.btnApptCancel.Location = new System.Drawing.Point(518, 2);
-            this.btnApptCancel.Margin = new System.Windows.Forms.Padding(2);
-            this.btnApptCancel.Name = "btnApptCancel";
-            this.btnApptCancel.Size = new System.Drawing.Size(254, 53);
-            this.btnApptCancel.TabIndex = 4;
-            this.btnApptCancel.Text = "Cancel";
-            this.btnApptCancel.UseVisualStyleBackColor = false;
-            // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -2006,6 +2006,9 @@ namespace ClinicManagement_proj.UI
             this.pnlSidebarHeader.ResumeLayout(false);
             this.pnlMainContent.ResumeLayout(false);
             this.pnlAppointmentManagement.ResumeLayout(false);
+            this.grpApptMgmt.ResumeLayout(false);
+            this.layoutApptMgmt.ResumeLayout(false);
+            this.layoutApptMgmt.PerformLayout();
             this.pnlPatientRegistration.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegPatients)).EndInit();
             this.grpPatientRegistration.ResumeLayout(false);
@@ -2041,9 +2044,6 @@ namespace ClinicManagement_proj.UI
             this.grpNotifications.ResumeLayout(false);
             this.pnlNotifications.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).EndInit();
-            this.grpApptMgmt.ResumeLayout(false);
-            this.layoutApptMgmt.ResumeLayout(false);
-            this.layoutApptMgmt.PerformLayout();
             this.ResumeLayout(false);
 
         }
