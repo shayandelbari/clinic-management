@@ -57,6 +57,17 @@ namespace ClinicManagement_proj.BLL.Services
             return true;
         }
 
+        public PatientDTO Search(int id)
+        {
+            PatientDTO patientToSearch = new PatientDTO();
+
+            //Check if the contact id exist
+            patientToSearch = clinicDb.Patients.FirstOrDefault(u => u.Id == id);
+
+            // return true if exist otherwise return false
+            return patientToSearch;
+        }
+
 
     }
 }

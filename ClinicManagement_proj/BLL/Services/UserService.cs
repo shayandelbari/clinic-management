@@ -3,6 +3,7 @@ using ClinicManagement_proj.DAL;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 
 namespace ClinicManagement_proj.BLL.Services
 {
@@ -77,7 +78,6 @@ namespace ClinicManagement_proj.BLL.Services
             user.PasswordHash = userDto.PasswordHash;
             user.CreatedAt = userDto.CreatedAt;
 
-            // Update roles
             user.Roles.Clear();
             if (userDto.Roles != null)
             {
@@ -96,6 +96,17 @@ namespace ClinicManagement_proj.BLL.Services
             clinicDb.SaveChanges();
         }
 
+
+        public UserDTO Search( int id)
+        {
+            UserDTO userToSearch = new UserDTO();
+
+            //Check if the contact id exist
+            userToSearch = clinicDb.Users.FirstOrDefault(u => u.Id == id);
+
+            // return true if exist otherwise return false
+            return userToSearch;
+        }
 
     }
 }
