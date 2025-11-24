@@ -22,7 +22,7 @@ namespace ClinicManagement_proj.BLL.DTO
         public DateTime CreatedAt { get; set; }
         public DateTime ModifiedAt { get; set; }
 
-        public List<AppointmentDTO> Appointments { get; set; }
+        public ICollection<AppointmentDTO> Appointments { get; set; }
 
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClinicManagement_proj.BLL.DTO
 {
-    public class ScheduleConstraintDTO
+    public class DoctorScheduleDTO
     {
         public int Id { get; set; }
         public int DoctorId { get; set; }

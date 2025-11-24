@@ -13,7 +13,7 @@ namespace ClinicManagement_proj.BLL.DTO
         public string RoleName { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime ModifiedAt { get; set; }
-        public List<UserDTO> Users { get; set; }
+        public ICollection<UserDTO> Users { get; set; }
 
     }
 }

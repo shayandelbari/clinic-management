@@ -11,6 +11,6 @@ namespace ClinicManagement_proj.BLL.DTO
         public int Id { get; set; }
         public int HourOfDay { get; set; }
         public int MinuteOfHour { get; set; }
-        public List<AppointmentDTO> Appointments { get; set; }
+        public ICollection<AppointmentDTO> Appointments { get; set; }
     }
 }

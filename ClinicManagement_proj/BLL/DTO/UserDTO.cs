@@ -14,7 +14,7 @@ namespace ClinicManagement_proj.BLL.DTO
         public string PasswordHash { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime ModifiedAt { get; set; }
-        public List<RoleDTO> Roles { get; set; }
+        public ICollection<RoleDTO> Roles { get; set; }
 
        
     }

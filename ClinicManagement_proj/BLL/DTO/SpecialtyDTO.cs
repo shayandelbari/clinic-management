@@ -11,6 +11,6 @@ namespace ClinicManagement_proj.BLL.DTO
         public static int NAME_MAX_LENGTH = 64;
         public int Id { get; set; }
         public string Name { get; set; }
-        public List<DoctorDTO> Doctors { get; set; }
+        public ICollection<DoctorDTO> Doctors { get; set; }
     }
 }
