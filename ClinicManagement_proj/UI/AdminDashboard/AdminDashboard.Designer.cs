@@ -96,7 +96,7 @@ namespace ClinicManagement_proj.UI
             this.lblDocUserId = new System.Windows.Forms.Label();
             this.lblNotice = new System.Windows.Forms.Label();
             this.txtDoctorLName = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.layoutDoctorActions = new System.Windows.Forms.TableLayoutPanel();
             this.btnDoctorSubmit = new System.Windows.Forms.Button();
             this.btnDoctorDelete = new System.Windows.Forms.Button();
             this.btnDoctorCancel = new System.Windows.Forms.Button();
@@ -173,7 +173,7 @@ namespace ClinicManagement_proj.UI
             this.pnlDoctorManagement.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoctors)).BeginInit();
             this.grpDoctorMgmt.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
+            this.layoutDoctorActions.SuspendLayout();
             this.pnlDoctorScheduling.SuspendLayout();
             this.grpDoctorScheduling.SuspendLayout();
             this.layoutSchedulingContent.SuspendLayout();
@@ -803,7 +803,6 @@ namespace ClinicManagement_proj.UI
             this.dgvUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUsers.Size = new System.Drawing.Size(710, 576);
             this.dgvUsers.TabIndex = 4;
-            this.dgvUsers.Click += new System.EventHandler(this.dgvUsers_Click);
             // 
             // grpAdminForm
             // 
@@ -861,7 +860,6 @@ namespace ClinicManagement_proj.UI
             this.btnTogglePassword.TabIndex = 8;
             this.btnTogglePassword.Text = "Show";
             this.btnTogglePassword.UseVisualStyleBackColor = false;
-            this.btnTogglePassword.Click += new System.EventHandler(this.btnTogglePassword_Click);
             // 
             // txtUsrPassword
             // 
@@ -877,7 +875,6 @@ namespace ClinicManagement_proj.UI
             this.txtUsrPassword.Size = new System.Drawing.Size(475, 31);
             this.txtUsrPassword.TabIndex = 7;
             this.txtUsrPassword.UseSystemPasswordChar = true;
-            this.txtUsrPassword.TextChanged += new System.EventHandler(this.txtUsrPassword_TextChanged);
             // 
             // pnlButtons
             // 
@@ -918,7 +915,6 @@ namespace ClinicManagement_proj.UI
             this.btnUsrSubmit.TabIndex = 5;
             this.btnUsrSubmit.Text = "Create";
             this.btnUsrSubmit.UseVisualStyleBackColor = false;
-            this.btnUsrSubmit.Click += new System.EventHandler(this.btnUsrSubmit_Click);
             // 
             // btnGenPassword
             // 
@@ -937,7 +933,6 @@ namespace ClinicManagement_proj.UI
             this.btnGenPassword.TabIndex = 6;
             this.btnGenPassword.Text = "Generate Password";
             this.btnGenPassword.UseVisualStyleBackColor = false;
-            this.btnGenPassword.Click += new System.EventHandler(this.btnGenPassword_Click);
             // 
             // btnUsrDelete
             // 
@@ -956,7 +951,6 @@ namespace ClinicManagement_proj.UI
             this.btnUsrDelete.TabIndex = 7;
             this.btnUsrDelete.Text = "Delete";
             this.btnUsrDelete.UseVisualStyleBackColor = false;
-            this.btnUsrDelete.Click += new System.EventHandler(this.btnUsrDelete_Click);
             // 
             // btnUsrCancel
             // 
@@ -975,7 +969,6 @@ namespace ClinicManagement_proj.UI
             this.btnUsrCancel.TabIndex = 4;
             this.btnUsrCancel.Text = "Cancel";
             this.btnUsrCancel.UseVisualStyleBackColor = false;
-            this.btnUsrCancel.Click += new System.EventHandler(this.btnUsrCancel_Click);
             // 
             // comboRoles
             // 
@@ -1105,7 +1098,7 @@ namespace ClinicManagement_proj.UI
             this.grpDoctorMgmt.Controls.Add(this.lblDocUserId);
             this.grpDoctorMgmt.Controls.Add(this.lblNotice);
             this.grpDoctorMgmt.Controls.Add(this.txtDoctorLName);
-            this.grpDoctorMgmt.Controls.Add(this.tableLayoutPanel2);
+            this.grpDoctorMgmt.Controls.Add(this.layoutDoctorActions);
             this.grpDoctorMgmt.Controls.Add(this.comboSpecialization);
             this.grpDoctorMgmt.Controls.Add(this.lblSpecialization);
             this.grpDoctorMgmt.Controls.Add(this.lblDoctorLName);
@@ -1133,7 +1126,6 @@ namespace ClinicManagement_proj.UI
             this.comboDoctorUserId.Name = "comboDoctorUserId";
             this.comboDoctorUserId.Size = new System.Drawing.Size(489, 31);
             this.comboDoctorUserId.TabIndex = 14;
-            this.comboDoctorUserId.SelectedIndexChanged += new System.EventHandler(this.comboDoctorUserId_SelectedIndexChanged);
             // 
             // lblDocUserId
             // 
@@ -1174,26 +1166,26 @@ namespace ClinicManagement_proj.UI
             this.txtDoctorLName.Size = new System.Drawing.Size(488, 31);
             this.txtDoctorLName.TabIndex = 11;
             // 
-            // tableLayoutPanel2
+            // layoutDoctorActions
             // 
-            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.layoutDoctorActions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.ColumnCount = 4;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Controls.Add(this.btnDoctorSubmit, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnDoctorDelete, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnDoctorCancel, 1, 0);
-            this.tableLayoutPanel2.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.AddColumns;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(24, 484);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(489, 56);
-            this.tableLayoutPanel2.TabIndex = 10;
+            this.layoutDoctorActions.ColumnCount = 4;
+            this.layoutDoctorActions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.layoutDoctorActions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.layoutDoctorActions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.layoutDoctorActions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.layoutDoctorActions.Controls.Add(this.btnDoctorSubmit, 3, 0);
+            this.layoutDoctorActions.Controls.Add(this.btnDoctorDelete, 2, 0);
+            this.layoutDoctorActions.Controls.Add(this.btnDoctorCancel, 1, 0);
+            this.layoutDoctorActions.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.AddColumns;
+            this.layoutDoctorActions.Location = new System.Drawing.Point(24, 484);
+            this.layoutDoctorActions.Margin = new System.Windows.Forms.Padding(2);
+            this.layoutDoctorActions.Name = "layoutDoctorActions";
+            this.layoutDoctorActions.RowCount = 1;
+            this.layoutDoctorActions.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.layoutDoctorActions.Size = new System.Drawing.Size(489, 56);
+            this.layoutDoctorActions.TabIndex = 10;
             // 
             // btnDoctorSubmit
             // 
@@ -1205,14 +1197,13 @@ namespace ClinicManagement_proj.UI
             this.btnDoctorSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDoctorSubmit.Font = new System.Drawing.Font("Lucida Sans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDoctorSubmit.ForeColor = System.Drawing.Color.White;
-            this.btnDoctorSubmit.Location = new System.Drawing.Point(391, 2);
+            this.btnDoctorSubmit.Location = new System.Drawing.Point(470, 2);
             this.btnDoctorSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnDoctorSubmit.Name = "btnDoctorSubmit";
-            this.btnDoctorSubmit.Size = new System.Drawing.Size(96, 52);
+            this.btnDoctorSubmit.Size = new System.Drawing.Size(17, 52);
             this.btnDoctorSubmit.TabIndex = 5;
             this.btnDoctorSubmit.Text = "Create";
             this.btnDoctorSubmit.UseVisualStyleBackColor = false;
-            this.btnDoctorSubmit.Click += new System.EventHandler(this.btnDoctorSubmit_Click);
             // 
             // btnDoctorDelete
             // 
@@ -1224,14 +1215,13 @@ namespace ClinicManagement_proj.UI
             this.btnDoctorDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDoctorDelete.Font = new System.Drawing.Font("Lucida Sans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDoctorDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDoctorDelete.Location = new System.Drawing.Point(294, 2);
+            this.btnDoctorDelete.Location = new System.Drawing.Point(353, 2);
             this.btnDoctorDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDoctorDelete.Name = "btnDoctorDelete";
-            this.btnDoctorDelete.Size = new System.Drawing.Size(93, 52);
+            this.btnDoctorDelete.Size = new System.Drawing.Size(113, 52);
             this.btnDoctorDelete.TabIndex = 7;
             this.btnDoctorDelete.Text = "Delete";
             this.btnDoctorDelete.UseVisualStyleBackColor = false;
-            this.btnDoctorDelete.Click += new System.EventHandler(this.btnDoctorDelete_Click);
             // 
             // btnDoctorCancel
             // 
@@ -1243,14 +1233,13 @@ namespace ClinicManagement_proj.UI
             this.btnDoctorCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDoctorCancel.Font = new System.Drawing.Font("Lucida Sans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDoctorCancel.ForeColor = System.Drawing.Color.White;
-            this.btnDoctorCancel.Location = new System.Drawing.Point(197, 2);
+            this.btnDoctorCancel.Location = new System.Drawing.Point(236, 2);
             this.btnDoctorCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnDoctorCancel.Name = "btnDoctorCancel";
-            this.btnDoctorCancel.Size = new System.Drawing.Size(93, 52);
+            this.btnDoctorCancel.Size = new System.Drawing.Size(113, 52);
             this.btnDoctorCancel.TabIndex = 4;
             this.btnDoctorCancel.Text = "Cancel";
             this.btnDoctorCancel.UseVisualStyleBackColor = false;
-            this.btnDoctorCancel.Click += new System.EventHandler(this.btnDoctorCancel_Click);
             // 
             // comboSpecialization
             // 
@@ -2028,8 +2017,8 @@ namespace ClinicManagement_proj.UI
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoctors)).EndInit();
             this.grpDoctorMgmt.ResumeLayout(false);
             this.grpDoctorMgmt.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
+            this.layoutDoctorActions.ResumeLayout(false);
+            this.layoutDoctorActions.PerformLayout();
             this.pnlDoctorScheduling.ResumeLayout(false);
             this.grpDoctorScheduling.ResumeLayout(false);
             this.layoutSchedulingContent.ResumeLayout(false);
@@ -2105,7 +2094,7 @@ namespace ClinicManagement_proj.UI
         private System.Windows.Forms.Label lblDocUserId;
         private System.Windows.Forms.Label lblNotice;
         private System.Windows.Forms.TextBox txtDoctorLName;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel layoutDoctorActions;
         private System.Windows.Forms.Button btnDoctorSubmit;
         private System.Windows.Forms.Button btnDoctorDelete;
         private System.Windows.Forms.Button btnDoctorCancel;

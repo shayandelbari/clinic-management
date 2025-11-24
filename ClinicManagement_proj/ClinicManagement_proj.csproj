@@ -143,21 +143,6 @@
     <Compile Include="UI\AdminDashboard\AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\AdminDashboard\AdminDashboard.Doctor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\AdminDashboard\AdminDashboard.Notifications.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\AdminDashboard\AdminDashboard.Patient.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\AdminDashboard\AdminDashboard.Scheduling.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\AdminDashboard\AdminDashboard.User.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="UI\AdminDashboard\Controllers\AppointmentManagementController.cs" />
     <Compile Include="UI\AdminDashboard\Controllers\DoctorManagementController.cs" />
     <Compile Include="UI\Utils\ImageHelper.cs" />
