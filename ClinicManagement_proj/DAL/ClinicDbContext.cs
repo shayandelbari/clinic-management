@@ -186,7 +186,7 @@ namespace ClinicManagement_proj.DAL
     }
 
 
-    internal class ClinicDbContextInitializer : DropCreateDatabaseIfModelChanges<ClinicDbContext>
+    internal class ClinicDbContextInitializer : DropCreateDatabaseAlways<ClinicDbContext>
     {
         protected override void Seed(ClinicDbContext context)
         {
