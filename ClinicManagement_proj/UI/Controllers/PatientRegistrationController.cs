@@ -1,5 +1,6 @@
 using ClinicManagement_proj.BLL.DTO;
 using ClinicManagement_proj.BLL.Services;
+using ClinicManagement_proj.BLL;
 using System;
 using System.Windows.Forms;
 
@@ -11,7 +12,7 @@ namespace ClinicManagement_proj.UI
     /// </summary>
     public class PatientRegistrationController : IPanelController
     {
-        private readonly PatientService patientService = new PatientService();
+        private readonly PatientService patientService = ClinicManagementApp.PatientService;
 
 
 

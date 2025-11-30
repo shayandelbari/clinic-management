@@ -6,9 +6,9 @@ namespace ClinicManagement_proj.BLL.Services
     {
         private readonly UserService _userService;
 
-        public LoginService()
+        public LoginService(UserService userService)
         {
-            _userService = new UserService();
+            _userService = userService;
         }
 
         public UserDTO Authenticate(string username, string password)

@@ -9,8 +9,13 @@ namespace ClinicManagement_proj.BLL.Services
 {
     public class RoleService
     {
-        private readonly ClinicDbContext clinicDb = new ClinicDbContext();
+        private readonly ClinicDbContext clinicDb;
 
+
+        public RoleService(ClinicDbContext dbContext)
+        {
+            clinicDb = dbContext;
+        }
 
         public List<RoleDTO> GetAllRoles()
         {

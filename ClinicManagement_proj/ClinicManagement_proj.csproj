@@ -60,7 +60,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\CurrentUser.cs" />
     <Compile Include="BLL\DTO\AppointmentDTO.cs" />
     <Compile Include="BLL\DTO\DaysOfWeekEnum.cs" />
     <Compile Include="BLL\DTO\DoctorDTO.cs" />
@@ -78,6 +77,7 @@
     <Compile Include="BLL\Services\UserService.cs" />
     <Compile Include="BLL\Utils\Notification.cs" />
     <Compile Include="BLL\Utils\NotificationManager.cs" />
+    <Compile Include="BLL\ClinicManagementApp.cs" />
     <Compile Include="DAL\Appointment.cs">
       <DependentUpon>HealthCareClinicModel.tt</DependentUpon>
     </Compile>
@@ -162,12 +162,6 @@
     </Compile>
     <Compile Include="UI\DoctorDashboard.Designer.cs">
       <DependentUpon>DoctorDashboard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Login.cs">
       <SubType>Form</SubType>

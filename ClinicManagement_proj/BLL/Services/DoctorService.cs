@@ -6,9 +6,14 @@ using System.Linq;
 
 namespace ClinicManagement_proj.BLL.Services
 {
-    internal class DoctorService
+    public class DoctorService
     {
-        private readonly ClinicDbContext clinicDb = new ClinicDbContext();
+        private readonly ClinicDbContext clinicDb;
+
+        public DoctorService(ClinicDbContext dbContext)
+        {
+            clinicDb = dbContext;
+        }
 
         public int CreateDoctor(DoctorDTO doctorDto)
         {

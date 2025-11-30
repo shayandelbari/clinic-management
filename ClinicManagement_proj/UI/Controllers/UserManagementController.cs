@@ -1,4 +1,5 @@
 using ClinicManagement_proj.BLL.DTO;
+using ClinicManagement_proj.BLL;
 using ClinicManagement_proj.BLL.Services;
 using ClinicManagement_proj.BLL.Utils;
 using System;
@@ -59,8 +60,8 @@ namespace ClinicManagement_proj.UI
         public UserManagementController(Panel panel)
         {
             this.panel = panel;
-            this.userService = new UserService();
-            this.roleService = new RoleService();
+            this.userService = ClinicManagementApp.UserService;
+            this.roleService = ClinicManagementApp.RoleService;
         }
 
         public void Initialize()
@@ -84,7 +85,6 @@ namespace ClinicManagement_proj.UI
             ResetUsrForm();
 
             cmbRoles.DataSource = roleService.GetAllRoles();
-            cmbRoles.DisplayMember = "RoleName";
         }
 
         private void LoadUsers()
@@ -285,7 +285,7 @@ namespace ClinicManagement_proj.UI
                     txtUsrUsername.Text = user.Username;
                     if (user.Roles.Any())
                     {
-                        cmbRoles.SelectedValue = user.Roles.First();
+                        cmbRoles.SelectedItem = user.Roles.First();
                     }
                     EnterUsrEditMode();
                     dgvUsers.DataSource = new List<UserDTO> { user };
@@ -314,7 +314,7 @@ namespace ClinicManagement_proj.UI
                 txtUsrPassword.Text = string.Empty;
                 if (selectedUser.Roles.Any())
                 {
-                    cmbRoles.SelectedValue = selectedUser.Roles.First();
+                    cmbRoles.SelectedItem = selectedUser.Roles.First();
                 }
                 EnterUsrEditMode();
             }

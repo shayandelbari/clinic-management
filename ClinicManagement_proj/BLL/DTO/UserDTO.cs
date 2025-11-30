@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace ClinicManagement_proj.BLL.DTO
@@ -98,6 +99,11 @@ namespace ClinicManagement_proj.BLL.DTO
             PasswordHash = passwordHash;
             CreatedAt = createdAt;
             Roles = new List<RoleDTO>();
+        }
+
+        public override string ToString()
+        {
+            return $"{Id} - {Username} ({Roles.FirstOrDefault()})";
         }
     }
 }

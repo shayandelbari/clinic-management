@@ -10,7 +10,14 @@ namespace ClinicManagement_proj.BLL.Services
 {
     public class UserService
     {
-        private ClinicDbContext clinicDb = new ClinicDbContext();
+        private ClinicDbContext clinicDb;
+
+        public UserDTO CurrentUser { get; set; }
+
+        public UserService(ClinicDbContext dbContext)
+        {
+            clinicDb = dbContext;
+        }
 
         public enum UserRoles
         {
@@ -42,9 +49,7 @@ namespace ClinicManagement_proj.BLL.Services
             for (int i = 0; i < 20; i++)
             {
                 if (hashBytes[i + 16] != hash[i])
-                {
                     return false;
-                }
             }
             return true;
         }
@@ -58,6 +63,7 @@ namespace ClinicManagement_proj.BLL.Services
                 .Include(u => u.Roles)
                 .ToList();
         }
+
         public UserDTO GetUserById(int id)
         {
             if (!CurrentUserHasRole(UserRoles.Administrator))
@@ -130,7 +136,6 @@ namespace ClinicManagement_proj.BLL.Services
             clinicDb.SaveChanges();
         }
 
-
         public List<UserDTO> Search(int id)
         {
             if (!CurrentUserHasRole(UserRoles.Administrator))
@@ -153,10 +158,10 @@ namespace ClinicManagement_proj.BLL.Services
                 .ToList();
         }
 
-        public static bool CurrentUserHasRole(UserRoles role)
+        public bool CurrentUserHasRole(UserRoles role)
         {
-            if (CurrentUser.User == null) return false;
-            return CurrentUser.User.Roles.Any(r => r.RoleName == role.ToString());
+            if (CurrentUser == null) return false;
+            return CurrentUser.Roles.Any(r => r.RoleName == role.ToString());
         }
     }
 }

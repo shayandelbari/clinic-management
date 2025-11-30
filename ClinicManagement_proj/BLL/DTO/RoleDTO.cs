@@ -49,5 +49,10 @@ namespace ClinicManagement_proj.BLL.DTO
             ModifiedAt = modifiedAt;
             Users = users ?? new List<UserDTO>();
         }
+
+        public override string ToString()
+        {
+            return RoleName;
+        }
     }
 }
