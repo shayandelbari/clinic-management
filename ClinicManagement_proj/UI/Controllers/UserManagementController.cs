@@ -49,8 +49,8 @@ namespace ClinicManagement_proj.UI
                 ?? throw new Exception("No control named [txtUsrUsername] found in grpAdminForm controls collection."));
         private TextBox txtUsrPassword => (TextBox)(pnlPassword.Controls["txtUsrPassword"] 
                 ?? throw new Exception("No control named [txtUsrPassword] found in pnlPassword controls collection."));
-        private ComboBox comboRoles => (ComboBox)(grpAdminForm.Controls["comboRoles"] 
-                ?? throw new Exception("No control named [comboRoles] found in grpAdminForm controls collection."));
+        private ComboBox cmbRoles => (ComboBox)(grpAdminForm.Controls["cmbRoles"] 
+                ?? throw new Exception("No control named [cmbRoles] found in grpAdminForm controls collection."));
 
         private bool isEditMode = false;
         private bool isPasswordChanged = false;
@@ -82,9 +82,9 @@ namespace ClinicManagement_proj.UI
         {
             LoadUsers();
             ResetUsrForm();
-            comboRoles.DataSource = roleService.GetAllRoles();
-            comboRoles.DisplayMember = "RoleName";
-            comboRoles.ValueMember = "Id";
+            cmbRoles.DataSource = roleService.GetAllRoles();
+            cmbRoles.DisplayMember = "RoleName";
+            cmbRoles.ValueMember = "Id";
         }
 
         private void LoadUsers()
@@ -99,7 +99,7 @@ namespace ClinicManagement_proj.UI
         private void ResetUsrForm()
         {
             txtUsrPassword.Text = string.Empty;
-            comboRoles.SelectedIndex = -1;
+            cmbRoles.SelectedIndex = -1;
             isEditMode = false;
             isPasswordChanged = false;
             btnUsrCancel.Visible = false;
@@ -150,7 +150,7 @@ namespace ClinicManagement_proj.UI
         {
             string username = txtUsrUsername.Text.Trim();
             string password = txtUsrPassword.Text.Trim();
-            var selectedRole = comboRoles.SelectedItem as RoleDTO;
+            var selectedRole = cmbRoles.SelectedItem as RoleDTO;
 
             if (string.IsNullOrEmpty(username) || selectedRole == null || string.IsNullOrEmpty(password))
             {
@@ -184,7 +184,7 @@ namespace ClinicManagement_proj.UI
             }
 
             string username = txtUsrUsername.Text.Trim();
-            var selectedRole = comboRoles.SelectedItem as RoleDTO;
+            var selectedRole = cmbRoles.SelectedItem as RoleDTO;
 
             if (string.IsNullOrEmpty(username) || selectedRole == null)
             {
@@ -235,7 +235,7 @@ namespace ClinicManagement_proj.UI
                     txtUsrUsername.Text = user.Username;
                     if (user.Roles.Any())
                     {
-                        comboRoles.SelectedValue = user.Roles.First().Id;
+                        cmbRoles.SelectedValue = user.Roles.First().Id;
                     }
                     EnterUsrEditMode();
                     dgvUsers.DataSource = new List<UserDTO> { user };
@@ -264,7 +264,7 @@ namespace ClinicManagement_proj.UI
                 txtUsrUsername.Text = user.Username;
                 if (user.Roles.Any())
                 {
-                    comboRoles.SelectedValue = user.Roles.First().Id;
+                    cmbRoles.SelectedValue = user.Roles.First().Id;
                 }
                 EnterUsrEditMode();
             }

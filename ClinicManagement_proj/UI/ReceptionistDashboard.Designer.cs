@@ -43,17 +43,28 @@ namespace ClinicManagement_proj.UI
             this.lblSidebarTitle = new System.Windows.Forms.Label();
             this.pnlMainContent = new System.Windows.Forms.Panel();
             this.pnlAppointmentManagement = new System.Windows.Forms.Panel();
-            this.grpApptMgmt = new System.Windows.Forms.GroupBox();
-            this.layoutApptMgmt = new System.Windows.Forms.TableLayoutPanel();
             this.dgvAppointments = new System.Windows.Forms.DataGridView();
+            this.grpApptMgmt = new System.Windows.Forms.GroupBox();
             this.layoutApptButtons = new System.Windows.Forms.TableLayoutPanel();
             this.btnApptCreate = new System.Windows.Forms.Button();
             this.btnApptUpdate = new System.Windows.Forms.Button();
             this.btnApptSearch = new System.Windows.Forms.Button();
-            this.btnApptCancel = new System.Windows.Forms.Button();
             this.btnApptDisplay = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnApptCancel = new System.Windows.Forms.Button();
+            this.txtApptDoctor = new System.Windows.Forms.TextBox();
+            this.lblApptPatient = new System.Windows.Forms.Label();
+            this.txtApptPatient = new System.Windows.Forms.TextBox();
+            this.lblApptDate = new System.Windows.Forms.Label();
+            this.dtpApptDate = new System.Windows.Forms.DateTimePicker();
+            this.lblApptTimeSlot = new System.Windows.Forms.Label();
+            this.flpApptTimeSlots = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblApptNotes = new System.Windows.Forms.Label();
+            this.txtApptNotes = new System.Windows.Forms.TextBox();
+            this.lblApptStatus = new System.Windows.Forms.Label();
+            this.cmbApptStatus = new System.Windows.Forms.ComboBox();
+            this.txtApptId = new System.Windows.Forms.TextBox();
+            this.lblApptDoctor = new System.Windows.Forms.Label();
+            this.lblApptId = new System.Windows.Forms.Label();
             this.pnlPatientRegistration = new System.Windows.Forms.Panel();
             this.dgvRegPatients = new System.Windows.Forms.DataGridView();
             this.grpPatientRegistration = new System.Windows.Forms.GroupBox();
@@ -66,7 +77,7 @@ namespace ClinicManagement_proj.UI
             this.btnPCancel = new System.Windows.Forms.Button();
             this.txtPPhone = new System.Windows.Forms.TextBox();
             this.lblPPhone = new System.Windows.Forms.Label();
-            this.dateDoB = new System.Windows.Forms.DateTimePicker();
+            this.dtpDoB = new System.Windows.Forms.DateTimePicker();
             this.lblDoB = new System.Windows.Forms.Label();
             this.txtPatientId = new System.Windows.Forms.TextBox();
             this.lblPatientId = new System.Windows.Forms.Label();
@@ -89,9 +100,8 @@ namespace ClinicManagement_proj.UI
             this.pnlSidebarHeader.SuspendLayout();
             this.pnlMainContent.SuspendLayout();
             this.pnlAppointmentManagement.SuspendLayout();
-            this.grpApptMgmt.SuspendLayout();
-            this.layoutApptMgmt.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).BeginInit();
+            this.grpApptMgmt.SuspendLayout();
             this.layoutApptButtons.SuspendLayout();
             this.pnlPatientRegistration.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegPatients)).BeginInit();
@@ -128,7 +138,7 @@ namespace ClinicManagement_proj.UI
             this.pnlSidebar.Location = new System.Drawing.Point(0, 125);
             this.pnlSidebar.Margin = new System.Windows.Forms.Padding(2);
             this.pnlSidebar.Name = "pnlSidebar";
-            this.pnlSidebar.Size = new System.Drawing.Size(298, 700);
+            this.pnlSidebar.Size = new System.Drawing.Size(298, 925);
             this.pnlSidebar.TabIndex = 2;
             // 
             // btnAppointmentManagement
@@ -207,59 +217,20 @@ namespace ClinicManagement_proj.UI
             this.pnlMainContent.Margin = new System.Windows.Forms.Padding(2);
             this.pnlMainContent.Name = "pnlMainContent";
             this.pnlMainContent.Padding = new System.Windows.Forms.Padding(20);
-            this.pnlMainContent.Size = new System.Drawing.Size(1376, 700);
+            this.pnlMainContent.Size = new System.Drawing.Size(1376, 925);
             this.pnlMainContent.TabIndex = 3;
             // 
             // pnlAppointmentManagement
             // 
+            this.pnlAppointmentManagement.Controls.Add(this.dgvAppointments);
             this.pnlAppointmentManagement.Controls.Add(this.grpApptMgmt);
             this.pnlAppointmentManagement.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlAppointmentManagement.Location = new System.Drawing.Point(20, 20);
             this.pnlAppointmentManagement.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAppointmentManagement.Name = "pnlAppointmentManagement";
-            this.pnlAppointmentManagement.Size = new System.Drawing.Size(1336, 660);
-            this.pnlAppointmentManagement.TabIndex = 5;
+            this.pnlAppointmentManagement.Size = new System.Drawing.Size(1336, 885);
+            this.pnlAppointmentManagement.TabIndex = 6;
             this.pnlAppointmentManagement.Visible = false;
-            // 
-            // grpApptMgmt
-            // 
-            this.grpApptMgmt.Controls.Add(this.layoutApptMgmt);
-            this.grpApptMgmt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grpApptMgmt.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpApptMgmt.Location = new System.Drawing.Point(0, 0);
-            this.grpApptMgmt.Margin = new System.Windows.Forms.Padding(2);
-            this.grpApptMgmt.Name = "grpApptMgmt";
-            this.grpApptMgmt.Padding = new System.Windows.Forms.Padding(25);
-            this.grpApptMgmt.Size = new System.Drawing.Size(1336, 660);
-            this.grpApptMgmt.TabIndex = 7;
-            this.grpApptMgmt.TabStop = false;
-            this.grpApptMgmt.Text = "Create Appointment";
-            // 
-            // layoutApptMgmt
-            // 
-            this.layoutApptMgmt.ColumnCount = 8;
-            this.layoutApptMgmt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.layoutApptMgmt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.layoutApptMgmt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.layoutApptMgmt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.layoutApptMgmt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.layoutApptMgmt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.layoutApptMgmt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.layoutApptMgmt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.layoutApptMgmt.Controls.Add(this.dgvAppointments, 4, 0);
-            this.layoutApptMgmt.Controls.Add(this.layoutApptButtons, 0, 2);
-            this.layoutApptMgmt.Controls.Add(this.textBox2, 2, 0);
-            this.layoutApptMgmt.Controls.Add(this.label2, 0, 0);
-            this.layoutApptMgmt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutApptMgmt.Location = new System.Drawing.Point(25, 49);
-            this.layoutApptMgmt.Name = "layoutApptMgmt";
-            this.layoutApptMgmt.RowCount = 3;
-            this.layoutApptMgmt.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.layoutApptMgmt.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.layoutApptMgmt.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.layoutApptMgmt.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.layoutApptMgmt.Size = new System.Drawing.Size(1286, 586);
-            this.layoutApptMgmt.TabIndex = 11;
             // 
             // dgvAppointments
             // 
@@ -271,45 +242,69 @@ namespace ClinicManagement_proj.UI
             this.dgvAppointments.BackgroundColor = System.Drawing.Color.White;
             this.dgvAppointments.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.layoutApptMgmt.SetColumnSpan(this.dgvAppointments, 4);
             this.dgvAppointments.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvAppointments.Location = new System.Drawing.Point(642, 2);
+            this.dgvAppointments.Location = new System.Drawing.Point(616, 3);
             this.dgvAppointments.Margin = new System.Windows.Forms.Padding(2);
             this.dgvAppointments.MultiSelect = false;
             this.dgvAppointments.Name = "dgvAppointments";
             this.dgvAppointments.ReadOnly = true;
             this.dgvAppointments.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvAppointments.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.layoutApptMgmt.SetRowSpan(this.dgvAppointments, 3);
             this.dgvAppointments.RowTemplate.Height = 24;
             this.dgvAppointments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAppointments.Size = new System.Drawing.Size(642, 582);
-            this.dgvAppointments.TabIndex = 11;
+            this.dgvAppointments.Size = new System.Drawing.Size(720, 895);
+            this.dgvAppointments.TabIndex = 8;
+            // 
+            // grpApptMgmt
+            // 
+            this.grpApptMgmt.Controls.Add(this.layoutApptButtons);
+            this.grpApptMgmt.Controls.Add(this.txtApptDoctor);
+            this.grpApptMgmt.Controls.Add(this.lblApptPatient);
+            this.grpApptMgmt.Controls.Add(this.txtApptPatient);
+            this.grpApptMgmt.Controls.Add(this.lblApptDate);
+            this.grpApptMgmt.Controls.Add(this.dtpApptDate);
+            this.grpApptMgmt.Controls.Add(this.lblApptTimeSlot);
+            this.grpApptMgmt.Controls.Add(this.flpApptTimeSlots);
+            this.grpApptMgmt.Controls.Add(this.lblApptNotes);
+            this.grpApptMgmt.Controls.Add(this.txtApptNotes);
+            this.grpApptMgmt.Controls.Add(this.lblApptStatus);
+            this.grpApptMgmt.Controls.Add(this.cmbApptStatus);
+            this.grpApptMgmt.Controls.Add(this.txtApptId);
+            this.grpApptMgmt.Controls.Add(this.lblApptDoctor);
+            this.grpApptMgmt.Controls.Add(this.lblApptId);
+            this.grpApptMgmt.Dock = System.Windows.Forms.DockStyle.Left;
+            this.grpApptMgmt.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpApptMgmt.Location = new System.Drawing.Point(0, 0);
+            this.grpApptMgmt.Margin = new System.Windows.Forms.Padding(2);
+            this.grpApptMgmt.Name = "grpApptMgmt";
+            this.grpApptMgmt.Padding = new System.Windows.Forms.Padding(25);
+            this.grpApptMgmt.Size = new System.Drawing.Size(610, 885);
+            this.grpApptMgmt.TabIndex = 7;
+            this.grpApptMgmt.TabStop = false;
+            this.grpApptMgmt.Text = "Appointment Management";
             // 
             // layoutApptButtons
             // 
-            this.layoutApptButtons.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.layoutApptButtons.ColumnCount = 4;
-            this.layoutApptMgmt.SetColumnSpan(this.layoutApptButtons, 4);
             this.layoutApptButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.layoutApptButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.layoutApptButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.layoutApptButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.layoutApptButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.layoutApptButtons.Controls.Add(this.btnApptCreate, 0, 0);
             this.layoutApptButtons.Controls.Add(this.btnApptUpdate, 1, 0);
             this.layoutApptButtons.Controls.Add(this.btnApptSearch, 2, 0);
-            this.layoutApptButtons.Controls.Add(this.btnApptCancel, 0, 1);
-            this.layoutApptButtons.Controls.Add(this.btnApptDisplay, 3, 0);
+            this.layoutApptButtons.Controls.Add(this.btnApptDisplay, 0, 1);
+            this.layoutApptButtons.Controls.Add(this.btnApptCancel, 3, 0);
             this.layoutApptButtons.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.AddColumns;
-            this.layoutApptButtons.Location = new System.Drawing.Point(2, 392);
+            this.layoutApptButtons.Location = new System.Drawing.Point(28, 750);
             this.layoutApptButtons.Margin = new System.Windows.Forms.Padding(2);
             this.layoutApptButtons.Name = "layoutApptButtons";
             this.layoutApptButtons.RowCount = 2;
             this.layoutApptButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.layoutApptButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.layoutApptButtons.Size = new System.Drawing.Size(636, 111);
-            this.layoutApptButtons.TabIndex = 17;
+            this.layoutApptButtons.Size = new System.Drawing.Size(560, 116);
+            this.layoutApptButtons.TabIndex = 10;
             // 
             // btnApptCreate
             // 
@@ -322,7 +317,7 @@ namespace ClinicManagement_proj.UI
             this.btnApptCreate.Location = new System.Drawing.Point(2, 2);
             this.btnApptCreate.Margin = new System.Windows.Forms.Padding(2);
             this.btnApptCreate.Name = "btnApptCreate";
-            this.btnApptCreate.Size = new System.Drawing.Size(155, 51);
+            this.btnApptCreate.Size = new System.Drawing.Size(136, 54);
             this.btnApptCreate.TabIndex = 5;
             this.btnApptCreate.Text = "Create";
             this.btnApptCreate.UseVisualStyleBackColor = false;
@@ -335,10 +330,10 @@ namespace ClinicManagement_proj.UI
             this.btnApptUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnApptUpdate.Font = new System.Drawing.Font("Lucida Sans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApptUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnApptUpdate.Location = new System.Drawing.Point(161, 2);
+            this.btnApptUpdate.Location = new System.Drawing.Point(142, 2);
             this.btnApptUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnApptUpdate.Name = "btnApptUpdate";
-            this.btnApptUpdate.Size = new System.Drawing.Size(155, 51);
+            this.btnApptUpdate.Size = new System.Drawing.Size(136, 54);
             this.btnApptUpdate.TabIndex = 11;
             this.btnApptUpdate.Text = "Update";
             this.btnApptUpdate.UseVisualStyleBackColor = false;
@@ -351,29 +346,13 @@ namespace ClinicManagement_proj.UI
             this.btnApptSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnApptSearch.Font = new System.Drawing.Font("Lucida Sans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApptSearch.ForeColor = System.Drawing.Color.White;
-            this.btnApptSearch.Location = new System.Drawing.Point(320, 2);
+            this.btnApptSearch.Location = new System.Drawing.Point(282, 2);
             this.btnApptSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnApptSearch.Name = "btnApptSearch";
-            this.btnApptSearch.Size = new System.Drawing.Size(155, 51);
+            this.btnApptSearch.Size = new System.Drawing.Size(136, 54);
             this.btnApptSearch.TabIndex = 4;
             this.btnApptSearch.Text = "Search";
             this.btnApptSearch.UseVisualStyleBackColor = false;
-            // 
-            // btnApptCancel
-            // 
-            this.btnApptCancel.AutoSize = true;
-            this.btnApptCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.btnApptCancel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnApptCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnApptCancel.Font = new System.Drawing.Font("Lucida Sans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApptCancel.ForeColor = System.Drawing.Color.White;
-            this.btnApptCancel.Location = new System.Drawing.Point(2, 57);
-            this.btnApptCancel.Margin = new System.Windows.Forms.Padding(2);
-            this.btnApptCancel.Name = "btnApptCancel";
-            this.btnApptCancel.Size = new System.Drawing.Size(155, 52);
-            this.btnApptCancel.TabIndex = 9;
-            this.btnApptCancel.Text = "Cancel";
-            this.btnApptCancel.UseVisualStyleBackColor = false;
             // 
             // btnApptDisplay
             // 
@@ -383,38 +362,210 @@ namespace ClinicManagement_proj.UI
             this.btnApptDisplay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnApptDisplay.Font = new System.Drawing.Font("Lucida Sans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApptDisplay.ForeColor = System.Drawing.Color.White;
-            this.btnApptDisplay.Location = new System.Drawing.Point(479, 2);
+            this.btnApptDisplay.Location = new System.Drawing.Point(2, 60);
             this.btnApptDisplay.Margin = new System.Windows.Forms.Padding(2);
             this.btnApptDisplay.Name = "btnApptDisplay";
-            this.btnApptDisplay.Size = new System.Drawing.Size(155, 51);
+            this.btnApptDisplay.Size = new System.Drawing.Size(136, 54);
             this.btnApptDisplay.TabIndex = 10;
             this.btnApptDisplay.Text = "Display";
             this.btnApptDisplay.UseVisualStyleBackColor = false;
             // 
-            // textBox2
+            // btnApptCancel
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnApptCancel.AutoSize = true;
+            this.btnApptCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(165)))), ((int)(((byte)(166)))));
+            this.btnApptCancel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnApptCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnApptCancel.Font = new System.Drawing.Font("Lucida Sans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApptCancel.ForeColor = System.Drawing.Color.White;
+            this.btnApptCancel.Location = new System.Drawing.Point(422, 2);
+            this.btnApptCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnApptCancel.Name = "btnApptCancel";
+            this.btnApptCancel.Size = new System.Drawing.Size(136, 54);
+            this.btnApptCancel.TabIndex = 9;
+            this.btnApptCancel.Text = "Cancel";
+            this.btnApptCancel.UseVisualStyleBackColor = false;
+            // 
+            // txtApptDoctor
+            // 
+            this.txtApptDoctor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(325, 2);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(5, 2, 2, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(153, 31);
-            this.textBox2.TabIndex = 5;
+            this.txtApptDoctor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtApptDoctor.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApptDoctor.Location = new System.Drawing.Point(25, 162);
+            this.txtApptDoctor.Margin = new System.Windows.Forms.Padding(5, 2, 2, 5);
+            this.txtApptDoctor.Name = "txtApptDoctor";
+            this.txtApptDoctor.Size = new System.Drawing.Size(560, 31);
+            this.txtApptDoctor.TabIndex = 13;
             // 
-            // label2
+            // lblApptPatient
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblApptPatient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(2, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 35);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Phone Number";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblApptPatient.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApptPatient.Location = new System.Drawing.Point(25, 208);
+            this.lblApptPatient.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblApptPatient.Name = "lblApptPatient";
+            this.lblApptPatient.Size = new System.Drawing.Size(560, 35);
+            this.lblApptPatient.TabIndex = 14;
+            this.lblApptPatient.Text = "Patient";
+            this.lblApptPatient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtApptPatient
+            // 
+            this.txtApptPatient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtApptPatient.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtApptPatient.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApptPatient.Location = new System.Drawing.Point(25, 248);
+            this.txtApptPatient.Margin = new System.Windows.Forms.Padding(5, 2, 2, 5);
+            this.txtApptPatient.Name = "txtApptPatient";
+            this.txtApptPatient.Size = new System.Drawing.Size(560, 31);
+            this.txtApptPatient.TabIndex = 15;
+            // 
+            // lblApptDate
+            // 
+            this.lblApptDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblApptDate.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApptDate.Location = new System.Drawing.Point(25, 294);
+            this.lblApptDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblApptDate.Name = "lblApptDate";
+            this.lblApptDate.Size = new System.Drawing.Size(560, 35);
+            this.lblApptDate.TabIndex = 16;
+            this.lblApptDate.Text = "Appointment Date";
+            this.lblApptDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // dtpApptDate
+            // 
+            this.dtpApptDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpApptDate.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpApptDate.Location = new System.Drawing.Point(25, 334);
+            this.dtpApptDate.Margin = new System.Windows.Forms.Padding(5, 2, 2, 5);
+            this.dtpApptDate.Name = "dtpApptDate";
+            this.dtpApptDate.Size = new System.Drawing.Size(560, 31);
+            this.dtpApptDate.TabIndex = 17;
+            // 
+            // lblApptTimeSlot
+            // 
+            this.lblApptTimeSlot.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblApptTimeSlot.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApptTimeSlot.Location = new System.Drawing.Point(25, 380);
+            this.lblApptTimeSlot.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblApptTimeSlot.Name = "lblApptTimeSlot";
+            this.lblApptTimeSlot.Size = new System.Drawing.Size(560, 35);
+            this.lblApptTimeSlot.TabIndex = 18;
+            this.lblApptTimeSlot.Text = "Time Slot";
+            this.lblApptTimeSlot.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // flpApptTimeSlots
+            // 
+            this.flpApptTimeSlots.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flpApptTimeSlots.AutoScroll = true;
+            this.flpApptTimeSlots.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flpApptTimeSlots.Location = new System.Drawing.Point(25, 420);
+            this.flpApptTimeSlots.Margin = new System.Windows.Forms.Padding(2);
+            this.flpApptTimeSlots.Name = "flpApptTimeSlots";
+            this.flpApptTimeSlots.Size = new System.Drawing.Size(560, 60);
+            this.flpApptTimeSlots.TabIndex = 19;
+            // 
+            // lblApptNotes
+            // 
+            this.lblApptNotes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblApptNotes.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApptNotes.Location = new System.Drawing.Point(27, 574);
+            this.lblApptNotes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblApptNotes.Name = "lblApptNotes";
+            this.lblApptNotes.Size = new System.Drawing.Size(290, 35);
+            this.lblApptNotes.TabIndex = 20;
+            this.lblApptNotes.Text = "Notes";
+            this.lblApptNotes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtApptNotes
+            // 
+            this.txtApptNotes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtApptNotes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtApptNotes.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApptNotes.Location = new System.Drawing.Point(28, 617);
+            this.txtApptNotes.Margin = new System.Windows.Forms.Padding(5, 2, 2, 5);
+            this.txtApptNotes.Multiline = true;
+            this.txtApptNotes.Name = "txtApptNotes";
+            this.txtApptNotes.Size = new System.Drawing.Size(560, 126);
+            this.txtApptNotes.TabIndex = 21;
+            // 
+            // lblApptStatus
+            // 
+            this.lblApptStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblApptStatus.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApptStatus.Location = new System.Drawing.Point(25, 490);
+            this.lblApptStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblApptStatus.Name = "lblApptStatus";
+            this.lblApptStatus.Size = new System.Drawing.Size(245, 35);
+            this.lblApptStatus.TabIndex = 22;
+            this.lblApptStatus.Text = "Status";
+            this.lblApptStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cmbApptStatus
+            // 
+            this.cmbApptStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbApptStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbApptStatus.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbApptStatus.FormattingEnabled = true;
+            this.cmbApptStatus.Items.AddRange(new object[] {
+            "Scheduled",
+            "Completed",
+            "Cancelled",
+            "No Show"});
+            this.cmbApptStatus.Location = new System.Drawing.Point(25, 525);
+            this.cmbApptStatus.Margin = new System.Windows.Forms.Padding(5, 2, 2, 5);
+            this.cmbApptStatus.Name = "cmbApptStatus";
+            this.cmbApptStatus.Size = new System.Drawing.Size(560, 31);
+            this.cmbApptStatus.TabIndex = 23;
+            // 
+            // txtApptId
+            // 
+            this.txtApptId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtApptId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtApptId.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApptId.Location = new System.Drawing.Point(25, 76);
+            this.txtApptId.Margin = new System.Windows.Forms.Padding(5, 2, 2, 5);
+            this.txtApptId.Name = "txtApptId";
+            this.txtApptId.Size = new System.Drawing.Size(560, 31);
+            this.txtApptId.TabIndex = 25;
+            // 
+            // lblApptDoctor
+            // 
+            this.lblApptDoctor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblApptDoctor.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApptDoctor.Location = new System.Drawing.Point(25, 121);
+            this.lblApptDoctor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblApptDoctor.Name = "lblApptDoctor";
+            this.lblApptDoctor.Size = new System.Drawing.Size(560, 35);
+            this.lblApptDoctor.TabIndex = 12;
+            this.lblApptDoctor.Text = "Doctor";
+            this.lblApptDoctor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblApptId
+            // 
+            this.lblApptId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblApptId.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApptId.Location = new System.Drawing.Point(25, 30);
+            this.lblApptId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblApptId.Name = "lblApptId";
+            this.lblApptId.Size = new System.Drawing.Size(560, 35);
+            this.lblApptId.TabIndex = 24;
+            this.lblApptId.Text = "Appointment ID";
+            this.lblApptId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pnlPatientRegistration
             // 
@@ -424,7 +575,7 @@ namespace ClinicManagement_proj.UI
             this.pnlPatientRegistration.Location = new System.Drawing.Point(20, 20);
             this.pnlPatientRegistration.Margin = new System.Windows.Forms.Padding(2);
             this.pnlPatientRegistration.Name = "pnlPatientRegistration";
-            this.pnlPatientRegistration.Size = new System.Drawing.Size(1336, 660);
+            this.pnlPatientRegistration.Size = new System.Drawing.Size(1336, 885);
             this.pnlPatientRegistration.TabIndex = 3;
             this.pnlPatientRegistration.Visible = false;
             // 
@@ -448,7 +599,7 @@ namespace ClinicManagement_proj.UI
             this.dgvRegPatients.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvRegPatients.RowTemplate.Height = 24;
             this.dgvRegPatients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRegPatients.Size = new System.Drawing.Size(720, 670);
+            this.dgvRegPatients.Size = new System.Drawing.Size(720, 895);
             this.dgvRegPatients.TabIndex = 7;
             // 
             // grpPatientRegistration
@@ -456,7 +607,7 @@ namespace ClinicManagement_proj.UI
             this.grpPatientRegistration.Controls.Add(this.layoutPatientButtons);
             this.grpPatientRegistration.Controls.Add(this.txtPPhone);
             this.grpPatientRegistration.Controls.Add(this.lblPPhone);
-            this.grpPatientRegistration.Controls.Add(this.dateDoB);
+            this.grpPatientRegistration.Controls.Add(this.dtpDoB);
             this.grpPatientRegistration.Controls.Add(this.lblDoB);
             this.grpPatientRegistration.Controls.Add(this.txtPatientId);
             this.grpPatientRegistration.Controls.Add(this.lblPatientId);
@@ -472,7 +623,7 @@ namespace ClinicManagement_proj.UI
             this.grpPatientRegistration.Margin = new System.Windows.Forms.Padding(2);
             this.grpPatientRegistration.Name = "grpPatientRegistration";
             this.grpPatientRegistration.Padding = new System.Windows.Forms.Padding(25);
-            this.grpPatientRegistration.Size = new System.Drawing.Size(610, 660);
+            this.grpPatientRegistration.Size = new System.Drawing.Size(610, 885);
             this.grpPatientRegistration.TabIndex = 6;
             this.grpPatientRegistration.TabStop = false;
             this.grpPatientRegistration.Text = "Register Patient";
@@ -621,16 +772,16 @@ namespace ClinicManagement_proj.UI
             this.lblPPhone.Text = "Phone Number";
             this.lblPPhone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // dateDoB
+            // dtpDoB
             // 
-            this.dateDoB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dtpDoB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateDoB.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateDoB.Location = new System.Drawing.Point(24, 248);
-            this.dateDoB.Margin = new System.Windows.Forms.Padding(5, 2, 2, 5);
-            this.dateDoB.Name = "dateDoB";
-            this.dateDoB.Size = new System.Drawing.Size(559, 31);
-            this.dateDoB.TabIndex = 5;
+            this.dtpDoB.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDoB.Location = new System.Drawing.Point(24, 248);
+            this.dtpDoB.Margin = new System.Windows.Forms.Padding(5, 2, 2, 5);
+            this.dtpDoB.Name = "dtpDoB";
+            this.dtpDoB.Size = new System.Drawing.Size(559, 31);
+            this.dtpDoB.TabIndex = 5;
             // 
             // lblDoB
             // 
@@ -811,7 +962,7 @@ namespace ClinicManagement_proj.UI
             this.pnlNotifications.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlNotifications.Location = new System.Drawing.Point(1673, 125);
             this.pnlNotifications.Name = "pnlNotifications";
-            this.pnlNotifications.Size = new System.Drawing.Size(1, 700);
+            this.pnlNotifications.Size = new System.Drawing.Size(1, 925);
             this.pnlNotifications.TabIndex = 1;
             this.pnlNotifications.Visible = false;
             // 
@@ -826,7 +977,7 @@ namespace ClinicManagement_proj.UI
             this.lbNotifications.ItemHeight = 17;
             this.lbNotifications.Location = new System.Drawing.Point(0, 0);
             this.lbNotifications.Name = "lbNotifications";
-            this.lbNotifications.Size = new System.Drawing.Size(0, 629);
+            this.lbNotifications.Size = new System.Drawing.Size(0, 833);
             this.lbNotifications.TabIndex = 0;
             // 
             // timerToast
@@ -854,7 +1005,7 @@ namespace ClinicManagement_proj.UI
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1674, 825);
+            this.ClientSize = new System.Drawing.Size(1674, 1050);
             this.Controls.Add(this.pnlNotifications);
             this.Controls.Add(this.pnlMainContent);
             this.Controls.Add(this.pnlSidebar);
@@ -862,7 +1013,7 @@ namespace ClinicManagement_proj.UI
             this.Font = new System.Drawing.Font("Lucida Sans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(1692, 846);
+            this.MinimumSize = new System.Drawing.Size(1692, 1097);
             this.Name = "ReceptionistDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Receptionist Dashboard";
@@ -870,10 +1021,9 @@ namespace ClinicManagement_proj.UI
             this.pnlSidebarHeader.ResumeLayout(false);
             this.pnlMainContent.ResumeLayout(false);
             this.pnlAppointmentManagement.ResumeLayout(false);
-            this.grpApptMgmt.ResumeLayout(false);
-            this.layoutApptMgmt.ResumeLayout(false);
-            this.layoutApptMgmt.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).EndInit();
+            this.grpApptMgmt.ResumeLayout(false);
+            this.grpApptMgmt.PerformLayout();
             this.layoutApptButtons.ResumeLayout(false);
             this.layoutApptButtons.PerformLayout();
             this.pnlPatientRegistration.ResumeLayout(false);
@@ -907,7 +1057,7 @@ namespace ClinicManagement_proj.UI
         private System.Windows.Forms.Button btnPSearch;
         private System.Windows.Forms.TextBox txtPPhone;
         private System.Windows.Forms.Label lblPPhone;
-        private System.Windows.Forms.DateTimePicker dateDoB;
+        private System.Windows.Forms.DateTimePicker dtpDoB;
         private System.Windows.Forms.Label lblDoB;
         private System.Windows.Forms.TextBox txtMedicalNumber;
         private System.Windows.Forms.Label lblMedicalNumber;
@@ -922,24 +1072,35 @@ namespace ClinicManagement_proj.UI
         private System.Windows.Forms.Panel pnlNotifications;
         private System.Windows.Forms.ListBox lbNotifications;
         private System.Windows.Forms.Timer timerToast;
-        private System.Windows.Forms.Panel pnlAppointmentManagement;
         private System.Windows.Forms.GroupBox grpAppointmentForm;
         private System.Windows.Forms.Label lblAppointmentPlaceholder;
-        private System.Windows.Forms.GroupBox grpApptMgmt;
         private System.Windows.Forms.Button btnPCancel;
         private System.Windows.Forms.Button btnPDisplay;
         private System.Windows.Forms.Button btnPUpdate;
         private System.Windows.Forms.TextBox txtPatientId;
         private System.Windows.Forms.Label lblPatientId;
-        private System.Windows.Forms.TableLayoutPanel layoutApptMgmt;
+        private System.Windows.Forms.Panel pnlAppointmentManagement;
         private System.Windows.Forms.DataGridView dgvAppointments;
+        private System.Windows.Forms.GroupBox grpApptMgmt;
         private System.Windows.Forms.TableLayoutPanel layoutApptButtons;
         private System.Windows.Forms.Button btnApptCreate;
         private System.Windows.Forms.Button btnApptUpdate;
         private System.Windows.Forms.Button btnApptSearch;
-        private System.Windows.Forms.Button btnApptCancel;
         private System.Windows.Forms.Button btnApptDisplay;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnApptCancel;
+        private System.Windows.Forms.Label lblApptDoctor;
+        private System.Windows.Forms.TextBox txtApptDoctor;
+        private System.Windows.Forms.Label lblApptPatient;
+        private System.Windows.Forms.TextBox txtApptPatient;
+        private System.Windows.Forms.Label lblApptDate;
+        private System.Windows.Forms.DateTimePicker dtpApptDate;
+        private System.Windows.Forms.Label lblApptTimeSlot;
+        private System.Windows.Forms.FlowLayoutPanel flpApptTimeSlots;
+        private System.Windows.Forms.Label lblApptNotes;
+        private System.Windows.Forms.TextBox txtApptNotes;
+        private System.Windows.Forms.Label lblApptStatus;
+        private System.Windows.Forms.ComboBox cmbApptStatus;
+        private System.Windows.Forms.Label lblApptId;
+        private System.Windows.Forms.TextBox txtApptId;
     }
 }
