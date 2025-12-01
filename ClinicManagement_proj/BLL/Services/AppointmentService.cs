@@ -26,6 +26,9 @@ namespace ClinicManagement_proj.BLL.Services
                     )
                )
                 throw new UnauthorizedAccessException("Only authorized users can create appointments.");
+
+            appointment.CreatedAt = DateTime.Now;
+            appointment.ModifiedAt = DateTime.Now;
             clinicDb.Appointments.Add(appointment);
             clinicDb.SaveChanges();
             return appointment;
