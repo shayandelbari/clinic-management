@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace ClinicManagement_proj.BLL.DTO
-{
+{ 
     public class AppointmentDTO
     {
         public static int NOTES_MAX_LENGTH = 512;
@@ -46,6 +46,11 @@ namespace ClinicManagement_proj.BLL.DTO
             TimeSlotId = timeSlotId;
             CreatedAt = createdAt;
             ModifiedAt = modifiedAt;
+        }
+
+        public override string ToString()
+        {
+            return $"Appointment on {Date.ToShortDateString()} at {TimeSlot?.ToString() ?? "N/A"} with {Doctor?.ToString() ?? "Unknown Doctor"} for {Patient?.ToString() ?? "Unknown Patient"}";
         }
     }
 }

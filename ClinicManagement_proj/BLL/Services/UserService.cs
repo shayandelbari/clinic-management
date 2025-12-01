@@ -88,10 +88,12 @@ namespace ClinicManagement_proj.BLL.Services
             if (!ClinicManagementApp.CurrentUserHasRole(UserRoles.Administrator))
                 throw new UnauthorizedAccessException("Only Admin users can create new users.");
 
-            if (clinicDb.Users.Any(u => u.Username == user.Username))
+            if (clinicDb.Users.Any(u => u.Username.ToLower() == user.Username.ToLower()))
                 throw new ArgumentException("Username already exists");
 
             user.PasswordHash = HashPassword(password);
+            user.CreatedAt = DateTime.Now;
+            user.ModifiedAt = DateTime.Now;
             clinicDb.Users.Add(user);
             clinicDb.SaveChanges();
         }

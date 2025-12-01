@@ -58,6 +58,11 @@ namespace ClinicManagement_proj.UI
             this.panel = panel;
         }
 
+        public PatientRegistrationController(Panel pnlPatientRegistration)
+        {
+            this.panel = pnlPatientRegistration;
+        }
+
         public void Initialize()
         {
             btnPatientCreate.Click += new EventHandler(btnPatientCreate_Click);
@@ -140,7 +145,7 @@ namespace ClinicManagement_proj.UI
 
         private void btnPatientSearch_Click(object sender, EventArgs e)
         {
-            ResetPatientForm();
+            
             if (!int.TryParse(txtPatientId.Text, out int id))
             {
                 MessageBox.Show("Enter a valid Patient ID.");
@@ -155,6 +160,7 @@ namespace ClinicManagement_proj.UI
 
                 return;
             }
+            ResetPatientForm();
 
             txtPatientId.Text = result.Id.ToString();
             txtPFName.Text = result.FirstName;

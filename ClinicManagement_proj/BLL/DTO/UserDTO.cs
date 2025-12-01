@@ -25,8 +25,8 @@ namespace ClinicManagement_proj.BLL.DTO
             get { return _passwordHash; }
             set { _passwordHash = ValidatePasswordHash(value); }
         }
-        public DateTime CreatedAt { get; set; } = DateTime.Now;
-        public DateTime ModifiedAt { get; set; } = DateTime.Now;
+        public DateTime CreatedAt { get; set; }
+        public DateTime ModifiedAt { get; set; }
         public ICollection<RoleDTO> Roles { get; set; }
 
         public UserDTO()
@@ -75,30 +75,6 @@ namespace ClinicManagement_proj.BLL.DTO
             if (!Regex.IsMatch(password, @"[\W_]"))
                 throw new ArgumentException("Password must contain at least one special character.");
             return password;
-        }
-
-        public UserDTO(string username, string passwordHash, ICollection<RoleDTO> roles = null)
-        {
-            Username = username;
-            PasswordHash = passwordHash;
-            Roles = roles ?? new List<RoleDTO>();
-        }
-
-        public UserDTO(int id, string username, string passwordHash, ICollection<RoleDTO> roles = null)
-        {
-            Id = id;
-            Username = username;
-            PasswordHash = passwordHash;
-            Roles = roles ?? new List<RoleDTO>();
-        }
-
-        public UserDTO(int id, string username, string passwordHash, DateTime createdAt)
-        {
-            Id = id;
-            Username = username;
-            PasswordHash = passwordHash;
-            CreatedAt = createdAt;
-            Roles = new List<RoleDTO>();
         }
 
         public override string ToString()

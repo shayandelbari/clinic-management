@@ -1,4 +1,5 @@
 ﻿using ClinicManagement_proj.BLL.Utils;
+using ClinicManagement_proj.BLL;
 using System;
 using System.Drawing;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace ClinicManagement_proj.UI
 
         private NavigationManager navigationManager;
         private PatientRegistrationController patientRegistrationController;
-        private AppointmentManagementController appointmentManagementController;
+        private ApptMgmtController appointmentManagementController;
 
         public ReceptionistDashboard()
         {
@@ -33,8 +34,8 @@ namespace ClinicManagement_proj.UI
             navigationManager = new NavigationManager(SIDEBAR_BG, SIDEBAR_ACTIVE);
 
             // Initialize panel controllers
-            patientRegistrationController = new PatientRegistrationController(pnlPatientRegistration);
-            appointmentManagementController = new AppointmentManagementController(pnlAppointmentManagement);
+            patientRegistrationController = new PatientRegistrationController(pnlPatientRegistration, ClinicManagementApp.PatientService );
+            appointmentManagementController = new ApptMgmtController(pnlAppointmentManagement);
         }
 
         /// <summary>
