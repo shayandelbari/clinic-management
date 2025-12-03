@@ -2,6 +2,7 @@ using ClinicManagement_proj.BLL;
 using ClinicManagement_proj.BLL.DTO;
 using ClinicManagement_proj.BLL.Services;
 using System;
+using System.Data.Common;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -83,6 +84,8 @@ namespace ClinicManagement_proj.UI
             var users = patientService.GetAllPatients();
             dgvPatients.DataSource = users;
             dgvPatients.AutoGenerateColumns = true;
+
+            dgvPatients.Columns["Appointments"].Visible = false;
         }
 
 

@@ -101,13 +101,9 @@ namespace ClinicManagement_proj.UI
             dgvDoctors.Columns["ModifiedAt"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dgvDoctors.Columns["ModifiedAt"].DisplayIndex = 5;
 
-            dgvDoctors.Columns["Appointments"].HeaderText = "Appointments";
-            dgvDoctors.Columns["Appointments"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dgvDoctors.Columns["Appointments"].DisplayIndex = 6;
+            dgvDoctors.Columns["Appointments"].Visible = false;
 
-            dgvDoctors.Columns["DoctorSchedules"].HeaderText = "Doctor Schedules";
-            dgvDoctors.Columns["DoctorSchedules"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dgvDoctors.Columns["DoctorSchedules"].DisplayIndex = 7;
+            dgvDoctors.Columns["DoctorSchedules"].Visible = false;
 
             dgvDoctors.Columns["Specialties"].HeaderText = "Specialties";
             dgvDoctors.Columns["Specialties"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
