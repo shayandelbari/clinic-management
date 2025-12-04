@@ -19,6 +19,17 @@
           <Property Name="CreatedAt" Type="datetime2" Precision="7" Nullable="false" />
           <Property Name="ModifiedAt" Type="datetime2" Precision="7" Nullable="false" />
         </EntityType>
+        <EntityType Name="Audit_Appointment">
+          <Key>
+            <PropertyRef Name="AuditId" />
+          </Key>
+          <Property Name="AuditId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AppointmentId" Type="int" Nullable="false" />
+          <Property Name="PatientName" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="DoctorName" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="NewStatus" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="AuditDate" Type="datetime2" Precision="7" Nullable="false" />
+        </EntityType>
         <EntityType Name="Doctor">
           <Key>
             <PropertyRef Name="Id" />
@@ -325,6 +336,7 @@ warning 6002: The table/view 'HealthCareClinicDB_T2.dbo.vw_UpcomingAppointments'
         </Function>
         <EntityContainer Name="HealthCareClinicDB_T2ModelStoreContainer">
           <EntitySet Name="Appointment" EntityType="Self.Appointment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Audit_Appointment" EntityType="Self.Audit_Appointment" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Doctor" EntityType="Self.Doctor" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DoctorSchedule" EntityType="Self.DoctorSchedule" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DoctorSpecialties" EntityType="Self.DoctorSpecialties" Schema="dbo" store:Type="Tables" />
@@ -460,6 +472,17 @@ warning 6002: The table/view 'HealthCareClinicDB_T2.dbo.vw_UpcomingAppointments'
           <NavigationProperty Name="Doctor" Relationship="Self.FK_Appointment_Doctor" FromRole="Appointment" ToRole="Doctor" />
           <NavigationProperty Name="Patient" Relationship="Self.FK_Appointment_Patient" FromRole="Appointment" ToRole="Patient" />
           <NavigationProperty Name="TimeSlot" Relationship="Self.FK_Appointment_TimeSlot" FromRole="Appointment" ToRole="TimeSlots" />
+        </EntityType>
+        <EntityType Name="Audit_Appointment">
+          <Key>
+            <PropertyRef Name="AuditId" />
+          </Key>
+          <Property Name="AuditId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AppointmentId" Type="Int32" Nullable="false" />
+          <Property Name="PatientName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DoctorName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NewStatus" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AuditDate" Type="DateTime" Nullable="false" Precision="7" />
         </EntityType>
         <EntityType Name="Doctor">
           <Key>
@@ -700,6 +723,7 @@ warning 6002: The table/view 'HealthCareClinicDB_T2.dbo.vw_UpcomingAppointments'
         </Association>
         <EntityContainer Name="HealthCareClinicDB_T2Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Appointments" EntityType="Self.Appointment" />
+          <EntitySet Name="Audit_Appointment" EntityType="Self.Audit_Appointment" />
           <EntitySet Name="Doctors" EntityType="Self.Doctor" />
           <EntitySet Name="DoctorSchedules" EntityType="Self.DoctorSchedule" />
           <EntitySet Name="Patients" EntityType="Self.Patient" />
@@ -768,6 +792,18 @@ warning 6002: The table/view 'HealthCareClinicDB_T2.dbo.vw_UpcomingAppointments'
                 <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
                 <ScalarProperty Name="ModifiedAt" ColumnName="ModifiedAt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Audit_Appointment">
+            <EntityTypeMapping TypeName="HealthCareClinicDB_T2Model.Audit_Appointment">
+              <MappingFragment StoreEntitySet="Audit_Appointment">
+                <ScalarProperty Name="AuditId" ColumnName="AuditId" />
+                <ScalarProperty Name="AppointmentId" ColumnName="AppointmentId" />
+                <ScalarProperty Name="PatientName" ColumnName="PatientName" />
+                <ScalarProperty Name="DoctorName" ColumnName="DoctorName" />
+                <ScalarProperty Name="NewStatus" ColumnName="NewStatus" />
+                <ScalarProperty Name="AuditDate" ColumnName="AuditDate" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

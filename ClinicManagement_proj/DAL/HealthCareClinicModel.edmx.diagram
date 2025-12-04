@@ -4,8 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="3bc733d841644812a80510af611219fa" Name="Diagram1">
+      <Diagram DiagramId="e9e8e3c4e68847deaa7fcdc17bcb9480" Name="Diagram1">
         <EntityTypeShape EntityType="HealthCareClinicDB_T2Model.Appointment" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthCareClinicDB_T2Model.Audit_Appointment" Width="1.5" PointX="5.75" PointY="5.375" IsExpanded="true" />
         <EntityTypeShape EntityType="HealthCareClinicDB_T2Model.Doctor" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="HealthCareClinicDB_T2Model.DoctorSchedule" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
         <EntityTypeShape EntityType="HealthCareClinicDB_T2Model.Patient" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
@@ -13,10 +14,10 @@
         <EntityTypeShape EntityType="HealthCareClinicDB_T2Model.Specialty" Width="1.5" PointX="3" PointY="11.375" IsExpanded="true" />
         <EntityTypeShape EntityType="HealthCareClinicDB_T2Model.TimeSlot" Width="1.5" PointX="0.75" PointY="9.25" IsExpanded="true" />
         <EntityTypeShape EntityType="HealthCareClinicDB_T2Model.User" Width="1.5" PointX="8" PointY="1.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="HealthCareClinicDB_T2Model.vw_DoctorTodaySchedule" Width="1.5" PointX="5.75" PointY="5.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="HealthCareClinicDB_T2Model.vw_PatientClinicalSummary" Width="1.5" PointX="7.75" PointY="5.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="HealthCareClinicDB_T2Model.vw_PatientRecordsSummary" Width="1.5" PointX="7.75" PointY="9.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="HealthCareClinicDB_T2Model.vw_UpcomingAppointments" Width="1.5" PointX="9.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthCareClinicDB_T2Model.vw_DoctorTodaySchedule" Width="1.5" PointX="7.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthCareClinicDB_T2Model.vw_PatientClinicalSummary" Width="1.5" PointX="9.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthCareClinicDB_T2Model.vw_PatientRecordsSummary" Width="1.5" PointX="5.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthCareClinicDB_T2Model.vw_UpcomingAppointments" Width="1.5" PointX="7.75" PointY="10.375" IsExpanded="true" />
         <AssociationConnector Association="HealthCareClinicDB_T2Model.FK_Appointment_Doctor" ManuallyRouted="false" />
         <AssociationConnector Association="HealthCareClinicDB_T2Model.FK_Appointment_Patient" ManuallyRouted="false" />
         <AssociationConnector Association="HealthCareClinicDB_T2Model.FK_Appointment_TimeSlot" ManuallyRouted="false" />

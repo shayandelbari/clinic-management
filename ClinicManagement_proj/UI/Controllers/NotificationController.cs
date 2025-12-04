@@ -79,7 +79,6 @@ namespace ClinicManagement_proj.UI
 
         public void OnHide()
         {
-            throw new NotImplementedException();
         }
     }
 }

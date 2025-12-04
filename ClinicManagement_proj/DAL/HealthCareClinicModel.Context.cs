@@ -28,6 +28,7 @@ namespace ClinicManagement_proj.DAL
         }
     
         public virtual DbSet<Appointment> Appointments { get; set; }
+        public virtual DbSet<Audit_Appointment> Audit_Appointment { get; set; }
         public virtual DbSet<Doctor> Doctors { get; set; }
         public virtual DbSet<DoctorSchedule> DoctorSchedules { get; set; }
         public virtual DbSet<Patient> Patients { get; set; }

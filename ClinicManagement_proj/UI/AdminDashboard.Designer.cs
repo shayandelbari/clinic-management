@@ -38,7 +38,14 @@ namespace ClinicManagement_proj.UI
             this.lblHeader = new System.Windows.Forms.Label();
             this.pnlSidebar = new System.Windows.Forms.Panel();
             this.pnlLogout = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.lblLogout = new System.Windows.Forms.Label();
+            this.btnAppointmentManagement = new System.Windows.Forms.Button();
+            this.btnPatientRegistration = new System.Windows.Forms.Button();
+            this.btnDoctorScheduling = new System.Windows.Forms.Button();
+            this.btnDoctorManagement = new System.Windows.Forms.Button();
+            this.btnUserManagement = new System.Windows.Forms.Button();
+            this.btnReports = new System.Windows.Forms.Button();
             this.pnlSidebarHeader = new System.Windows.Forms.Panel();
             this.lblSidebarTitle = new System.Windows.Forms.Label();
             this.pnlMainContent = new System.Windows.Forms.Panel();
@@ -188,21 +195,14 @@ namespace ClinicManagement_proj.UI
             this.txtPFName = new System.Windows.Forms.TextBox();
             this.lblPFName = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.pnlNotificationsTop = new System.Windows.Forms.Panel();
+            this.btnNotifications = new System.Windows.Forms.Button();
+            this.lblToast = new System.Windows.Forms.Label();
+            this.lblNotificationsTitle = new System.Windows.Forms.Label();
             this.pnlNotifications = new System.Windows.Forms.Panel();
             this.timerToast = new System.Windows.Forms.Timer(this.components);
             this.grpAppointmentForm = new System.Windows.Forms.GroupBox();
             this.lblAppointmentPlaceholder = new System.Windows.Forms.Label();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.btnAppointmentManagement = new System.Windows.Forms.Button();
-            this.btnPatientRegistration = new System.Windows.Forms.Button();
-            this.btnDoctorScheduling = new System.Windows.Forms.Button();
-            this.btnDoctorManagement = new System.Windows.Forms.Button();
-            this.btnUserManagement = new System.Windows.Forms.Button();
-            this.btnReports = new System.Windows.Forms.Button();
-            this.btnNotifications = new System.Windows.Forms.Button();
-            this.pnlNotificationsTop = new System.Windows.Forms.Panel();
-            this.lblToast = new System.Windows.Forms.Label();
-            this.lblNotificationsTitle = new System.Windows.Forms.Label();
             this.pnlSidebar.SuspendLayout();
             this.pnlLogout.SuspendLayout();
             this.pnlSidebarHeader.SuspendLayout();
@@ -297,6 +297,22 @@ namespace ClinicManagement_proj.UI
             this.pnlLogout.Size = new System.Drawing.Size(298, 102);
             this.pnlLogout.TabIndex = 5;
             // 
+            // btnLogout
+            // 
+            this.btnLogout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Image = global::ClinicManagement_proj.Properties.Resources.logout_icon;
+            this.btnLogout.Location = new System.Drawing.Point(217, 20);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(0);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(61, 62);
+            this.btnLogout.TabIndex = 3;
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // lblLogout
             // 
             this.lblLogout.BackColor = System.Drawing.Color.Transparent;
@@ -309,6 +325,132 @@ namespace ClinicManagement_proj.UI
             this.lblLogout.TabIndex = 4;
             this.lblLogout.Text = "Welcome, [USER]";
             this.lblLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnAppointmentManagement
+            // 
+            this.btnAppointmentManagement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnAppointmentManagement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAppointmentManagement.FlatAppearance.BorderSize = 0;
+            this.btnAppointmentManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAppointmentManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAppointmentManagement.ForeColor = System.Drawing.Color.White;
+            this.btnAppointmentManagement.Image = global::ClinicManagement_proj.Properties.Resources.appointment_icon;
+            this.btnAppointmentManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAppointmentManagement.Location = new System.Drawing.Point(0, 400);
+            this.btnAppointmentManagement.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAppointmentManagement.Name = "btnAppointmentManagement";
+            this.btnAppointmentManagement.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnAppointmentManagement.Size = new System.Drawing.Size(298, 70);
+            this.btnAppointmentManagement.TabIndex = 6;
+            this.btnAppointmentManagement.Text = "    Appointments";
+            this.btnAppointmentManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAppointmentManagement.UseVisualStyleBackColor = false;
+            this.btnAppointmentManagement.Click += new System.EventHandler(this.btnAppointmentManagement_Click);
+            // 
+            // btnPatientRegistration
+            // 
+            this.btnPatientRegistration.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnPatientRegistration.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPatientRegistration.FlatAppearance.BorderSize = 0;
+            this.btnPatientRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPatientRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPatientRegistration.ForeColor = System.Drawing.Color.White;
+            this.btnPatientRegistration.Image = global::ClinicManagement_proj.Properties.Resources.patient_icon;
+            this.btnPatientRegistration.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPatientRegistration.Location = new System.Drawing.Point(0, 330);
+            this.btnPatientRegistration.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPatientRegistration.Name = "btnPatientRegistration";
+            this.btnPatientRegistration.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnPatientRegistration.Size = new System.Drawing.Size(298, 70);
+            this.btnPatientRegistration.TabIndex = 4;
+            this.btnPatientRegistration.Text = "    Patient Registration";
+            this.btnPatientRegistration.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPatientRegistration.UseVisualStyleBackColor = false;
+            this.btnPatientRegistration.Click += new System.EventHandler(this.btnPatientRegistration_Click);
+            // 
+            // btnDoctorScheduling
+            // 
+            this.btnDoctorScheduling.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnDoctorScheduling.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDoctorScheduling.FlatAppearance.BorderSize = 0;
+            this.btnDoctorScheduling.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDoctorScheduling.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoctorScheduling.ForeColor = System.Drawing.Color.White;
+            this.btnDoctorScheduling.Image = global::ClinicManagement_proj.Properties.Resources.schedule_icon;
+            this.btnDoctorScheduling.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDoctorScheduling.Location = new System.Drawing.Point(0, 260);
+            this.btnDoctorScheduling.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDoctorScheduling.Name = "btnDoctorScheduling";
+            this.btnDoctorScheduling.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnDoctorScheduling.Size = new System.Drawing.Size(298, 70);
+            this.btnDoctorScheduling.TabIndex = 5;
+            this.btnDoctorScheduling.Text = "    Doctor Scheduling";
+            this.btnDoctorScheduling.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDoctorScheduling.UseVisualStyleBackColor = false;
+            this.btnDoctorScheduling.Click += new System.EventHandler(this.btnDoctorScheduling_Click);
+            // 
+            // btnDoctorManagement
+            // 
+            this.btnDoctorManagement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnDoctorManagement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDoctorManagement.FlatAppearance.BorderSize = 0;
+            this.btnDoctorManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDoctorManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoctorManagement.ForeColor = System.Drawing.Color.White;
+            this.btnDoctorManagement.Image = global::ClinicManagement_proj.Properties.Resources.doctor_icon;
+            this.btnDoctorManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDoctorManagement.Location = new System.Drawing.Point(0, 190);
+            this.btnDoctorManagement.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDoctorManagement.Name = "btnDoctorManagement";
+            this.btnDoctorManagement.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnDoctorManagement.Size = new System.Drawing.Size(298, 70);
+            this.btnDoctorManagement.TabIndex = 3;
+            this.btnDoctorManagement.Text = "    Doctor Management";
+            this.btnDoctorManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDoctorManagement.UseVisualStyleBackColor = false;
+            this.btnDoctorManagement.Click += new System.EventHandler(this.btnDoctorManagement_Click);
+            // 
+            // btnUserManagement
+            // 
+            this.btnUserManagement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.btnUserManagement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUserManagement.FlatAppearance.BorderSize = 0;
+            this.btnUserManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUserManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUserManagement.ForeColor = System.Drawing.Color.White;
+            this.btnUserManagement.Image = global::ClinicManagement_proj.Properties.Resources.users_icon;
+            this.btnUserManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUserManagement.Location = new System.Drawing.Point(0, 120);
+            this.btnUserManagement.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUserManagement.Name = "btnUserManagement";
+            this.btnUserManagement.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnUserManagement.Size = new System.Drawing.Size(298, 70);
+            this.btnUserManagement.TabIndex = 2;
+            this.btnUserManagement.Text = "    User Management";
+            this.btnUserManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUserManagement.UseVisualStyleBackColor = false;
+            this.btnUserManagement.Click += new System.EventHandler(this.btnUserManagement_Click);
+            // 
+            // btnReports
+            // 
+            this.btnReports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnReports.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReports.FlatAppearance.BorderSize = 0;
+            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReports.ForeColor = System.Drawing.Color.White;
+            this.btnReports.Image = global::ClinicManagement_proj.Properties.Resources.reports_icon;
+            this.btnReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReports.Location = new System.Drawing.Point(0, 50);
+            this.btnReports.Margin = new System.Windows.Forms.Padding(1);
+            this.btnReports.Name = "btnReports";
+            this.btnReports.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnReports.Size = new System.Drawing.Size(298, 70);
+            this.btnReports.TabIndex = 1;
+            this.btnReports.Text = "    Reports";
+            this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReports.UseVisualStyleBackColor = false;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // pnlSidebarHeader
             // 
@@ -2542,6 +2684,65 @@ namespace ClinicManagement_proj.UI
             this.pnlHeader.Size = new System.Drawing.Size(1580, 125);
             this.pnlHeader.TabIndex = 4;
             // 
+            // pnlNotificationsTop
+            // 
+            this.pnlNotificationsTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.pnlNotificationsTop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlNotificationsTop.Controls.Add(this.btnNotifications);
+            this.pnlNotificationsTop.Controls.Add(this.lblToast);
+            this.pnlNotificationsTop.Controls.Add(this.lblNotificationsTitle);
+            this.pnlNotificationsTop.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlNotificationsTop.ForeColor = System.Drawing.Color.White;
+            this.pnlNotificationsTop.Location = new System.Drawing.Point(684, 0);
+            this.pnlNotificationsTop.Name = "pnlNotificationsTop";
+            this.pnlNotificationsTop.Size = new System.Drawing.Size(896, 125);
+            this.pnlNotificationsTop.TabIndex = 3;
+            // 
+            // btnNotifications
+            // 
+            this.btnNotifications.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnNotifications.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNotifications.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNotifications.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnNotifications.Image = global::ClinicManagement_proj.Properties.Resources.notifications_icon;
+            this.btnNotifications.Location = new System.Drawing.Point(799, 30);
+            this.btnNotifications.Margin = new System.Windows.Forms.Padding(2, 30, 2, 2);
+            this.btnNotifications.Name = "btnNotifications";
+            this.btnNotifications.Size = new System.Drawing.Size(95, 93);
+            this.btnNotifications.TabIndex = 0;
+            this.btnNotifications.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnNotifications.UseVisualStyleBackColor = false;
+            this.btnNotifications.Click += new System.EventHandler(this.btnNotifications_Click);
+            // 
+            // lblToast
+            // 
+            this.lblToast.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.lblToast.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblToast.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.lblToast.ForeColor = System.Drawing.Color.White;
+            this.lblToast.Location = new System.Drawing.Point(0, 30);
+            this.lblToast.Name = "lblToast";
+            this.lblToast.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.lblToast.Size = new System.Drawing.Size(894, 93);
+            this.lblToast.TabIndex = 0;
+            this.lblToast.Text = "Error message will appear here";
+            this.lblToast.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblToast.Visible = false;
+            // 
+            // lblNotificationsTitle
+            // 
+            this.lblNotificationsTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.lblNotificationsTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblNotificationsTitle.Font = new System.Drawing.Font("Lucida Sans", 11F, System.Drawing.FontStyle.Bold);
+            this.lblNotificationsTitle.ForeColor = System.Drawing.Color.White;
+            this.lblNotificationsTitle.Location = new System.Drawing.Point(0, 0);
+            this.lblNotificationsTitle.Name = "lblNotificationsTitle";
+            this.lblNotificationsTitle.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
+            this.lblNotificationsTitle.Size = new System.Drawing.Size(894, 30);
+            this.lblNotificationsTitle.TabIndex = 1;
+            this.lblNotificationsTitle.Text = "📢 System Notifications";
+            // 
             // pnlNotifications
             // 
             this.pnlNotifications.BackColor = System.Drawing.Color.White;
@@ -2573,207 +2774,6 @@ namespace ClinicManagement_proj.UI
             this.lblAppointmentPlaceholder.Name = "lblAppointmentPlaceholder";
             this.lblAppointmentPlaceholder.Size = new System.Drawing.Size(100, 23);
             this.lblAppointmentPlaceholder.TabIndex = 0;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Image = global::ClinicManagement_proj.Properties.Resources.logout_icon;
-            this.btnLogout.Location = new System.Drawing.Point(217, 20);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(0);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(61, 62);
-            this.btnLogout.TabIndex = 3;
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // btnAppointmentManagement
-            // 
-            this.btnAppointmentManagement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnAppointmentManagement.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAppointmentManagement.FlatAppearance.BorderSize = 0;
-            this.btnAppointmentManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAppointmentManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAppointmentManagement.ForeColor = System.Drawing.Color.White;
-            this.btnAppointmentManagement.Image = global::ClinicManagement_proj.Properties.Resources.appointment_icon;
-            this.btnAppointmentManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAppointmentManagement.Location = new System.Drawing.Point(0, 400);
-            this.btnAppointmentManagement.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAppointmentManagement.Name = "btnAppointmentManagement";
-            this.btnAppointmentManagement.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnAppointmentManagement.Size = new System.Drawing.Size(298, 70);
-            this.btnAppointmentManagement.TabIndex = 6;
-            this.btnAppointmentManagement.Text = "    Appointments";
-            this.btnAppointmentManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAppointmentManagement.UseVisualStyleBackColor = false;
-            this.btnAppointmentManagement.Click += new System.EventHandler(this.btnAppointmentManagement_Click);
-            // 
-            // btnPatientRegistration
-            // 
-            this.btnPatientRegistration.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnPatientRegistration.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPatientRegistration.FlatAppearance.BorderSize = 0;
-            this.btnPatientRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPatientRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPatientRegistration.ForeColor = System.Drawing.Color.White;
-            this.btnPatientRegistration.Image = global::ClinicManagement_proj.Properties.Resources.patient_icon;
-            this.btnPatientRegistration.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPatientRegistration.Location = new System.Drawing.Point(0, 330);
-            this.btnPatientRegistration.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPatientRegistration.Name = "btnPatientRegistration";
-            this.btnPatientRegistration.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnPatientRegistration.Size = new System.Drawing.Size(298, 70);
-            this.btnPatientRegistration.TabIndex = 4;
-            this.btnPatientRegistration.Text = "    Patient Registration";
-            this.btnPatientRegistration.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPatientRegistration.UseVisualStyleBackColor = false;
-            this.btnPatientRegistration.Click += new System.EventHandler(this.btnPatientRegistration_Click);
-            // 
-            // btnDoctorScheduling
-            // 
-            this.btnDoctorScheduling.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnDoctorScheduling.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDoctorScheduling.FlatAppearance.BorderSize = 0;
-            this.btnDoctorScheduling.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDoctorScheduling.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoctorScheduling.ForeColor = System.Drawing.Color.White;
-            this.btnDoctorScheduling.Image = global::ClinicManagement_proj.Properties.Resources.schedule_icon;
-            this.btnDoctorScheduling.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDoctorScheduling.Location = new System.Drawing.Point(0, 260);
-            this.btnDoctorScheduling.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDoctorScheduling.Name = "btnDoctorScheduling";
-            this.btnDoctorScheduling.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnDoctorScheduling.Size = new System.Drawing.Size(298, 70);
-            this.btnDoctorScheduling.TabIndex = 5;
-            this.btnDoctorScheduling.Text = "    Doctor Scheduling";
-            this.btnDoctorScheduling.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDoctorScheduling.UseVisualStyleBackColor = false;
-            this.btnDoctorScheduling.Click += new System.EventHandler(this.btnDoctorScheduling_Click);
-            // 
-            // btnDoctorManagement
-            // 
-            this.btnDoctorManagement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnDoctorManagement.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDoctorManagement.FlatAppearance.BorderSize = 0;
-            this.btnDoctorManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDoctorManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoctorManagement.ForeColor = System.Drawing.Color.White;
-            this.btnDoctorManagement.Image = global::ClinicManagement_proj.Properties.Resources.doctor_icon;
-            this.btnDoctorManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDoctorManagement.Location = new System.Drawing.Point(0, 190);
-            this.btnDoctorManagement.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDoctorManagement.Name = "btnDoctorManagement";
-            this.btnDoctorManagement.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnDoctorManagement.Size = new System.Drawing.Size(298, 70);
-            this.btnDoctorManagement.TabIndex = 3;
-            this.btnDoctorManagement.Text = "    Doctor Management";
-            this.btnDoctorManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDoctorManagement.UseVisualStyleBackColor = false;
-            this.btnDoctorManagement.Click += new System.EventHandler(this.btnDoctorManagement_Click);
-            // 
-            // btnUserManagement
-            // 
-            this.btnUserManagement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.btnUserManagement.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUserManagement.FlatAppearance.BorderSize = 0;
-            this.btnUserManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUserManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUserManagement.ForeColor = System.Drawing.Color.White;
-            this.btnUserManagement.Image = global::ClinicManagement_proj.Properties.Resources.users_icon;
-            this.btnUserManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUserManagement.Location = new System.Drawing.Point(0, 120);
-            this.btnUserManagement.Margin = new System.Windows.Forms.Padding(2);
-            this.btnUserManagement.Name = "btnUserManagement";
-            this.btnUserManagement.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnUserManagement.Size = new System.Drawing.Size(298, 70);
-            this.btnUserManagement.TabIndex = 2;
-            this.btnUserManagement.Text = "    User Management";
-            this.btnUserManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUserManagement.UseVisualStyleBackColor = false;
-            this.btnUserManagement.Click += new System.EventHandler(this.btnUserManagement_Click);
-            // 
-            // btnReports
-            // 
-            this.btnReports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnReports.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReports.FlatAppearance.BorderSize = 0;
-            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReports.ForeColor = System.Drawing.Color.White;
-            this.btnReports.Image = global::ClinicManagement_proj.Properties.Resources.reports_icon;
-            this.btnReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReports.Location = new System.Drawing.Point(0, 50);
-            this.btnReports.Margin = new System.Windows.Forms.Padding(1);
-            this.btnReports.Name = "btnReports";
-            this.btnReports.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnReports.Size = new System.Drawing.Size(298, 70);
-            this.btnReports.TabIndex = 1;
-            this.btnReports.Text = "    Reports";
-            this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReports.UseVisualStyleBackColor = false;
-            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
-            // 
-            // btnNotifications
-            // 
-            this.btnNotifications.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnNotifications.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNotifications.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNotifications.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btnNotifications.Image = global::ClinicManagement_proj.Properties.Resources.notifications_icon;
-            this.btnNotifications.Location = new System.Drawing.Point(799, 30);
-            this.btnNotifications.Margin = new System.Windows.Forms.Padding(2, 30, 2, 2);
-            this.btnNotifications.Name = "btnNotifications";
-            this.btnNotifications.Size = new System.Drawing.Size(95, 93);
-            this.btnNotifications.TabIndex = 0;
-            this.btnNotifications.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnNotifications.UseVisualStyleBackColor = false;
-            this.btnNotifications.Click += new System.EventHandler(this.btnNotifications_Click);
-            // 
-            // pnlNotificationsTop
-            // 
-            this.pnlNotificationsTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.pnlNotificationsTop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlNotificationsTop.Controls.Add(this.btnNotifications);
-            this.pnlNotificationsTop.Controls.Add(this.lblToast);
-            this.pnlNotificationsTop.Controls.Add(this.lblNotificationsTitle);
-            this.pnlNotificationsTop.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlNotificationsTop.ForeColor = System.Drawing.Color.White;
-            this.pnlNotificationsTop.Location = new System.Drawing.Point(684, 0);
-            this.pnlNotificationsTop.Name = "pnlNotificationsTop";
-            this.pnlNotificationsTop.Size = new System.Drawing.Size(896, 125);
-            this.pnlNotificationsTop.TabIndex = 3;
-            // 
-            // lblToast
-            // 
-            this.lblToast.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.lblToast.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblToast.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
-            this.lblToast.ForeColor = System.Drawing.Color.White;
-            this.lblToast.Location = new System.Drawing.Point(0, 30);
-            this.lblToast.Name = "lblToast";
-            this.lblToast.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.lblToast.Size = new System.Drawing.Size(894, 93);
-            this.lblToast.TabIndex = 0;
-            this.lblToast.Text = "Error message will appear here";
-            this.lblToast.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblToast.Visible = false;
-            // 
-            // lblNotificationsTitle
-            // 
-            this.lblNotificationsTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.lblNotificationsTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblNotificationsTitle.Font = new System.Drawing.Font("Lucida Sans", 11F, System.Drawing.FontStyle.Bold);
-            this.lblNotificationsTitle.ForeColor = System.Drawing.Color.White;
-            this.lblNotificationsTitle.Location = new System.Drawing.Point(0, 0);
-            this.lblNotificationsTitle.Name = "lblNotificationsTitle";
-            this.lblNotificationsTitle.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.lblNotificationsTitle.Size = new System.Drawing.Size(894, 30);
-            this.lblNotificationsTitle.TabIndex = 1;
-            this.lblNotificationsTitle.Text = "📢 System Notifications";
             // 
             // AdminDashboard
             // 

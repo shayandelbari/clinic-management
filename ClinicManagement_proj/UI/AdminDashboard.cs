@@ -45,7 +45,6 @@ namespace ClinicManagement_proj.UI
             patientRegistrationController = new PatientRegistrationController(pnlPatientRegistration);
             reportsController = new ReportsController(pnlReports);
             appointmentManagementController = new ApptMgmtController(pnlAppointmentManagement);
-            notificationController = new NotificationsController(pnlNotification);
         }
         
 
@@ -60,7 +59,6 @@ namespace ClinicManagement_proj.UI
             navigationManager.RegisterPanel(btnPatientRegistration, patientRegistrationController);
             navigationManager.RegisterPanel(btnReports, reportsController);
             navigationManager.RegisterPanel(btnAppointmentManagement, appointmentManagementController);
-            navigationManager.RegisterPanel(btnNotification, notificationController);
 
 
             navigationManager.InitializeAll();
@@ -197,11 +195,6 @@ namespace ClinicManagement_proj.UI
         /// </summary>
         private void RefreshNotificationsList()
         {
-            lbNotifications.Items.Clear();
-            foreach (var n in NotificationManager.GetActiveNotifications().OrderByDescending(n => n.Timestamp))
-            {
-                lbNotifications.Items.Add($"{n.Timestamp:HH:mm:ss} - {n.Type}: {n.Message}");
-            }
         }
 
         /// <summary>
