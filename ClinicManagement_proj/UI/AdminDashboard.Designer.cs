@@ -200,6 +200,7 @@ namespace ClinicManagement_proj.UI
             this.lblToast = new System.Windows.Forms.Label();
             this.lblNotificationsTitle = new System.Windows.Forms.Label();
             this.pnlNotifications = new System.Windows.Forms.Panel();
+            this.flowLayoutPanelNotifications = new System.Windows.Forms.FlowLayoutPanel();
             this.timerToast = new System.Windows.Forms.Timer(this.components);
             this.grpAppointmentForm = new System.Windows.Forms.GroupBox();
             this.lblAppointmentPlaceholder = new System.Windows.Forms.Label();
@@ -247,6 +248,7 @@ namespace ClinicManagement_proj.UI
             this.layoutPatientButtons.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             this.pnlNotificationsTop.SuspendLayout();
+            this.pnlNotifications.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblHeader
@@ -324,7 +326,7 @@ namespace ClinicManagement_proj.UI
             this.lblLogout.Size = new System.Drawing.Size(197, 62);
             this.lblLogout.TabIndex = 4;
             this.lblLogout.Text = "Welcome, [USER]";
-            this.lblLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnAppointmentManagement
             // 
@@ -536,11 +538,11 @@ namespace ClinicManagement_proj.UI
             // 
             this.dgvDoctorTodaySchedule.AllowUserToAddRows = false;
             this.dgvDoctorTodaySchedule.AllowUserToDeleteRows = false;
-            this.dgvDoctorTodaySchedule.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDoctorTodaySchedule.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvDoctorTodaySchedule.BackgroundColor = System.Drawing.Color.White;
             this.dgvDoctorTodaySchedule.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDoctorTodaySchedule.ColumnHeadersHeight = 40;
-            this.dgvDoctorTodaySchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvDoctorTodaySchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDoctorTodaySchedule.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDoctorTodaySchedule.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvDoctorTodaySchedule.Location = new System.Drawing.Point(2, 82);
@@ -608,11 +610,11 @@ namespace ClinicManagement_proj.UI
             // 
             this.dgvPatientRecords.AllowUserToAddRows = false;
             this.dgvPatientRecords.AllowUserToDeleteRows = false;
-            this.dgvPatientRecords.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPatientRecords.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvPatientRecords.BackgroundColor = System.Drawing.Color.White;
             this.dgvPatientRecords.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPatientRecords.ColumnHeadersHeight = 40;
-            this.dgvPatientRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvPatientRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPatientRecords.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPatientRecords.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvPatientRecords.Location = new System.Drawing.Point(2, 82);
@@ -680,11 +682,11 @@ namespace ClinicManagement_proj.UI
             // 
             this.dgvUpcomingAppointments.AllowUserToAddRows = false;
             this.dgvUpcomingAppointments.AllowUserToDeleteRows = false;
-            this.dgvUpcomingAppointments.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvUpcomingAppointments.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvUpcomingAppointments.BackgroundColor = System.Drawing.Color.White;
             this.dgvUpcomingAppointments.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvUpcomingAppointments.ColumnHeadersHeight = 40;
-            this.dgvUpcomingAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvUpcomingAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUpcomingAppointments.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvUpcomingAppointments.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvUpcomingAppointments.Location = new System.Drawing.Point(2, 82);
@@ -752,11 +754,11 @@ namespace ClinicManagement_proj.UI
             // 
             this.dgvPatientClinicalSummary.AllowUserToAddRows = false;
             this.dgvPatientClinicalSummary.AllowUserToDeleteRows = false;
-            this.dgvPatientClinicalSummary.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPatientClinicalSummary.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvPatientClinicalSummary.BackgroundColor = System.Drawing.Color.White;
             this.dgvPatientClinicalSummary.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPatientClinicalSummary.ColumnHeadersHeight = 40;
-            this.dgvPatientClinicalSummary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvPatientClinicalSummary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPatientClinicalSummary.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPatientClinicalSummary.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvPatientClinicalSummary.Location = new System.Drawing.Point(2, 82);
@@ -2686,13 +2688,13 @@ namespace ClinicManagement_proj.UI
             // 
             // pnlNotificationsTop
             // 
-            this.pnlNotificationsTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.pnlNotificationsTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.pnlNotificationsTop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlNotificationsTop.Controls.Add(this.btnNotifications);
             this.pnlNotificationsTop.Controls.Add(this.lblToast);
             this.pnlNotificationsTop.Controls.Add(this.lblNotificationsTitle);
             this.pnlNotificationsTop.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlNotificationsTop.ForeColor = System.Drawing.Color.White;
+            this.pnlNotificationsTop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.pnlNotificationsTop.Location = new System.Drawing.Point(684, 0);
             this.pnlNotificationsTop.Name = "pnlNotificationsTop";
             this.pnlNotificationsTop.Size = new System.Drawing.Size(896, 125);
@@ -2701,10 +2703,11 @@ namespace ClinicManagement_proj.UI
             // btnNotifications
             // 
             this.btnNotifications.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnNotifications.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnNotifications.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNotifications.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNotifications.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnNotifications.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btnNotifications.Image = global::ClinicManagement_proj.Properties.Resources.notifications_icon;
             this.btnNotifications.Location = new System.Drawing.Point(799, 30);
             this.btnNotifications.Margin = new System.Windows.Forms.Padding(2, 30, 2, 2);
@@ -2713,7 +2716,6 @@ namespace ClinicManagement_proj.UI
             this.btnNotifications.TabIndex = 0;
             this.btnNotifications.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnNotifications.UseVisualStyleBackColor = false;
-            this.btnNotifications.Click += new System.EventHandler(this.btnNotifications_Click);
             // 
             // lblToast
             // 
@@ -2745,8 +2747,9 @@ namespace ClinicManagement_proj.UI
             // 
             // pnlNotifications
             // 
-            this.pnlNotifications.BackColor = System.Drawing.Color.White;
+            this.pnlNotifications.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.pnlNotifications.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlNotifications.Controls.Add(this.flowLayoutPanelNotifications);
             this.pnlNotifications.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlNotifications.Location = new System.Drawing.Point(684, 125);
             this.pnlNotifications.Margin = new System.Windows.Forms.Padding(2);
@@ -2755,10 +2758,18 @@ namespace ClinicManagement_proj.UI
             this.pnlNotifications.TabIndex = 1;
             this.pnlNotifications.Visible = false;
             // 
+            // flowLayoutPanelNotifications
+            // 
+            this.flowLayoutPanelNotifications.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelNotifications.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanelNotifications.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanelNotifications.Name = "flowLayoutPanelNotifications";
+            this.flowLayoutPanelNotifications.Size = new System.Drawing.Size(894, 749);
+            this.flowLayoutPanelNotifications.TabIndex = 0;
+            // 
             // timerToast
             // 
             this.timerToast.Interval = 5000;
-            this.timerToast.Tick += new System.EventHandler(this.timerToast_Tick);
             // 
             // grpAppointmentForm
             // 
@@ -2854,6 +2865,7 @@ namespace ClinicManagement_proj.UI
             this.layoutPatientButtons.PerformLayout();
             this.pnlHeader.ResumeLayout(false);
             this.pnlNotificationsTop.ResumeLayout(false);
+            this.pnlNotifications.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -3028,5 +3040,6 @@ namespace ClinicManagement_proj.UI
         private System.Windows.Forms.Panel pnlNotificationsTop;
         private System.Windows.Forms.Label lblToast;
         private System.Windows.Forms.Label lblNotificationsTitle;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelNotifications;
     }
 }

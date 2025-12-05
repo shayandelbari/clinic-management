@@ -12,7 +12,6 @@ namespace ClinicManagement_proj.UI
         private readonly Color SIDEBAR_BG = Color.FromArgb(44, 62, 80);
         private readonly Color SIDEBAR_ACTIVE = Color.FromArgb(52, 73, 94);
         private readonly Color HEADER_BG = Color.FromArgb(41, 128, 185);
-        private readonly Panel sidebarPanel;
         private NavigationManager navigationManager;
         private UserManagementController userManagementController;
         private DoctorManagementController doctorManagementController;
@@ -27,7 +26,6 @@ namespace ClinicManagement_proj.UI
             InitializeComponent();
             InitializeManagers();
             SetupNavigation();
-            SetupNotifications();
             StyleButtons();
         }
 
@@ -45,6 +43,9 @@ namespace ClinicManagement_proj.UI
             patientRegistrationController = new PatientRegistrationController(pnlPatientRegistration);
             reportsController = new ReportsController(pnlReports);
             appointmentManagementController = new ApptMgmtController(pnlAppointmentManagement);
+            notificationController = new NotificationsController(pnlNotifications, timerToast);
+
+            notificationController.Initialize();
         }
         
 
@@ -66,14 +67,6 @@ namespace ClinicManagement_proj.UI
         }
 
         /// <summary>
-        /// Setup notification system
-        /// </summary>
-        private void SetupNotifications()
-        {
-            NotificationManager.NotificationAdded += OnNotificationAdded;
-        }
-
-        /// <summary>
         /// Apply styling to navigation buttons
         /// </summary>
         private void StyleButtons()
@@ -90,7 +83,6 @@ namespace ClinicManagement_proj.UI
 
             btnLogout.Image = ImageHelper.ResizeImage(btnLogout.Image, 25, 25);
         }
-
         private void AdminDashboard_Load(object sender, EventArgs e)
         {
         }
@@ -135,83 +127,7 @@ namespace ClinicManagement_proj.UI
             navigationManager?.CleanupAll();
             ImageHelper.ClearCache();
             notificationController?.Cleanup();
-            NotificationManager.NotificationAdded -= OnNotificationAdded;
             base.OnFormClosing(e);
-        }
-
-        /// <summary>
-        /// Handle new notification added event
-        /// </summary>
-        private void OnNotificationAdded(Notification notif)
-        {
-            ShowToast(notif);
-
-            // Update list if notifications panel is visible
-            if (pnlNotifications.Visible)
-            {
-                RefreshNotificationsList();
-            }
-        }
-
-        /// <summary>
-        /// Show a toast notification
-        /// </summary>
-        private void ShowToast(Notification notif)
-        {
-            timerToast.Stop();
-            lblToast.Text = notif.Message;
-            lblToast.BackColor = GetNotificationColor(notif.Type);
-            lblToast.Visible = true;
-            timerToast.Start();
-        }
-
-        /// <summary>
-        /// Get color based on notification type
-        /// </summary>
-        private Color GetNotificationColor(NotificationType type)
-        {
-            switch (type)
-            {
-                case NotificationType.Error:
-                    return Color.Red;
-                case NotificationType.Warning:
-                    return Color.Orange;
-                default:
-                    return Color.Green;
-            }
-        }
-
-        /// <summary>
-        /// Timer tick to hide toast notification
-        /// </summary>
-        private void timerToast_Tick(object sender, EventArgs e)
-        {
-            lblToast.Visible = false;
-            timerToast.Stop();
-        }
-
-        /// <summary>
-        /// Refresh the notifications list
-        /// </summary>
-        private void RefreshNotificationsList()
-        {
-        }
-
-        /// <summary>
-        /// Toggle notifications panel visibility
-        /// </summary>
-        private void btnNotifications_Click(object sender, EventArgs e)
-        {
-            pnlNotifications.Visible = !pnlNotifications.Visible;
-            if (pnlNotifications.Visible)
-            {
-                RefreshNotificationsList();
-            }
-        }
-        private void btnNotification_Click(object sender, EventArgs e)
-        {
-            pnlNotifications.Visible = true;
-            notificationController.OnShow(); // controller builds cards
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

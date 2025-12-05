@@ -13,7 +13,7 @@ namespace ClinicManagement_proj.UI
         public LoginForm()
         {
             InitializeComponent();
-            NotificationManager.NotificationAdded += OnNotificationAdded;
+            ClinicManagementApp.NotificationService.NotificationAdded += OnNotificationAdded;
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
@@ -22,7 +22,13 @@ namespace ClinicManagement_proj.UI
             txtPassword.Text = Properties.Settings.Default.Password;
 
             cmbRole.Items.AddRange(Enum.GetNames(typeof(UserService.UserRoles)));
-            cmbRole.SelectedIndex = 0;
+            cmbRole.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbRole.SelectedItem = Properties.Settings.Default.Role;
+
+            if (cmbRole.SelectedItem == null)
+            {
+                cmbRole.SelectedItem = "Administrator";
+            }
 
             if (!string.IsNullOrEmpty(txtUsername.Text) && !string.IsNullOrEmpty(txtPassword.Text))
             {
@@ -43,10 +49,16 @@ namespace ClinicManagement_proj.UI
             {
                 ClinicManagementApp.CurrentUser = user;
 
-                var selectedRole = (UserService.UserRoles)Enum.Parse(typeof(UserService.UserRoles), cmbRole.Text);
+                UserService.UserRoles selectedRole;
+                if (!Enum.TryParse(cmbRole.Text, out selectedRole))
+                {
+                    ClinicManagementApp.NotificationService.AddNotification("Invalid role selected.", NotificationType.Error);
+                    return;
+                }
+
                 if (!ClinicManagementApp.CurrentUserHasRole(selectedRole))
                 {
-                    NotificationManager.AddNotification("User does not have the selected role.", NotificationType.Error);
+                    ClinicManagementApp.NotificationService.AddNotification("User does not have the selected role.", NotificationType.Error);
                     ClinicManagementApp.CurrentUser = null;
                     return;
                 }
@@ -55,45 +67,45 @@ namespace ClinicManagement_proj.UI
                 {
                     Properties.Settings.Default.Username = txtUsername.Text;
                     Properties.Settings.Default.Password = txtPassword.Text;
+                    Properties.Settings.Default.Role = Convert.ToString(cmbRole.SelectedItem);
                     Properties.Settings.Default.Save();
                 }
                 else
                 {
                     Properties.Settings.Default.Username = "";
                     Properties.Settings.Default.Password = "";
+                    Properties.Settings.Default.Role = "Administrator";
                     Properties.Settings.Default.Save();
                 }
 
                 Form dashboard = null;
 
-                if (ClinicManagementApp.CurrentUserHasRole(UserService.UserRoles.Administrator))
+                switch (selectedRole)
                 {
-                    dashboard = new AdminDashboard();
-                }
-                else if (ClinicManagementApp.CurrentUserHasRole(UserService.UserRoles.Doctor))
-                {
-                    dashboard = new DoctorDashboard();
-                }
-                else if (ClinicManagementApp.CurrentUserHasRole(UserService.UserRoles.Receptionist))
-                {
-                    dashboard = new ReceptionistDashboard();
-                }
-                else
-                {
-                    NotificationManager.AddNotification("User has no valid roles assigned.", NotificationType.Error);
-                    return;
+                    case UserService.UserRoles.Administrator:
+                        dashboard = new AdminDashboard();
+                        break;
+                    case UserService.UserRoles.Doctor:
+                        dashboard = new DoctorDashboard();
+                        break;
+                    case UserService.UserRoles.Receptionist:
+                        dashboard = new ReceptionistDashboard();
+                        break;
+                    default:
+                        ClinicManagementApp.NotificationService.AddNotification("User has no valid roles assigned.", NotificationType.Error);
+                        return;
                 }
 
                 this.Hide();
                 Label lblLogout = dashboard.Controls.Find("lblLogout", true)[0] as Label;
                 lblLogout.Text = $"Welcome {ClinicManagementApp.CurrentUser.Username}";
-                NotificationManager.AddNotification("Login successful.", NotificationType.Info);
+                ClinicManagementApp.NotificationService.AddNotification("Login successful.", NotificationType.Info);
                 dashboard.ShowDialog();
                 Close();
             }
             else
             {
-                NotificationManager.AddNotification("Invalid username or password.", NotificationType.Error);
+                ClinicManagementApp.NotificationService.AddNotification("Invalid username or password.", NotificationType.Error);
             }
         }
 
@@ -139,7 +151,7 @@ namespace ClinicManagement_proj.UI
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            NotificationManager.NotificationAdded -= OnNotificationAdded;
+            ClinicManagementApp.NotificationService.NotificationAdded -= OnNotificationAdded;
             base.OnFormClosing(e);
         }
     }

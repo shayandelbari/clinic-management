@@ -144,13 +144,13 @@ namespace ClinicManagement_proj.UI
             string idText = txtPatientId.Text.Trim();
             if (string.IsNullOrWhiteSpace(idText))
             {
-                NotificationManager.AddNotification("Please enter a Patient ID to search.", NotificationType.Warning);
+                ClinicManagementApp.NotificationService.AddNotification("Please enter a Patient ID to search.", NotificationType.Warning);
                 return;
             }
 
             if (!int.TryParse(idText, out int id))
             {
-                NotificationManager.AddNotification("Enter a valid Patient ID.", NotificationType.Warning);
+                ClinicManagementApp.NotificationService.AddNotification("Enter a valid Patient ID.", NotificationType.Warning);
                 return;
             }
 
@@ -160,7 +160,7 @@ namespace ClinicManagement_proj.UI
 
                 if (!results.Any())
                 {
-                    NotificationManager.AddNotification("Patient not found.", NotificationType.Info);
+                    ClinicManagementApp.NotificationService.AddNotification("Patient not found.", NotificationType.Info);
                     return;
                 }
 
@@ -179,7 +179,7 @@ namespace ClinicManagement_proj.UI
             }
             catch (Exception ex)
             {
-                NotificationManager.AddNotification($"Error during patient search: {ex.Message}", NotificationType.Error);
+                ClinicManagementApp.NotificationService.AddNotification($"Error during patient search: {ex.Message}", NotificationType.Error);
             }
 
         }
@@ -207,7 +207,7 @@ namespace ClinicManagement_proj.UI
                 ||
                 string.IsNullOrWhiteSpace(txtPPhone.Text))
             {
-                NotificationManager.AddNotification("All fields are required.", NotificationType.Warning);
+                ClinicManagementApp.NotificationService.AddNotification("All fields are required.", NotificationType.Warning);
                 return;
             }
             //if (patientService.Exists(id))
@@ -231,11 +231,11 @@ namespace ClinicManagement_proj.UI
                 patientService.AddPatient(dto);
                 LoadPatients();
                 ResetPatientForm();
-                NotificationManager.AddNotification("Patient created successfully.", NotificationType.Info);
+                ClinicManagementApp.NotificationService.AddNotification("Patient created successfully.", NotificationType.Info);
             }
             catch (Exception ex)
             {
-                NotificationManager.AddNotification($"Error creating patient: {ex.Message}", NotificationType.Error);
+                ClinicManagementApp.NotificationService.AddNotification($"Error creating patient: {ex.Message}", NotificationType.Error);
             }
         }
         /// <summary>
@@ -245,7 +245,7 @@ namespace ClinicManagement_proj.UI
         {
             if (dgvPatients.CurrentRow == null)
             {
-                NotificationManager.AddNotification("Please select a patient to update.", NotificationType.Warning);
+                ClinicManagementApp.NotificationService.AddNotification("Please select a patient to update.", NotificationType.Warning);
                 return;
             }
 
@@ -254,7 +254,7 @@ namespace ClinicManagement_proj.UI
                 || string.IsNullOrWhiteSpace(txtMedicalNumber.Text)
                 || string.IsNullOrWhiteSpace(txtPPhone.Text))
             {
-                NotificationManager.AddNotification("Please fill out the required fields.", NotificationType.Warning);
+                ClinicManagementApp.NotificationService.AddNotification("Please fill out the required fields.", NotificationType.Warning);
                 return;
             }
 
@@ -270,11 +270,11 @@ namespace ClinicManagement_proj.UI
             {
                 patientService.UpdatePatient(selectedPatient);
                 dgvPatients.Refresh();
-                NotificationManager.AddNotification("Patient updated successfully.", NotificationType.Info);
+                ClinicManagementApp.NotificationService.AddNotification("Patient updated successfully.", NotificationType.Info);
             }
             catch (Exception ex)
             {
-                NotificationManager.AddNotification($"Error updating patient: {ex.Message}", NotificationType.Error);
+                ClinicManagementApp.NotificationService.AddNotification($"Error updating patient: {ex.Message}", NotificationType.Error);
             }
         }
 

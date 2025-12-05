@@ -1,15 +1,25 @@
+using ClinicManagement_proj.BLL.DTO;
+using ClinicManagement_proj.BLL.Utils;
+using ClinicManagement_proj.DAL;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
-namespace ClinicManagement_proj.BLL.Utils
+namespace ClinicManagement_proj.BLL.Services
 {
-    public static class NotificationManager
+    public class NotificationService
     {
+        private readonly ClinicDbContext clinicDb;
         private static List<Notification> notifications = new List<Notification>();
 
-        public static event Action<Notification> NotificationAdded;
+        public event Action<Notification> NotificationAdded;
 
-        public static void AddNotification(string message, NotificationType type)
+        public NotificationService(ClinicDbContext dbContext)
+        {
+            clinicDb = dbContext;
+        }
+
+        public void AddNotification(string message, NotificationType type)
         {
             var notif = new Notification(message, type);
             lock (notifications)
@@ -27,7 +37,7 @@ namespace ClinicManagement_proj.BLL.Utils
             NotificationAdded?.Invoke(notif);
         }
 
-        public static List<Notification> GetActiveNotifications()
+        public List<Notification> GetActiveNotifications()
         {
             lock (notifications)
             {
@@ -41,6 +51,13 @@ namespace ClinicManagement_proj.BLL.Utils
                 }
                 return active;
             }
+        }
+
+        public List<AuditAppointmentDTO> GetAuditNotifications()
+        {
+            return clinicDb.AuditAppointments
+                .OrderByDescending(a => a.AuditDate)
+                .ToList();
         }
     }
 }

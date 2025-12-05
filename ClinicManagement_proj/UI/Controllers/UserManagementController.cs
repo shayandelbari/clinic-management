@@ -168,14 +168,14 @@ namespace ClinicManagement_proj.UI
                         Username = txtUsrUsername.Text.Trim(),
                         Roles = new List<RoleDTO> { selectedRole }
                     }, password);
-                NotificationManager.AddNotification("User created successfully!", NotificationType.Info);
+                ClinicManagementApp.NotificationService.AddNotification("User created successfully!", NotificationType.Info);
                 LoadUsers();
                 ResetUsrForm();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
-                NotificationManager.AddNotification($"Error: {ex.Message}", NotificationType.Error);
+                ClinicManagementApp.NotificationService.AddNotification($"Error: {ex.Message}", NotificationType.Error);
             }
         }
 
@@ -186,13 +186,13 @@ namespace ClinicManagement_proj.UI
         {
             if (!isEditMode)
             {
-                NotificationManager.AddNotification("Not in edit mode!", NotificationType.Error);
+                ClinicManagementApp.NotificationService.AddNotification("Not in edit mode!", NotificationType.Error);
                 return;
             }
 
             if (dgvUsers.CurrentRow == null)
             {
-                NotificationManager.AddNotification("Please select a user to update!", NotificationType.Error);
+                ClinicManagementApp.NotificationService.AddNotification("Please select a user to update!", NotificationType.Error);
                 return;
             }
 
@@ -209,19 +209,19 @@ namespace ClinicManagement_proj.UI
             }
             catch (Exception ex)
             {
-                NotificationManager.AddNotification($"Error: {ex.Message}", NotificationType.Error);
+                ClinicManagementApp.NotificationService.AddNotification($"Error: {ex.Message}", NotificationType.Error);
                 return;
             }
 
             try
             {
-                NotificationManager.AddNotification("User updated successfully!", NotificationType.Info);
+                ClinicManagementApp.NotificationService.AddNotification("User updated successfully!", NotificationType.Info);
                 LoadUsers();
                 ResetUsrForm();
             }
             catch (Exception ex)
             {
-                NotificationManager.AddNotification($"Error: {ex.Message}", NotificationType.Error);
+                ClinicManagementApp.NotificationService.AddNotification($"Error: {ex.Message}", NotificationType.Error);
             }
         }
 
@@ -247,7 +247,7 @@ namespace ClinicManagement_proj.UI
             {
                 if (!int.TryParse(idText, out int userId))
                 {
-                    NotificationManager.AddNotification("Invalid user id!", NotificationType.Error);
+                    ClinicManagementApp.NotificationService.AddNotification("Invalid user id!", NotificationType.Error);
                     return;
                 }
                 users = userService.Search(userId);
@@ -258,7 +258,7 @@ namespace ClinicManagement_proj.UI
             }
             else
             {
-                NotificationManager.AddNotification("Enter user id or username to search!", NotificationType.Error);
+                ClinicManagementApp.NotificationService.AddNotification("Enter user id or username to search!", NotificationType.Error);
                 return;
             }
 
@@ -281,12 +281,12 @@ namespace ClinicManagement_proj.UI
                 }
                 else
                 {
-                    NotificationManager.AddNotification("User not found!", NotificationType.Info);
+                    ClinicManagementApp.NotificationService.AddNotification("User not found!", NotificationType.Info);
                 }
             }
             catch (Exception ex)
             {
-                NotificationManager.AddNotification($"Error: {ex.Message}", NotificationType.Error);
+                ClinicManagementApp.NotificationService.AddNotification($"Error: {ex.Message}", NotificationType.Error);
             }
         }
 
@@ -342,13 +342,13 @@ namespace ClinicManagement_proj.UI
             {
                 UserDTO user = (UserDTO)dgvUsers.CurrentRow.DataBoundItem;
                 userService.DeleteUser(user);
-                NotificationManager.AddNotification("User deleted successfully!", NotificationType.Info);
+                ClinicManagementApp.NotificationService.AddNotification("User deleted successfully!", NotificationType.Info);
                 LoadUsers();
                 ResetUsrForm();
             }
             catch (Exception ex)
             {
-                NotificationManager.AddNotification($"Error: {ex.Message}", NotificationType.Error);
+                ClinicManagementApp.NotificationService.AddNotification($"Error: {ex.Message}", NotificationType.Error);
             }
         }
 

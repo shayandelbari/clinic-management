@@ -34,6 +34,10 @@ IF OBJECT_ID('dbo.vw_PatientClinicalSummary', 'V') IS NOT NULL
     DROP VIEW dbo.vw_PatientClinicalSummary;
 GO
 
+IF OBJECT_ID('dbo.Audit_Appointment', 'U') IS NOT NULL
+    DROP TABLE dbo.Audit_Appointment;
+GO
+
 -- DROP TABLES (correct FK order: children → parents)
 IF OBJECT_ID('dbo.Appointment', 'U') IS NOT NULL
     DROP TABLE dbo.Appointment;

@@ -12,22 +12,18 @@ namespace ClinicManagement_proj.UI
         private readonly Color SIDEBAR_BG = Color.FromArgb(44, 62, 80);
         private readonly Color SIDEBAR_ACTIVE = Color.FromArgb(52, 73, 94);
         private readonly Color HEADER_BG = Color.FromArgb(41, 128, 185);
-
         private NavigationManager navigationManager;
         private PatientRegistrationController patientRegistrationController;
         private ApptMgmtController appointmentManagementController;
+        private NotificationsController notificationController;
 
         public ReceptionistDashboard()
         {
             InitializeComponent();
             InitializeManagers();
             SetupNavigation();
-            SetupNotifications();
             StyleButtons();
         }
-
-        public void ReceptionistDashboard_Load(object sender, EventArgs e)
-        { }
 
         /// <summary>
         /// Initialize all managers and controllers
@@ -39,7 +35,11 @@ namespace ClinicManagement_proj.UI
             // Initialize panel controllers
             patientRegistrationController = new PatientRegistrationController(pnlPatientRegistration);
             appointmentManagementController = new ApptMgmtController(pnlAppointmentManagement);
+            notificationController = new NotificationsController(pnlNotifications, timerToast);
+
+            notificationController.Initialize();
         }
+        
 
         /// <summary>
         /// Setup navigation between panels
@@ -49,16 +49,9 @@ namespace ClinicManagement_proj.UI
             navigationManager.RegisterPanel(btnPatientRegistration, patientRegistrationController);
             navigationManager.RegisterPanel(btnAppointmentManagement, appointmentManagementController);
 
-            navigationManager.InitializeAll();
-            navigationManager.NavigateTo(btnPatientRegistration);
-        }
 
-        /// <summary>
-        /// Setup notification system
-        /// </summary>
-        private void SetupNotifications()
-        {
-            NotificationManager.NotificationAdded += OnNotificationAdded;
+            navigationManager.InitializeAll();
+            navigationManager.NavigateTo(btnAppointmentManagement);
         }
 
         /// <summary>
@@ -74,6 +67,9 @@ namespace ClinicManagement_proj.UI
 
             btnLogout.Image = ImageHelper.ResizeImage(btnLogout.Image, 25, 25);
         }
+        private void ReceptionistDashboard_Load(object sender, EventArgs e)
+        {
+        }
 
         private void btnPatientRegistration_Click(object sender, EventArgs e)
         {
@@ -84,7 +80,7 @@ namespace ClinicManagement_proj.UI
         {
             navigationManager.NavigateTo(btnAppointmentManagement);
         }
-
+        
         /// <summary>
         /// Cleanup resources on form closing
         /// </summary>
@@ -92,83 +88,8 @@ namespace ClinicManagement_proj.UI
         {
             navigationManager?.CleanupAll();
             ImageHelper.ClearCache();
-            NotificationManager.NotificationAdded -= OnNotificationAdded;
+            notificationController?.Cleanup();
             base.OnFormClosing(e);
-        }
-
-        /// <summary>
-        /// Handle new notification added event
-        /// </summary>
-        private void OnNotificationAdded(Notification notif)
-        {
-            ShowToast(notif);
-
-            // Update list if notifications panel is visible
-            if (pnlNotifications.Visible)
-            {
-                RefreshNotificationsList();
-            }
-        }
-
-        /// <summary>
-        /// Show a toast notification
-        /// </summary>
-        private void ShowToast(Notification notif)
-        {
-            timerToast.Stop();
-            lblToast.Text = notif.Message;
-            lblToast.BackColor = GetNotificationColor(notif.Type);
-            lblToast.Visible = true;
-            timerToast.Start();
-        }
-
-        /// <summary>
-        /// Get color based on notification type
-        /// </summary>
-        private Color GetNotificationColor(NotificationType type)
-        {
-            switch (type)
-            {
-                case NotificationType.Error:
-                    return Color.Red;
-                case NotificationType.Warning:
-                    return Color.Orange;
-                default:
-                    return Color.Green;
-            }
-        }
-
-        /// <summary>
-        /// Timer tick to hide toast notification
-        /// </summary>
-        private void timerToast_Tick(object sender, EventArgs e)
-        {
-            lblToast.Visible = false;
-            timerToast.Stop();
-        }
-
-        /// <summary>
-        /// Refresh the notifications list
-        /// </summary>
-        private void RefreshNotificationsList()
-        {
-            lbNotifications.Items.Clear();
-            foreach (var n in NotificationManager.GetActiveNotifications().OrderByDescending(n => n.Timestamp))
-            {
-                lbNotifications.Items.Add($"{n.Timestamp:HH:mm:ss} - {n.Type}: {n.Message}");
-            }
-        }
-
-        /// <summary>
-        /// Toggle notifications panel visibility
-        /// </summary>
-        private void btnNotifications_Click(object sender, EventArgs e)
-        {
-            pnlNotifications.Visible = !pnlNotifications.Visible;
-            if (pnlNotifications.Visible)
-            {
-                RefreshNotificationsList();
-            }
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

@@ -78,14 +78,21 @@ namespace ClinicManagement_proj.UI
 
             // Hide ID columns
             dgvPatientRecords.Columns["PatientId"].Visible = false;
+            dgvPatientRecords.Columns["AppointmentId"].Visible = false;
 
             // Set column headers
             dgvPatientRecords.Columns["PatientName"].HeaderText = "Patient Name";
             dgvPatientRecords.Columns["InsuranceNumber"].HeaderText = "Insurance Number";
             dgvPatientRecords.Columns["DateOfBirth"].HeaderText = "Date of Birth";
             dgvPatientRecords.Columns["PhoneNumber"].HeaderText = "Phone Number";
-            dgvPatientRecords.Columns["TotalAppointments"].HeaderText = "Total Appointments";
-            dgvPatientRecords.Columns["LastAppointmentDate"].HeaderText = "Last Appointment Date";
+            dgvPatientRecords.Columns["VisitNumber"].HeaderText = "Visit Number";
+            dgvPatientRecords.Columns["VisitDate"].HeaderText = "Visit Date";
+            dgvPatientRecords.Columns["Age"].HeaderText = "Age";
+            dgvPatientRecords.Columns["DoctorName"].HeaderText = "Doctor Name";
+            dgvPatientRecords.Columns["Specialization"].HeaderText = "Specialization";
+            dgvPatientRecords.Columns["VisitStatus"].HeaderText = "Visit Status";
+            dgvPatientRecords.Columns["ClinicalNotes"].HeaderText = "Clinical Notes";
+            dgvPatientRecords.Columns["DaysSinceVisit"].HeaderText = "Days Since Visit";
 
             // Set default alignment
             dgvPatientRecords.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -93,7 +100,9 @@ namespace ClinicManagement_proj.UI
             // Center-align specific columns
             dgvPatientRecords.Columns["DateOfBirth"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvPatientRecords.Columns["Age"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvPatientRecords.Columns["TotalAppointments"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvPatientRecords.Columns["VisitNumber"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvPatientRecords.Columns["VisitDate"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvPatientRecords.Columns["DaysSinceVisit"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             // Auto-resize columns
             dgvPatientRecords.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
@@ -110,11 +119,17 @@ namespace ClinicManagement_proj.UI
 
             // Set column headers
             dgvUpcomingAppointments.Columns["PatientName"].HeaderText = "Patient Name";
-            dgvUpcomingAppointments.Columns["PhoneNumber"].HeaderText = "Phone Number";
+            dgvUpcomingAppointments.Columns["PatientPhone"].HeaderText = "Phone Number";
             dgvUpcomingAppointments.Columns["DoctorName"].HeaderText = "Doctor Name";
             dgvUpcomingAppointments.Columns["AppointmentDate"].HeaderText = "Date";
             dgvUpcomingAppointments.Columns["HourOfDay"].HeaderText = "Hour";
             dgvUpcomingAppointments.Columns["MinuteOfHour"].HeaderText = "Minute";
+            dgvUpcomingAppointments.Columns["Specialization"].HeaderText = "Specialization";
+            dgvUpcomingAppointments.Columns["DayOfWeek"].HeaderText = "Day of Week";
+            dgvUpcomingAppointments.Columns["AppointmentTime"].HeaderText = "Appointment Time";
+            dgvUpcomingAppointments.Columns["Status"].HeaderText = "Status";
+            dgvUpcomingAppointments.Columns["Notes"].HeaderText = "Notes";
+            dgvUpcomingAppointments.Columns["DaysUntil"].HeaderText = "Days Until";
 
             // Set default alignment
             dgvUpcomingAppointments.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -123,6 +138,10 @@ namespace ClinicManagement_proj.UI
             dgvUpcomingAppointments.Columns["AppointmentDate"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvUpcomingAppointments.Columns["HourOfDay"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvUpcomingAppointments.Columns["MinuteOfHour"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvUpcomingAppointments.Columns["DayOfWeek"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvUpcomingAppointments.Columns["AppointmentTime"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvUpcomingAppointments.Columns["Status"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvUpcomingAppointments.Columns["DaysUntil"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             // Auto-resize columns
             dgvUpcomingAppointments.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);

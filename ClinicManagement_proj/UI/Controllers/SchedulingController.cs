@@ -232,7 +232,7 @@ namespace ClinicManagement_proj.UI
         {
             if (!(cmbDoctorSelect.SelectedItem is DoctorDTO doctor))
             {
-                NotificationManager.AddNotification("Please select a doctor to save the schedule.", NotificationType.Warning);
+                ClinicManagementApp.NotificationService.AddNotification("Please select a doctor to save the schedule.", NotificationType.Warning);
                 return;
             }
 
@@ -306,11 +306,11 @@ namespace ClinicManagement_proj.UI
                     }
                 }
 
-                NotificationManager.AddNotification("Weekly schedule saved successfully!", NotificationType.Info);
+                ClinicManagementApp.NotificationService.AddNotification("Weekly schedule saved successfully!", NotificationType.Info);
             }
             catch (Exception ex)
             {
-                NotificationManager.AddNotification($"Error saving schedule: {ex.Message}", NotificationType.Error);
+                ClinicManagementApp.NotificationService.AddNotification($"Error saving schedule: {ex.Message}", NotificationType.Error);
             }
         }
 
@@ -318,7 +318,7 @@ namespace ClinicManagement_proj.UI
         {
             if (!(cmbDoctorSelect.SelectedItem is DoctorDTO doctor))
             {
-                NotificationManager.AddNotification("Please select a doctor to revert the schedule.", NotificationType.Warning);
+                ClinicManagementApp.NotificationService.AddNotification("Please select a doctor to revert the schedule.", NotificationType.Warning);
                 return;
             }
 
@@ -360,11 +360,11 @@ namespace ClinicManagement_proj.UI
                     }
                 }
 
-                NotificationManager.AddNotification("Schedule reverted successfully.", NotificationType.Info);
+                ClinicManagementApp.NotificationService.AddNotification("Schedule reverted successfully.", NotificationType.Info);
             }
             catch (Exception ex)
             {
-                NotificationManager.AddNotification($"Error reverting schedule: {ex.Message}", NotificationType.Error);
+                ClinicManagementApp.NotificationService.AddNotification($"Error reverting schedule: {ex.Message}", NotificationType.Error);
             }
         }
         public void OnHide()

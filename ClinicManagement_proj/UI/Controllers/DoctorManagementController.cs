@@ -190,13 +190,13 @@ namespace ClinicManagement_proj.UI
 
             if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(lastName))
             {
-                NotificationManager.AddNotification("First Name and Last Name are required.", NotificationType.Warning);
+                ClinicManagementApp.NotificationService.AddNotification("First Name and Last Name are required.", NotificationType.Warning);
                 return;
             }
 
             if (!int.TryParse(idTxt, out int id))
             {
-                NotificationManager.AddNotification("Invalid Doctor ID format.", NotificationType.Error);
+                ClinicManagementApp.NotificationService.AddNotification("Invalid Doctor ID format.", NotificationType.Error);
                 return;
             }
 
@@ -211,13 +211,13 @@ namespace ClinicManagement_proj.UI
                     Specialties = specialization != null ? new List<SpecialtyDTO> { specialization } : new List<SpecialtyDTO>()
                 };
                 doctorService.CreateDoctor(newDoctor);
-                NotificationManager.AddNotification("Doctor created successfully.", NotificationType.Info);
+                ClinicManagementApp.NotificationService.AddNotification("Doctor created successfully.", NotificationType.Info);
                 LoadDoctors();
                 ResetDoctorForm();
             }
             catch (Exception ex)
             {
-                NotificationManager.AddNotification($"Error creating doctor: {ex.Message}", NotificationType.Error);
+                ClinicManagementApp.NotificationService.AddNotification($"Error creating doctor: {ex.Message}", NotificationType.Error);
             }
         }
 
@@ -228,7 +228,7 @@ namespace ClinicManagement_proj.UI
         {
             if (!isEditMode || dgvDoctors.CurrentRow == null)
             {
-                NotificationManager.AddNotification("Not in edit mode. Please select a doctor to edit.", NotificationType.Warning);
+                ClinicManagementApp.NotificationService.AddNotification("Not in edit mode. Please select a doctor to edit.", NotificationType.Warning);
                 return;
             }
 
@@ -242,13 +242,13 @@ namespace ClinicManagement_proj.UI
 
             if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(lastName) || string.IsNullOrEmpty(licenseNumber))
             {
-                NotificationManager.AddNotification("Please fill out the required fields", NotificationType.Warning);
+                ClinicManagementApp.NotificationService.AddNotification("Please fill out the required fields", NotificationType.Warning);
                 return;
             }
 
             if (idTxt != updatedDoctor.Id.ToString())
             {
-                NotificationManager.AddNotification("Doctor ID cannot be changed.", NotificationType.Warning);
+                ClinicManagementApp.NotificationService.AddNotification("Doctor ID cannot be changed.", NotificationType.Warning);
             }
 
             try
@@ -258,13 +258,13 @@ namespace ClinicManagement_proj.UI
                 updatedDoctor.LicenseNumber = licenseNumber;
                 updatedDoctor.Specialties = selectedSpecialties.Where(s => s != null).ToList();
                 doctorService.UpdateDoctor(updatedDoctor);
-                NotificationManager.AddNotification("Doctor updated successfully.", NotificationType.Info);
+                ClinicManagementApp.NotificationService.AddNotification("Doctor updated successfully.", NotificationType.Info);
                 LoadDoctors();
                 ResetDoctorForm();
             }
             catch (Exception ex)
             {
-                NotificationManager.AddNotification($"Error updating doctor: {ex.Message}", NotificationType.Error);
+                ClinicManagementApp.NotificationService.AddNotification($"Error updating doctor: {ex.Message}", NotificationType.Error);
             }
         }
 
@@ -284,7 +284,7 @@ namespace ClinicManagement_proj.UI
             {
                 if (!int.TryParse(idText, out int doctorId))
                 {
-                    NotificationManager.AddNotification("Invalid Doctor ID format.", NotificationType.Error);
+                    ClinicManagementApp.NotificationService.AddNotification("Invalid Doctor ID format.", NotificationType.Error);
                     return;
                 }
                 doctors = doctorService.Search(doctorId);
@@ -303,13 +303,13 @@ namespace ClinicManagement_proj.UI
             }
             else
             {
-                NotificationManager.AddNotification("Enter doctor id, first name, last name, or license number to search!", NotificationType.Warning);
+                ClinicManagementApp.NotificationService.AddNotification("Enter doctor id, first name, last name, or license number to search!", NotificationType.Warning);
                 return;
             }
 
             if (doctors.Count == 0)
             {
-                NotificationManager.AddNotification("No doctors found matching the criteria.", NotificationType.Info);
+                ClinicManagementApp.NotificationService.AddNotification("No doctors found matching the criteria.", NotificationType.Info);
                 return;
             }
 
@@ -330,7 +330,7 @@ namespace ClinicManagement_proj.UI
             }
             catch (Exception ex)
             {
-                NotificationManager.AddNotification($"Error during doctor search: {ex.Message}", NotificationType.Error);
+                ClinicManagementApp.NotificationService.AddNotification($"Error during doctor search: {ex.Message}", NotificationType.Error);
             }
         }
 
@@ -343,13 +343,13 @@ namespace ClinicManagement_proj.UI
             {
                 DoctorDTO doctor = (DoctorDTO)dgvDoctors.CurrentRow.DataBoundItem;
                 doctorService.DeleteDoctor(doctor.Id);
-                NotificationManager.AddNotification("Doctor deleted successfully.", NotificationType.Info);
+                ClinicManagementApp.NotificationService.AddNotification("Doctor deleted successfully.", NotificationType.Info);
                 LoadDoctors();
                 ResetDoctorForm();
             }
             catch (Exception ex)
             {
-                NotificationManager.AddNotification($"Error deleting doctor: {ex.Message}", NotificationType.Error);
+                ClinicManagementApp.NotificationService.AddNotification($"Error deleting doctor: {ex.Message}", NotificationType.Error);
             }
         }
 

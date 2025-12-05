@@ -46,5 +46,17 @@ namespace ClinicManagement_proj.Properties {
                 this["Username"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Administration")]
+        public string Role {
+            get {
+                return ((string)(this["Role"]));
+            }
+            set {
+                this["Role"] = value;
+            }
+        }
     }
 }

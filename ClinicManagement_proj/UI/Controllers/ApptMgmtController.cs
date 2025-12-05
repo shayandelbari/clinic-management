@@ -181,12 +181,12 @@ namespace ClinicManagement_proj.UI
                 dgvAppointments.DataSource = results;
                 if (!results.Any())
                 {
-                    NotificationManager.AddNotification("No appointments found for the selected date.", NotificationType.Info);
+                    ClinicManagementApp.NotificationService.AddNotification("No appointments found for the selected date.", NotificationType.Info);
                 }
             }
             catch (Exception ex)
             {
-                NotificationManager.AddNotification($"Error searching appointments: {ex.Message}", NotificationType.Error);
+                ClinicManagementApp.NotificationService.AddNotification($"Error searching appointments: {ex.Message}", NotificationType.Error);
             }
         }
 
@@ -194,7 +194,7 @@ namespace ClinicManagement_proj.UI
         {
             if (selectedDoctor == null || selectedPatient == null || selectedTimeSlot == null)
             {
-                NotificationManager.AddNotification("Please select valid doctor, patient, and time slot.", NotificationType.Warning);
+                ClinicManagementApp.NotificationService.AddNotification("Please select valid doctor, patient, and time slot.", NotificationType.Warning);
                 return;
             }
 
@@ -213,11 +213,11 @@ namespace ClinicManagement_proj.UI
                 appointmentService.CreateAppointment(dto);
                 LoadAppointments();
                 ResetAppointmentForm();
-                NotificationManager.AddNotification("Appointment created successfully.", NotificationType.Info);
+                ClinicManagementApp.NotificationService.AddNotification("Appointment created successfully.", NotificationType.Info);
             }
             catch (Exception ex)
             {
-                NotificationManager.AddNotification($"Error creating appointment: {ex.Message}", NotificationType.Error);
+                ClinicManagementApp.NotificationService.AddNotification($"Error creating appointment: {ex.Message}", NotificationType.Error);
             }
         }
 
@@ -225,7 +225,7 @@ namespace ClinicManagement_proj.UI
         {
             if (dgvAppointments.CurrentRow == null)
             {
-                NotificationManager.AddNotification("Please select an appointment to update.", NotificationType.Warning);
+                ClinicManagementApp.NotificationService.AddNotification("Please select an appointment to update.", NotificationType.Warning);
                 return;
             }
 
@@ -242,11 +242,11 @@ namespace ClinicManagement_proj.UI
                 appointmentService.UpdateAppointment(appointment);
                 LoadAppointments();
                 ResetAppointmentForm();
-                NotificationManager.AddNotification("Appointment updated successfully.", NotificationType.Info);
+                ClinicManagementApp.NotificationService.AddNotification("Appointment updated successfully.", NotificationType.Info);
             }
             catch (Exception ex)
             {
-                NotificationManager.AddNotification($"Error updating appointment: {ex.Message}", NotificationType.Error);
+                ClinicManagementApp.NotificationService.AddNotification($"Error updating appointment: {ex.Message}", NotificationType.Error);
             }
         }
 
