@@ -3,6 +3,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ClinicManagement_proj.BLL.DTO
 {
+    /// <summary>
+    /// Represents a doctor schedule data transfer object.
+    /// </summary>
     public class DoctorScheduleDTO
     {
         public static int DAYOFWEEK_MAX_LENGTH = 10;
@@ -15,12 +18,6 @@ namespace ClinicManagement_proj.BLL.DTO
         {
             get { return _dayOfWeek; }
             set { _dayOfWeek = ValidateDayOfWeek(value); }
-        }
-        [NotMapped]
-        public DaysOfWeekEnum DayOfWeekEnum
-        {
-            get { return (DaysOfWeekEnum)Enum.Parse(typeof(DaysOfWeekEnum), DayOfWeek); }
-            set { DayOfWeek = value.ToString(); }
         }
         public TimeSpan WorkStartTime { get; set; }
         public TimeSpan WorkEndTime { get; set; }
@@ -54,7 +51,24 @@ namespace ClinicManagement_proj.BLL.DTO
         /// Initializes a new instance of the DoctorScheduleDTO class with specified parameters.
         /// </summary>
         /// <param name="doctorId">The ID of the doctor.</param>
-        /// <param name="dayOfWeek">The day of the week.</param>
+        /// <param name="workStartTime">The work start time.</param>
+        /// <param name="workEndTime">The work end time.</param>
+        /// <param name="createdAt">The creation date.</param>
+        /// <param name="modifiedAt">The modification date.</param>
+        public DoctorScheduleDTO(int doctorId, TimeSpan workStartTime, TimeSpan workEndTime, DateTime createdAt, DateTime modifiedAt)
+        {
+            DoctorId = doctorId;
+            WorkStartTime = workStartTime;
+            WorkEndTime = workEndTime;
+            CreatedAt = createdAt;
+            ModifiedAt = modifiedAt;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DoctorScheduleDTO class with specified parameters including day of week.
+        /// </summary>
+        /// <param name="doctorId">The ID of the doctor.</param>
+        /// <param name="dayOfWeek">The day of the week as an enum value.</param>
         /// <param name="workStartTime">The work start time.</param>
         /// <param name="workEndTime">The work end time.</param>
         /// <param name="createdAt">The creation date.</param>
@@ -62,7 +76,7 @@ namespace ClinicManagement_proj.BLL.DTO
         public DoctorScheduleDTO(int doctorId, DaysOfWeekEnum dayOfWeek, TimeSpan workStartTime, TimeSpan workEndTime, DateTime createdAt, DateTime modifiedAt)
         {
             DoctorId = doctorId;
-            DayOfWeekEnum = dayOfWeek;
+            DayOfWeek = dayOfWeek.ToString();
             WorkStartTime = workStartTime;
             WorkEndTime = workEndTime;
             CreatedAt = createdAt;

@@ -1,0 +1,180 @@
+### YamlMime:TableOfContent
+items:
+- uid: ClinicManagement_proj.BLL
+  name: ClinicManagement_proj.BLL
+  type: Namespace
+  items:
+  - uid: ClinicManagement_proj.BLL.ClinicManagementApp
+    name: ClinicManagementApp
+    type: Class
+- uid: ClinicManagement_proj.BLL.DTO
+  name: ClinicManagement_proj.BLL.DTO
+  type: Namespace
+  items:
+  - uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO
+    name: AppointmentDTO
+    type: Class
+  - uid: ClinicManagement_proj.BLL.DTO.AuditAppointmentDTO
+    name: AuditAppointmentDTO
+    type: Class
+  - uid: ClinicManagement_proj.BLL.DTO.DaysOfWeekEnum
+    name: DaysOfWeekEnum
+    type: Enum
+  - uid: ClinicManagement_proj.BLL.DTO.DoctorDTO
+    name: DoctorDTO
+    type: Class
+  - uid: ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO
+    name: DoctorScheduleDTO
+    type: Class
+  - uid: ClinicManagement_proj.BLL.DTO.PatientDTO
+    name: PatientDTO
+    type: Class
+  - uid: ClinicManagement_proj.BLL.DTO.RoleDTO
+    name: RoleDTO
+    type: Class
+  - uid: ClinicManagement_proj.BLL.DTO.SpecialtyDTO
+    name: SpecialtyDTO
+    type: Class
+  - uid: ClinicManagement_proj.BLL.DTO.TimeSlotDTO
+    name: TimeSlotDTO
+    type: Class
+  - uid: ClinicManagement_proj.BLL.DTO.UserDTO
+    name: UserDTO
+    type: Class
+- uid: ClinicManagement_proj.BLL.Services
+  name: ClinicManagement_proj.BLL.Services
+  type: Namespace
+  items:
+  - uid: ClinicManagement_proj.BLL.Services.AppointmentService
+    name: AppointmentService
+    type: Class
+  - uid: ClinicManagement_proj.BLL.Services.DoctorScheduleService
+    name: DoctorScheduleService
+    type: Class
+  - uid: ClinicManagement_proj.BLL.Services.DoctorService
+    name: DoctorService
+    type: Class
+  - uid: ClinicManagement_proj.BLL.Services.NotificationService
+    name: NotificationService
+    type: Class
+  - uid: ClinicManagement_proj.BLL.Services.PatientService
+    name: PatientService
+    type: Class
+  - uid: ClinicManagement_proj.BLL.Services.UserService
+    name: UserService
+    type: Class
+  - uid: ClinicManagement_proj.BLL.Services.UserService.UserRoles
+    name: UserService.UserRoles
+    type: Enum
+  - uid: ClinicManagement_proj.BLL.Services.ViewsService
+    name: ViewsService
+    type: Class
+- uid: ClinicManagement_proj.BLL.Utils
+  name: ClinicManagement_proj.BLL.Utils
+  type: Namespace
+  items:
+  - uid: ClinicManagement_proj.BLL.Utils.Notification
+    name: Notification
+    type: Class
+  - uid: ClinicManagement_proj.BLL.Utils.NotificationType
+    name: NotificationType
+    type: Enum
+- uid: ClinicManagement_proj.DAL
+  name: ClinicManagement_proj.DAL
+  type: Namespace
+  items:
+  - uid: ClinicManagement_proj.DAL.Appointment
+    name: Appointment
+    type: Class
+  - uid: ClinicManagement_proj.DAL.Audit_Appointment
+    name: Audit_Appointment
+    type: Class
+  - uid: ClinicManagement_proj.DAL.ClinicDbContext
+    name: ClinicDbContext
+    type: Class
+  - uid: ClinicManagement_proj.DAL.Doctor
+    name: Doctor
+    type: Class
+  - uid: ClinicManagement_proj.DAL.DoctorSchedule
+    name: DoctorSchedule
+    type: Class
+  - uid: ClinicManagement_proj.DAL.HealthCareClinicDB_T2Entities
+    name: HealthCareClinicDB_T2Entities
+    type: Class
+  - uid: ClinicManagement_proj.DAL.Patient
+    name: Patient
+    type: Class
+  - uid: ClinicManagement_proj.DAL.Role
+    name: Role
+    type: Class
+  - uid: ClinicManagement_proj.DAL.Specialty
+    name: Specialty
+    type: Class
+  - uid: ClinicManagement_proj.DAL.TimeSlot
+    name: TimeSlot
+    type: Class
+  - uid: ClinicManagement_proj.DAL.User
+    name: User
+    type: Class
+  - uid: ClinicManagement_proj.DAL.sp_GetAvailableSlots_Result
+    name: sp_GetAvailableSlots_Result
+    type: Class
+  - uid: ClinicManagement_proj.DAL.vw_DoctorTodaySchedule
+    name: vw_DoctorTodaySchedule
+    type: Class
+  - uid: ClinicManagement_proj.DAL.vw_PatientClinicalSummary
+    name: vw_PatientClinicalSummary
+    type: Class
+  - uid: ClinicManagement_proj.DAL.vw_PatientRecordsSummary
+    name: vw_PatientRecordsSummary
+    type: Class
+  - uid: ClinicManagement_proj.DAL.vw_UpcomingAppointments
+    name: vw_UpcomingAppointments
+    type: Class
+- uid: ClinicManagement_proj.UI
+  name: ClinicManagement_proj.UI
+  type: Namespace
+  items:
+  - uid: ClinicManagement_proj.UI.AdminDashboard
+    name: AdminDashboard
+    type: Class
+  - uid: ClinicManagement_proj.UI.ApptMgmtController
+    name: ApptMgmtController
+    type: Class
+  - uid: ClinicManagement_proj.UI.DoctorDashboard
+    name: DoctorDashboard
+    type: Class
+  - uid: ClinicManagement_proj.UI.DoctorManagementController
+    name: DoctorManagementController
+    type: Class
+  - uid: ClinicManagement_proj.UI.IPanelController
+    name: IPanelController
+    type: Interface
+  - uid: ClinicManagement_proj.UI.ImageHelper
+    name: ImageHelper
+    type: Class
+  - uid: ClinicManagement_proj.UI.LoginForm
+    name: LoginForm
+    type: Class
+  - uid: ClinicManagement_proj.UI.NavigationManager
+    name: NavigationManager
+    type: Class
+  - uid: ClinicManagement_proj.UI.NotificationsController
+    name: NotificationsController
+    type: Class
+  - uid: ClinicManagement_proj.UI.PatientRegistrationController
+    name: PatientRegistrationController
+    type: Class
+  - uid: ClinicManagement_proj.UI.ReceptionistDashboard
+    name: ReceptionistDashboard
+    type: Class
+  - uid: ClinicManagement_proj.UI.ReportsController
+    name: ReportsController
+    type: Class
+  - uid: ClinicManagement_proj.UI.SchedulingController
+    name: SchedulingController
+    type: Class
+  - uid: ClinicManagement_proj.UI.UserManagementController
+    name: UserManagementController
+    type: Class
+memberLayout: SamePage

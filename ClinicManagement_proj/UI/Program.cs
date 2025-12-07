@@ -4,6 +4,9 @@ using System.Windows.Forms;
 
 namespace ClinicManagement_proj
 {
+    /// <summary>
+    /// The main program class for the clinic management application.
+    /// </summary>
     internal static class Program
     {
         /// <summary>

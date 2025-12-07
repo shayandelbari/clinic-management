@@ -2,6 +2,9 @@
 
 namespace ClinicManagement_proj.BLL.DTO
 {
+    /// <summary>
+    /// Represents an appointment data transfer object.
+    /// </summary>
     public class AppointmentDTO
     {
         public static int NOTES_MAX_LENGTH = 512;

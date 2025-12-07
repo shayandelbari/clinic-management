@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace ClinicManagement_proj.BLL.DTO
 {
+    /// <summary>
+    /// Represents a time slot data transfer object.
+    /// </summary>
     public class TimeSlotDTO
     {
         private int _hourOfDay;

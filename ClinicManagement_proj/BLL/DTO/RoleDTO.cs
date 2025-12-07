@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace ClinicManagement_proj.BLL.DTO
 {
+    /// <summary>
+    /// Represents a role data transfer object.
+    /// </summary>
     public class RoleDTO
     {
         public static int ROLENAME_MAXLENGTH = 64;

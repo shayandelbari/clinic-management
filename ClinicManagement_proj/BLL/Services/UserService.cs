@@ -8,6 +8,9 @@ using System.Security.Cryptography;
 
 namespace ClinicManagement_proj.BLL.Services
 {
+    /// <summary>
+    /// Provides services for managing users in the clinic.
+    /// </summary>
     public class UserService
     {
         private ClinicDbContext clinicDb;
@@ -43,7 +46,8 @@ namespace ClinicManagement_proj.BLL.Services
                 {
                     return user;
                 }
-            } catch (Exception) { }
+            }
+            catch (Exception) { }
             return null;
         }
 

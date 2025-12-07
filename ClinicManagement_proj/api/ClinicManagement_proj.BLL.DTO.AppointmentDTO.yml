@@ -1,0 +1,1011 @@
+### YamlMime:ManagedReference
+items:
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO
+  commentId: T:ClinicManagement_proj.BLL.DTO.AppointmentDTO
+  id: AppointmentDTO
+  parent: ClinicManagement_proj.BLL.DTO
+  children:
+  - ClinicManagement_proj.BLL.DTO.AppointmentDTO.#ctor
+  - ClinicManagement_proj.BLL.DTO.AppointmentDTO.#ctor(System.DateTime,System.String,System.Int32,System.Int32,System.Int32,System.DateTime,System.DateTime)
+  - ClinicManagement_proj.BLL.DTO.AppointmentDTO.CreatedAt
+  - ClinicManagement_proj.BLL.DTO.AppointmentDTO.Date
+  - ClinicManagement_proj.BLL.DTO.AppointmentDTO.Doctor
+  - ClinicManagement_proj.BLL.DTO.AppointmentDTO.DoctorId
+  - ClinicManagement_proj.BLL.DTO.AppointmentDTO.Id
+  - ClinicManagement_proj.BLL.DTO.AppointmentDTO.ModifiedAt
+  - ClinicManagement_proj.BLL.DTO.AppointmentDTO.NOTES_MAX_LENGTH
+  - ClinicManagement_proj.BLL.DTO.AppointmentDTO.Notes
+  - ClinicManagement_proj.BLL.DTO.AppointmentDTO.Patient
+  - ClinicManagement_proj.BLL.DTO.AppointmentDTO.PatientId
+  - ClinicManagement_proj.BLL.DTO.AppointmentDTO.Status
+  - ClinicManagement_proj.BLL.DTO.AppointmentDTO.TimeSlot
+  - ClinicManagement_proj.BLL.DTO.AppointmentDTO.TimeSlotId
+  - ClinicManagement_proj.BLL.DTO.AppointmentDTO.ToString
+  - ClinicManagement_proj.BLL.DTO.AppointmentDTO.ValidateNotes(System.String)
+  langs:
+  - csharp
+  - vb
+  name: AppointmentDTO
+  nameWithType: AppointmentDTO
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO
+  type: Class
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/AppointmentDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: AppointmentDTO
+    path: BLL/DTO/AppointmentDTO.cs
+    startLine: 7
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  summary: Represents an appointment data transfer object.
+  example: []
+  syntax:
+    content: public class AppointmentDTO
+    content.vb: Public Class AppointmentDTO
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.NOTES_MAX_LENGTH
+  commentId: F:ClinicManagement_proj.BLL.DTO.AppointmentDTO.NOTES_MAX_LENGTH
+  id: NOTES_MAX_LENGTH
+  parent: ClinicManagement_proj.BLL.DTO.AppointmentDTO
+  langs:
+  - csharp
+  - vb
+  name: NOTES_MAX_LENGTH
+  nameWithType: AppointmentDTO.NOTES_MAX_LENGTH
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.NOTES_MAX_LENGTH
+  type: Field
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/AppointmentDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: NOTES_MAX_LENGTH
+    path: BLL/DTO/AppointmentDTO.cs
+    startLine: 9
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  syntax:
+    content: public static int NOTES_MAX_LENGTH
+    return:
+      type: System.Int32
+    content.vb: Public Shared NOTES_MAX_LENGTH As Integer
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.Id
+  commentId: P:ClinicManagement_proj.BLL.DTO.AppointmentDTO.Id
+  id: Id
+  parent: ClinicManagement_proj.BLL.DTO.AppointmentDTO
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: AppointmentDTO.Id
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.Id
+  type: Property
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/AppointmentDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: Id
+    path: BLL/DTO/AppointmentDTO.cs
+    startLine: 13
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  syntax:
+    content: public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Id As Integer
+  overload: ClinicManagement_proj.BLL.DTO.AppointmentDTO.Id*
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.Date
+  commentId: P:ClinicManagement_proj.BLL.DTO.AppointmentDTO.Date
+  id: Date
+  parent: ClinicManagement_proj.BLL.DTO.AppointmentDTO
+  langs:
+  - csharp
+  - vb
+  name: Date
+  nameWithType: AppointmentDTO.Date
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.Date
+  type: Property
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/AppointmentDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: Date
+    path: BLL/DTO/AppointmentDTO.cs
+    startLine: 14
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  syntax:
+    content: public DateTime Date { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property [Date] As Date
+  overload: ClinicManagement_proj.BLL.DTO.AppointmentDTO.Date*
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.Notes
+  commentId: P:ClinicManagement_proj.BLL.DTO.AppointmentDTO.Notes
+  id: Notes
+  parent: ClinicManagement_proj.BLL.DTO.AppointmentDTO
+  langs:
+  - csharp
+  - vb
+  name: Notes
+  nameWithType: AppointmentDTO.Notes
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.Notes
+  type: Property
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/AppointmentDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: Notes
+    path: BLL/DTO/AppointmentDTO.cs
+    startLine: 15
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  syntax:
+    content: public string Notes { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Notes As String
+  overload: ClinicManagement_proj.BLL.DTO.AppointmentDTO.Notes*
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.DoctorId
+  commentId: P:ClinicManagement_proj.BLL.DTO.AppointmentDTO.DoctorId
+  id: DoctorId
+  parent: ClinicManagement_proj.BLL.DTO.AppointmentDTO
+  langs:
+  - csharp
+  - vb
+  name: DoctorId
+  nameWithType: AppointmentDTO.DoctorId
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.DoctorId
+  type: Property
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/AppointmentDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: DoctorId
+    path: BLL/DTO/AppointmentDTO.cs
+    startLine: 21
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  syntax:
+    content: public int DoctorId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property DoctorId As Integer
+  overload: ClinicManagement_proj.BLL.DTO.AppointmentDTO.DoctorId*
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.PatientId
+  commentId: P:ClinicManagement_proj.BLL.DTO.AppointmentDTO.PatientId
+  id: PatientId
+  parent: ClinicManagement_proj.BLL.DTO.AppointmentDTO
+  langs:
+  - csharp
+  - vb
+  name: PatientId
+  nameWithType: AppointmentDTO.PatientId
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.PatientId
+  type: Property
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/AppointmentDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: PatientId
+    path: BLL/DTO/AppointmentDTO.cs
+    startLine: 22
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  syntax:
+    content: public int PatientId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property PatientId As Integer
+  overload: ClinicManagement_proj.BLL.DTO.AppointmentDTO.PatientId*
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.TimeSlotId
+  commentId: P:ClinicManagement_proj.BLL.DTO.AppointmentDTO.TimeSlotId
+  id: TimeSlotId
+  parent: ClinicManagement_proj.BLL.DTO.AppointmentDTO
+  langs:
+  - csharp
+  - vb
+  name: TimeSlotId
+  nameWithType: AppointmentDTO.TimeSlotId
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.TimeSlotId
+  type: Property
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/AppointmentDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: TimeSlotId
+    path: BLL/DTO/AppointmentDTO.cs
+    startLine: 23
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  syntax:
+    content: public int TimeSlotId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property TimeSlotId As Integer
+  overload: ClinicManagement_proj.BLL.DTO.AppointmentDTO.TimeSlotId*
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.Status
+  commentId: P:ClinicManagement_proj.BLL.DTO.AppointmentDTO.Status
+  id: Status
+  parent: ClinicManagement_proj.BLL.DTO.AppointmentDTO
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: AppointmentDTO.Status
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.Status
+  type: Property
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/AppointmentDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: Status
+    path: BLL/DTO/AppointmentDTO.cs
+    startLine: 24
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  syntax:
+    content: public string Status { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Status As String
+  overload: ClinicManagement_proj.BLL.DTO.AppointmentDTO.Status*
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.CreatedAt
+  commentId: P:ClinicManagement_proj.BLL.DTO.AppointmentDTO.CreatedAt
+  id: CreatedAt
+  parent: ClinicManagement_proj.BLL.DTO.AppointmentDTO
+  langs:
+  - csharp
+  - vb
+  name: CreatedAt
+  nameWithType: AppointmentDTO.CreatedAt
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.CreatedAt
+  type: Property
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/AppointmentDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: CreatedAt
+    path: BLL/DTO/AppointmentDTO.cs
+    startLine: 25
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  syntax:
+    content: public DateTime CreatedAt { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property CreatedAt As Date
+  overload: ClinicManagement_proj.BLL.DTO.AppointmentDTO.CreatedAt*
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.ModifiedAt
+  commentId: P:ClinicManagement_proj.BLL.DTO.AppointmentDTO.ModifiedAt
+  id: ModifiedAt
+  parent: ClinicManagement_proj.BLL.DTO.AppointmentDTO
+  langs:
+  - csharp
+  - vb
+  name: ModifiedAt
+  nameWithType: AppointmentDTO.ModifiedAt
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.ModifiedAt
+  type: Property
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/AppointmentDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: ModifiedAt
+    path: BLL/DTO/AppointmentDTO.cs
+    startLine: 26
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  syntax:
+    content: public DateTime ModifiedAt { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property ModifiedAt As Date
+  overload: ClinicManagement_proj.BLL.DTO.AppointmentDTO.ModifiedAt*
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.Patient
+  commentId: P:ClinicManagement_proj.BLL.DTO.AppointmentDTO.Patient
+  id: Patient
+  parent: ClinicManagement_proj.BLL.DTO.AppointmentDTO
+  langs:
+  - csharp
+  - vb
+  name: Patient
+  nameWithType: AppointmentDTO.Patient
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.Patient
+  type: Property
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/AppointmentDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: Patient
+    path: BLL/DTO/AppointmentDTO.cs
+    startLine: 27
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  syntax:
+    content: public PatientDTO Patient { get; set; }
+    parameters: []
+    return:
+      type: ClinicManagement_proj.BLL.DTO.PatientDTO
+    content.vb: Public Property Patient As PatientDTO
+  overload: ClinicManagement_proj.BLL.DTO.AppointmentDTO.Patient*
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.Doctor
+  commentId: P:ClinicManagement_proj.BLL.DTO.AppointmentDTO.Doctor
+  id: Doctor
+  parent: ClinicManagement_proj.BLL.DTO.AppointmentDTO
+  langs:
+  - csharp
+  - vb
+  name: Doctor
+  nameWithType: AppointmentDTO.Doctor
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.Doctor
+  type: Property
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/AppointmentDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: Doctor
+    path: BLL/DTO/AppointmentDTO.cs
+    startLine: 28
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  syntax:
+    content: public DoctorDTO Doctor { get; set; }
+    parameters: []
+    return:
+      type: ClinicManagement_proj.BLL.DTO.DoctorDTO
+    content.vb: Public Property Doctor As DoctorDTO
+  overload: ClinicManagement_proj.BLL.DTO.AppointmentDTO.Doctor*
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.TimeSlot
+  commentId: P:ClinicManagement_proj.BLL.DTO.AppointmentDTO.TimeSlot
+  id: TimeSlot
+  parent: ClinicManagement_proj.BLL.DTO.AppointmentDTO
+  langs:
+  - csharp
+  - vb
+  name: TimeSlot
+  nameWithType: AppointmentDTO.TimeSlot
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.TimeSlot
+  type: Property
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/AppointmentDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: TimeSlot
+    path: BLL/DTO/AppointmentDTO.cs
+    startLine: 29
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  syntax:
+    content: public TimeSlotDTO TimeSlot { get; set; }
+    parameters: []
+    return:
+      type: ClinicManagement_proj.BLL.DTO.TimeSlotDTO
+    content.vb: Public Property TimeSlot As TimeSlotDTO
+  overload: ClinicManagement_proj.BLL.DTO.AppointmentDTO.TimeSlot*
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.#ctor
+  commentId: M:ClinicManagement_proj.BLL.DTO.AppointmentDTO.#ctor
+  id: '#ctor'
+  parent: ClinicManagement_proj.BLL.DTO.AppointmentDTO
+  langs:
+  - csharp
+  - vb
+  name: AppointmentDTO()
+  nameWithType: AppointmentDTO.AppointmentDTO()
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.AppointmentDTO()
+  type: Constructor
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/AppointmentDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: .ctor
+    path: BLL/DTO/AppointmentDTO.cs
+    startLine: 34
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  summary: Initializes a new instance of the AppointmentDTO class.
+  example: []
+  syntax:
+    content: public AppointmentDTO()
+    content.vb: Public Sub New()
+  overload: ClinicManagement_proj.BLL.DTO.AppointmentDTO.#ctor*
+  nameWithType.vb: AppointmentDTO.New()
+  fullName.vb: ClinicManagement_proj.BLL.DTO.AppointmentDTO.New()
+  name.vb: New()
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.ValidateNotes(System.String)
+  commentId: M:ClinicManagement_proj.BLL.DTO.AppointmentDTO.ValidateNotes(System.String)
+  id: ValidateNotes(System.String)
+  parent: ClinicManagement_proj.BLL.DTO.AppointmentDTO
+  langs:
+  - csharp
+  - vb
+  name: ValidateNotes(string)
+  nameWithType: AppointmentDTO.ValidateNotes(string)
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.ValidateNotes(string)
+  type: Method
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/AppointmentDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: ValidateNotes
+    path: BLL/DTO/AppointmentDTO.cs
+    startLine: 44
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  summary: Validates the notes string to ensure it does not exceed the maximum length.
+  example: []
+  syntax:
+    content: public static string ValidateNotes(string notes)
+    parameters:
+    - id: notes
+      type: System.String
+      description: The notes string to validate.
+    return:
+      type: System.String
+      description: The notes string if valid.
+    content.vb: Public Shared Function ValidateNotes(notes As String) As String
+  overload: ClinicManagement_proj.BLL.DTO.AppointmentDTO.ValidateNotes*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if the notes length exceeds NOTES_MAX_LENGTH.
+  nameWithType.vb: AppointmentDTO.ValidateNotes(String)
+  fullName.vb: ClinicManagement_proj.BLL.DTO.AppointmentDTO.ValidateNotes(String)
+  name.vb: ValidateNotes(String)
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.#ctor(System.DateTime,System.String,System.Int32,System.Int32,System.Int32,System.DateTime,System.DateTime)
+  commentId: M:ClinicManagement_proj.BLL.DTO.AppointmentDTO.#ctor(System.DateTime,System.String,System.Int32,System.Int32,System.Int32,System.DateTime,System.DateTime)
+  id: '#ctor(System.DateTime,System.String,System.Int32,System.Int32,System.Int32,System.DateTime,System.DateTime)'
+  parent: ClinicManagement_proj.BLL.DTO.AppointmentDTO
+  langs:
+  - csharp
+  - vb
+  name: AppointmentDTO(DateTime, string, int, int, int, DateTime, DateTime)
+  nameWithType: AppointmentDTO.AppointmentDTO(DateTime, string, int, int, int, DateTime, DateTime)
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.AppointmentDTO(System.DateTime, string, int, int, int, System.DateTime, System.DateTime)
+  type: Constructor
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/AppointmentDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: .ctor
+    path: BLL/DTO/AppointmentDTO.cs
+    startLine: 61
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  summary: Initializes a new instance of the AppointmentDTO class with specified parameters.
+  example: []
+  syntax:
+    content: public AppointmentDTO(DateTime date, string notes, int doctorId, int patientId, int timeSlotId, DateTime createdAt, DateTime modifiedAt)
+    parameters:
+    - id: date
+      type: System.DateTime
+      description: The date of the appointment.
+    - id: notes
+      type: System.String
+      description: The notes for the appointment.
+    - id: doctorId
+      type: System.Int32
+      description: The ID of the doctor.
+    - id: patientId
+      type: System.Int32
+      description: The ID of the patient.
+    - id: timeSlotId
+      type: System.Int32
+      description: The ID of the time slot.
+    - id: createdAt
+      type: System.DateTime
+      description: The creation date.
+    - id: modifiedAt
+      type: System.DateTime
+      description: The modification date.
+    content.vb: Public Sub New([date] As Date, notes As String, doctorId As Integer, patientId As Integer, timeSlotId As Integer, createdAt As Date, modifiedAt As Date)
+  overload: ClinicManagement_proj.BLL.DTO.AppointmentDTO.#ctor*
+  nameWithType.vb: AppointmentDTO.New(Date, String, Integer, Integer, Integer, Date, Date)
+  fullName.vb: ClinicManagement_proj.BLL.DTO.AppointmentDTO.New(Date, String, Integer, Integer, Integer, Date, Date)
+  name.vb: New(Date, String, Integer, Integer, Integer, Date, Date)
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.ToString
+  commentId: M:ClinicManagement_proj.BLL.DTO.AppointmentDTO.ToString
+  id: ToString
+  parent: ClinicManagement_proj.BLL.DTO.AppointmentDTO
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: AppointmentDTO.ToString()
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.ToString()
+  type: Method
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/AppointmentDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: ToString
+    path: BLL/DTO/AppointmentDTO.cs
+    startLine: 76
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  summary: Returns a string representation of the appointment.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string describing the appointment details.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: ClinicManagement_proj.BLL.DTO.AppointmentDTO.ToString*
+references:
+- uid: ClinicManagement_proj.BLL.DTO
+  commentId: N:ClinicManagement_proj.BLL.DTO
+  href: ClinicManagement_proj.html
+  name: ClinicManagement_proj.BLL.DTO
+  nameWithType: ClinicManagement_proj.BLL.DTO
+  fullName: ClinicManagement_proj.BLL.DTO
+  spec.csharp:
+  - uid: ClinicManagement_proj
+    name: ClinicManagement_proj
+    href: ClinicManagement_proj.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL
+    name: BLL
+    href: ClinicManagement_proj.BLL.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL.DTO
+    name: DTO
+    href: ClinicManagement_proj.BLL.DTO.html
+  spec.vb:
+  - uid: ClinicManagement_proj
+    name: ClinicManagement_proj
+    href: ClinicManagement_proj.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL
+    name: BLL
+    href: ClinicManagement_proj.BLL.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL.DTO
+    name: DTO
+    href: ClinicManagement_proj.BLL.DTO.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.Id*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.AppointmentDTO.Id
+  href: ClinicManagement_proj.BLL.DTO.AppointmentDTO.html#ClinicManagement_proj_BLL_DTO_AppointmentDTO_Id
+  name: Id
+  nameWithType: AppointmentDTO.Id
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.Id
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.Date*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.AppointmentDTO.Date
+  href: ClinicManagement_proj.BLL.DTO.AppointmentDTO.html#ClinicManagement_proj_BLL_DTO_AppointmentDTO_Date
+  name: Date
+  nameWithType: AppointmentDTO.Date
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.Date
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.Notes*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.AppointmentDTO.Notes
+  href: ClinicManagement_proj.BLL.DTO.AppointmentDTO.html#ClinicManagement_proj_BLL_DTO_AppointmentDTO_Notes
+  name: Notes
+  nameWithType: AppointmentDTO.Notes
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.Notes
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.DoctorId*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.AppointmentDTO.DoctorId
+  href: ClinicManagement_proj.BLL.DTO.AppointmentDTO.html#ClinicManagement_proj_BLL_DTO_AppointmentDTO_DoctorId
+  name: DoctorId
+  nameWithType: AppointmentDTO.DoctorId
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.DoctorId
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.PatientId*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.AppointmentDTO.PatientId
+  href: ClinicManagement_proj.BLL.DTO.AppointmentDTO.html#ClinicManagement_proj_BLL_DTO_AppointmentDTO_PatientId
+  name: PatientId
+  nameWithType: AppointmentDTO.PatientId
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.PatientId
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.TimeSlotId*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.AppointmentDTO.TimeSlotId
+  href: ClinicManagement_proj.BLL.DTO.AppointmentDTO.html#ClinicManagement_proj_BLL_DTO_AppointmentDTO_TimeSlotId
+  name: TimeSlotId
+  nameWithType: AppointmentDTO.TimeSlotId
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.TimeSlotId
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.Status*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.AppointmentDTO.Status
+  href: ClinicManagement_proj.BLL.DTO.AppointmentDTO.html#ClinicManagement_proj_BLL_DTO_AppointmentDTO_Status
+  name: Status
+  nameWithType: AppointmentDTO.Status
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.Status
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.CreatedAt*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.AppointmentDTO.CreatedAt
+  href: ClinicManagement_proj.BLL.DTO.AppointmentDTO.html#ClinicManagement_proj_BLL_DTO_AppointmentDTO_CreatedAt
+  name: CreatedAt
+  nameWithType: AppointmentDTO.CreatedAt
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.CreatedAt
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.ModifiedAt*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.AppointmentDTO.ModifiedAt
+  href: ClinicManagement_proj.BLL.DTO.AppointmentDTO.html#ClinicManagement_proj_BLL_DTO_AppointmentDTO_ModifiedAt
+  name: ModifiedAt
+  nameWithType: AppointmentDTO.ModifiedAt
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.ModifiedAt
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.Patient*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.AppointmentDTO.Patient
+  href: ClinicManagement_proj.BLL.DTO.AppointmentDTO.html#ClinicManagement_proj_BLL_DTO_AppointmentDTO_Patient
+  name: Patient
+  nameWithType: AppointmentDTO.Patient
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.Patient
+- uid: ClinicManagement_proj.BLL.DTO.PatientDTO
+  commentId: T:ClinicManagement_proj.BLL.DTO.PatientDTO
+  parent: ClinicManagement_proj.BLL.DTO
+  href: ClinicManagement_proj.BLL.DTO.PatientDTO.html
+  name: PatientDTO
+  nameWithType: PatientDTO
+  fullName: ClinicManagement_proj.BLL.DTO.PatientDTO
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.Doctor*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.AppointmentDTO.Doctor
+  href: ClinicManagement_proj.BLL.DTO.AppointmentDTO.html#ClinicManagement_proj_BLL_DTO_AppointmentDTO_Doctor
+  name: Doctor
+  nameWithType: AppointmentDTO.Doctor
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.Doctor
+- uid: ClinicManagement_proj.BLL.DTO.DoctorDTO
+  commentId: T:ClinicManagement_proj.BLL.DTO.DoctorDTO
+  parent: ClinicManagement_proj.BLL.DTO
+  href: ClinicManagement_proj.BLL.DTO.DoctorDTO.html
+  name: DoctorDTO
+  nameWithType: DoctorDTO
+  fullName: ClinicManagement_proj.BLL.DTO.DoctorDTO
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.TimeSlot*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.AppointmentDTO.TimeSlot
+  href: ClinicManagement_proj.BLL.DTO.AppointmentDTO.html#ClinicManagement_proj_BLL_DTO_AppointmentDTO_TimeSlot
+  name: TimeSlot
+  nameWithType: AppointmentDTO.TimeSlot
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.TimeSlot
+- uid: ClinicManagement_proj.BLL.DTO.TimeSlotDTO
+  commentId: T:ClinicManagement_proj.BLL.DTO.TimeSlotDTO
+  parent: ClinicManagement_proj.BLL.DTO
+  href: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.html
+  name: TimeSlotDTO
+  nameWithType: TimeSlotDTO
+  fullName: ClinicManagement_proj.BLL.DTO.TimeSlotDTO
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.#ctor*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.AppointmentDTO.#ctor
+  href: ClinicManagement_proj.BLL.DTO.AppointmentDTO.html#ClinicManagement_proj_BLL_DTO_AppointmentDTO__ctor
+  name: AppointmentDTO
+  nameWithType: AppointmentDTO.AppointmentDTO
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.AppointmentDTO
+  nameWithType.vb: AppointmentDTO.New
+  fullName.vb: ClinicManagement_proj.BLL.DTO.AppointmentDTO.New
+  name.vb: New
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.ValidateNotes*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.AppointmentDTO.ValidateNotes
+  href: ClinicManagement_proj.BLL.DTO.AppointmentDTO.html#ClinicManagement_proj_BLL_DTO_AppointmentDTO_ValidateNotes_System_String_
+  name: ValidateNotes
+  nameWithType: AppointmentDTO.ValidateNotes
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.ValidateNotes
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO.ToString*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.AppointmentDTO.ToString
+  href: ClinicManagement_proj.BLL.DTO.AppointmentDTO.html#ClinicManagement_proj_BLL_DTO_AppointmentDTO_ToString
+  name: ToString
+  nameWithType: AppointmentDTO.ToString
+  fullName: ClinicManagement_proj.BLL.DTO.AppointmentDTO.ToString

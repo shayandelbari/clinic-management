@@ -1,0 +1,871 @@
+### YamlMime:ManagedReference
+items:
+- uid: ClinicManagement_proj.BLL.Services.DoctorScheduleService
+  commentId: T:ClinicManagement_proj.BLL.Services.DoctorScheduleService
+  id: DoctorScheduleService
+  parent: ClinicManagement_proj.BLL.Services
+  children:
+  - ClinicManagement_proj.BLL.Services.DoctorScheduleService.#ctor(ClinicManagement_proj.DAL.ClinicDbContext)
+  - ClinicManagement_proj.BLL.Services.DoctorScheduleService.CreateSchedule(ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO)
+  - ClinicManagement_proj.BLL.Services.DoctorScheduleService.DeleteSchedule(ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO)
+  - ClinicManagement_proj.BLL.Services.DoctorScheduleService.DeleteSchedule(System.Int32)
+  - ClinicManagement_proj.BLL.Services.DoctorScheduleService.GetAllSchedules
+  - ClinicManagement_proj.BLL.Services.DoctorScheduleService.Search(System.Int32)
+  - ClinicManagement_proj.BLL.Services.DoctorScheduleService.Search(System.String)
+  - ClinicManagement_proj.BLL.Services.DoctorScheduleService.UpdateSchedule(ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO)
+  langs:
+  - csharp
+  - vb
+  name: DoctorScheduleService
+  nameWithType: DoctorScheduleService
+  fullName: ClinicManagement_proj.BLL.Services.DoctorScheduleService
+  type: Class
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/Services/DoctorScheduleService.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: DoctorScheduleService
+    path: BLL/Services/DoctorScheduleService.cs
+    startLine: 12
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.Services
+  summary: Provides services for managing doctor schedules.
+  example: []
+  syntax:
+    content: public class DoctorScheduleService
+    content.vb: Public Class DoctorScheduleService
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: ClinicManagement_proj.BLL.Services.DoctorScheduleService.#ctor(ClinicManagement_proj.DAL.ClinicDbContext)
+  commentId: M:ClinicManagement_proj.BLL.Services.DoctorScheduleService.#ctor(ClinicManagement_proj.DAL.ClinicDbContext)
+  id: '#ctor(ClinicManagement_proj.DAL.ClinicDbContext)'
+  parent: ClinicManagement_proj.BLL.Services.DoctorScheduleService
+  langs:
+  - csharp
+  - vb
+  name: DoctorScheduleService(ClinicDbContext)
+  nameWithType: DoctorScheduleService.DoctorScheduleService(ClinicDbContext)
+  fullName: ClinicManagement_proj.BLL.Services.DoctorScheduleService.DoctorScheduleService(ClinicManagement_proj.DAL.ClinicDbContext)
+  type: Constructor
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/Services/DoctorScheduleService.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: .ctor
+    path: BLL/Services/DoctorScheduleService.cs
+    startLine: 20
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.Services
+  summary: Initializes a new instance of the DoctorScheduleService class.
+  example: []
+  syntax:
+    content: public DoctorScheduleService(ClinicDbContext dbContext)
+    parameters:
+    - id: dbContext
+      type: ClinicManagement_proj.DAL.ClinicDbContext
+      description: The database context.
+    content.vb: Public Sub New(dbContext As ClinicDbContext)
+  overload: ClinicManagement_proj.BLL.Services.DoctorScheduleService.#ctor*
+  nameWithType.vb: DoctorScheduleService.New(ClinicDbContext)
+  fullName.vb: ClinicManagement_proj.BLL.Services.DoctorScheduleService.New(ClinicManagement_proj.DAL.ClinicDbContext)
+  name.vb: New(ClinicDbContext)
+- uid: ClinicManagement_proj.BLL.Services.DoctorScheduleService.CreateSchedule(ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO)
+  commentId: M:ClinicManagement_proj.BLL.Services.DoctorScheduleService.CreateSchedule(ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO)
+  id: CreateSchedule(ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO)
+  parent: ClinicManagement_proj.BLL.Services.DoctorScheduleService
+  langs:
+  - csharp
+  - vb
+  name: CreateSchedule(DoctorScheduleDTO)
+  nameWithType: DoctorScheduleService.CreateSchedule(DoctorScheduleDTO)
+  fullName: ClinicManagement_proj.BLL.Services.DoctorScheduleService.CreateSchedule(ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO)
+  type: Method
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/Services/DoctorScheduleService.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: CreateSchedule
+    path: BLL/Services/DoctorScheduleService.cs
+    startLine: 31
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.Services
+  summary: Creates a new doctor schedule.
+  example: []
+  syntax:
+    content: public DoctorScheduleDTO CreateSchedule(DoctorScheduleDTO scheduleDto)
+    parameters:
+    - id: scheduleDto
+      type: ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO
+      description: The schedule to create.
+    return:
+      type: ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO
+      description: The created schedule.
+    content.vb: Public Function CreateSchedule(scheduleDto As DoctorScheduleDTO) As DoctorScheduleDTO
+  overload: ClinicManagement_proj.BLL.Services.DoctorScheduleService.CreateSchedule*
+  exceptions:
+  - type: System.UnauthorizedAccessException
+    commentId: T:System.UnauthorizedAccessException
+    description: Thrown if the current user is not an administrator.
+- uid: ClinicManagement_proj.BLL.Services.DoctorScheduleService.UpdateSchedule(ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO)
+  commentId: M:ClinicManagement_proj.BLL.Services.DoctorScheduleService.UpdateSchedule(ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO)
+  id: UpdateSchedule(ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO)
+  parent: ClinicManagement_proj.BLL.Services.DoctorScheduleService
+  langs:
+  - csharp
+  - vb
+  name: UpdateSchedule(DoctorScheduleDTO)
+  nameWithType: DoctorScheduleService.UpdateSchedule(DoctorScheduleDTO)
+  fullName: ClinicManagement_proj.BLL.Services.DoctorScheduleService.UpdateSchedule(ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO)
+  type: Method
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/Services/DoctorScheduleService.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: UpdateSchedule
+    path: BLL/Services/DoctorScheduleService.cs
+    startLine: 47
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.Services
+  summary: Updates an existing doctor schedule.
+  example: []
+  syntax:
+    content: public DoctorScheduleDTO UpdateSchedule(DoctorScheduleDTO scheduleDto)
+    parameters:
+    - id: scheduleDto
+      type: ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO
+      description: The schedule to update.
+    return:
+      type: ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO
+      description: The updated schedule.
+    content.vb: Public Function UpdateSchedule(scheduleDto As DoctorScheduleDTO) As DoctorScheduleDTO
+  overload: ClinicManagement_proj.BLL.Services.DoctorScheduleService.UpdateSchedule*
+  exceptions:
+  - type: System.UnauthorizedAccessException
+    commentId: T:System.UnauthorizedAccessException
+    description: Thrown if the current user is not an administrator.
+- uid: ClinicManagement_proj.BLL.Services.DoctorScheduleService.DeleteSchedule(System.Int32)
+  commentId: M:ClinicManagement_proj.BLL.Services.DoctorScheduleService.DeleteSchedule(System.Int32)
+  id: DeleteSchedule(System.Int32)
+  parent: ClinicManagement_proj.BLL.Services.DoctorScheduleService
+  langs:
+  - csharp
+  - vb
+  name: DeleteSchedule(int)
+  nameWithType: DoctorScheduleService.DeleteSchedule(int)
+  fullName: ClinicManagement_proj.BLL.Services.DoctorScheduleService.DeleteSchedule(int)
+  type: Method
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/Services/DoctorScheduleService.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: DeleteSchedule
+    path: BLL/Services/DoctorScheduleService.cs
+    startLine: 63
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.Services
+  summary: Deletes a doctor schedule by ID.
+  example: []
+  syntax:
+    content: public void DeleteSchedule(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: The ID of the schedule to delete.
+    content.vb: Public Sub DeleteSchedule(id As Integer)
+  overload: ClinicManagement_proj.BLL.Services.DoctorScheduleService.DeleteSchedule*
+  exceptions:
+  - type: System.UnauthorizedAccessException
+    commentId: T:System.UnauthorizedAccessException
+    description: Thrown if the current user is not an administrator.
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if the schedule is not found.
+  nameWithType.vb: DoctorScheduleService.DeleteSchedule(Integer)
+  fullName.vb: ClinicManagement_proj.BLL.Services.DoctorScheduleService.DeleteSchedule(Integer)
+  name.vb: DeleteSchedule(Integer)
+- uid: ClinicManagement_proj.BLL.Services.DoctorScheduleService.DeleteSchedule(ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO)
+  commentId: M:ClinicManagement_proj.BLL.Services.DoctorScheduleService.DeleteSchedule(ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO)
+  id: DeleteSchedule(ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO)
+  parent: ClinicManagement_proj.BLL.Services.DoctorScheduleService
+  langs:
+  - csharp
+  - vb
+  name: DeleteSchedule(DoctorScheduleDTO)
+  nameWithType: DoctorScheduleService.DeleteSchedule(DoctorScheduleDTO)
+  fullName: ClinicManagement_proj.BLL.Services.DoctorScheduleService.DeleteSchedule(ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO)
+  type: Method
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/Services/DoctorScheduleService.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: DeleteSchedule
+    path: BLL/Services/DoctorScheduleService.cs
+    startLine: 81
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.Services
+  summary: Deletes a doctor schedule.
+  example: []
+  syntax:
+    content: public void DeleteSchedule(DoctorScheduleDTO scheduleDto)
+    parameters:
+    - id: scheduleDto
+      type: ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO
+      description: The schedule to delete.
+    content.vb: Public Sub DeleteSchedule(scheduleDto As DoctorScheduleDTO)
+  overload: ClinicManagement_proj.BLL.Services.DoctorScheduleService.DeleteSchedule*
+  exceptions:
+  - type: System.UnauthorizedAccessException
+    commentId: T:System.UnauthorizedAccessException
+    description: Thrown if the current user is not an administrator.
+- uid: ClinicManagement_proj.BLL.Services.DoctorScheduleService.GetAllSchedules
+  commentId: M:ClinicManagement_proj.BLL.Services.DoctorScheduleService.GetAllSchedules
+  id: GetAllSchedules
+  parent: ClinicManagement_proj.BLL.Services.DoctorScheduleService
+  langs:
+  - csharp
+  - vb
+  name: GetAllSchedules()
+  nameWithType: DoctorScheduleService.GetAllSchedules()
+  fullName: ClinicManagement_proj.BLL.Services.DoctorScheduleService.GetAllSchedules()
+  type: Method
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/Services/DoctorScheduleService.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: GetAllSchedules
+    path: BLL/Services/DoctorScheduleService.cs
+    startLine: 95
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.Services
+  summary: Gets all doctor schedules.
+  example: []
+  syntax:
+    content: public List<DoctorScheduleDTO> GetAllSchedules()
+    return:
+      type: System.Collections.Generic.List{ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO}
+      description: A list of all schedules.
+    content.vb: Public Function GetAllSchedules() As List(Of DoctorScheduleDTO)
+  overload: ClinicManagement_proj.BLL.Services.DoctorScheduleService.GetAllSchedules*
+  exceptions:
+  - type: System.UnauthorizedAccessException
+    commentId: T:System.UnauthorizedAccessException
+    description: Thrown if the current user does not have access.
+- uid: ClinicManagement_proj.BLL.Services.DoctorScheduleService.Search(System.Int32)
+  commentId: M:ClinicManagement_proj.BLL.Services.DoctorScheduleService.Search(System.Int32)
+  id: Search(System.Int32)
+  parent: ClinicManagement_proj.BLL.Services.DoctorScheduleService
+  langs:
+  - csharp
+  - vb
+  name: Search(int)
+  nameWithType: DoctorScheduleService.Search(int)
+  fullName: ClinicManagement_proj.BLL.Services.DoctorScheduleService.Search(int)
+  type: Method
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/Services/DoctorScheduleService.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: Search
+    path: BLL/Services/DoctorScheduleService.cs
+    startLine: 115
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.Services
+  summary: Searches for a doctor schedule by ID.
+  example: []
+  syntax:
+    content: public DoctorScheduleDTO Search(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: The ID of the schedule.
+    return:
+      type: ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO
+      description: The schedule with the specified ID.
+    content.vb: Public Function Search(id As Integer) As DoctorScheduleDTO
+  overload: ClinicManagement_proj.BLL.Services.DoctorScheduleService.Search*
+  exceptions:
+  - type: System.UnauthorizedAccessException
+    commentId: T:System.UnauthorizedAccessException
+    description: Thrown if the current user does not have access.
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if the schedule is not found.
+  nameWithType.vb: DoctorScheduleService.Search(Integer)
+  fullName.vb: ClinicManagement_proj.BLL.Services.DoctorScheduleService.Search(Integer)
+  name.vb: Search(Integer)
+- uid: ClinicManagement_proj.BLL.Services.DoctorScheduleService.Search(System.String)
+  commentId: M:ClinicManagement_proj.BLL.Services.DoctorScheduleService.Search(System.String)
+  id: Search(System.String)
+  parent: ClinicManagement_proj.BLL.Services.DoctorScheduleService
+  langs:
+  - csharp
+  - vb
+  name: Search(string)
+  nameWithType: DoctorScheduleService.Search(string)
+  fullName: ClinicManagement_proj.BLL.Services.DoctorScheduleService.Search(string)
+  type: Method
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/Services/DoctorScheduleService.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: Search
+    path: BLL/Services/DoctorScheduleService.cs
+    startLine: 140
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.Services
+  summary: Searches for a doctor schedule by day of the week.
+  example: []
+  syntax:
+    content: public DoctorScheduleDTO Search(string dayOfWeek)
+    parameters:
+    - id: dayOfWeek
+      type: System.String
+      description: The day of the week.
+    return:
+      type: ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO
+      description: The schedule for the specified day.
+    content.vb: Public Function Search(dayOfWeek As String) As DoctorScheduleDTO
+  overload: ClinicManagement_proj.BLL.Services.DoctorScheduleService.Search*
+  exceptions:
+  - type: System.UnauthorizedAccessException
+    commentId: T:System.UnauthorizedAccessException
+    description: Thrown if the current user does not have access.
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if the schedule is not found.
+  nameWithType.vb: DoctorScheduleService.Search(String)
+  fullName.vb: ClinicManagement_proj.BLL.Services.DoctorScheduleService.Search(String)
+  name.vb: Search(String)
+references:
+- uid: ClinicManagement_proj.BLL.Services
+  commentId: N:ClinicManagement_proj.BLL.Services
+  href: ClinicManagement_proj.html
+  name: ClinicManagement_proj.BLL.Services
+  nameWithType: ClinicManagement_proj.BLL.Services
+  fullName: ClinicManagement_proj.BLL.Services
+  spec.csharp:
+  - uid: ClinicManagement_proj
+    name: ClinicManagement_proj
+    href: ClinicManagement_proj.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL
+    name: BLL
+    href: ClinicManagement_proj.BLL.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL.Services
+    name: Services
+    href: ClinicManagement_proj.BLL.Services.html
+  spec.vb:
+  - uid: ClinicManagement_proj
+    name: ClinicManagement_proj
+    href: ClinicManagement_proj.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL
+    name: BLL
+    href: ClinicManagement_proj.BLL.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL.Services
+    name: Services
+    href: ClinicManagement_proj.BLL.Services.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ClinicManagement_proj.BLL.Services.DoctorScheduleService.#ctor*
+  commentId: Overload:ClinicManagement_proj.BLL.Services.DoctorScheduleService.#ctor
+  href: ClinicManagement_proj.BLL.Services.DoctorScheduleService.html#ClinicManagement_proj_BLL_Services_DoctorScheduleService__ctor_ClinicManagement_proj_DAL_ClinicDbContext_
+  name: DoctorScheduleService
+  nameWithType: DoctorScheduleService.DoctorScheduleService
+  fullName: ClinicManagement_proj.BLL.Services.DoctorScheduleService.DoctorScheduleService
+  nameWithType.vb: DoctorScheduleService.New
+  fullName.vb: ClinicManagement_proj.BLL.Services.DoctorScheduleService.New
+  name.vb: New
+- uid: ClinicManagement_proj.DAL.ClinicDbContext
+  commentId: T:ClinicManagement_proj.DAL.ClinicDbContext
+  parent: ClinicManagement_proj.DAL
+  href: ClinicManagement_proj.DAL.ClinicDbContext.html
+  name: ClinicDbContext
+  nameWithType: ClinicDbContext
+  fullName: ClinicManagement_proj.DAL.ClinicDbContext
+- uid: ClinicManagement_proj.DAL
+  commentId: N:ClinicManagement_proj.DAL
+  href: ClinicManagement_proj.html
+  name: ClinicManagement_proj.DAL
+  nameWithType: ClinicManagement_proj.DAL
+  fullName: ClinicManagement_proj.DAL
+  spec.csharp:
+  - uid: ClinicManagement_proj
+    name: ClinicManagement_proj
+    href: ClinicManagement_proj.html
+  - name: .
+  - uid: ClinicManagement_proj.DAL
+    name: DAL
+    href: ClinicManagement_proj.DAL.html
+  spec.vb:
+  - uid: ClinicManagement_proj
+    name: ClinicManagement_proj
+    href: ClinicManagement_proj.html
+  - name: .
+  - uid: ClinicManagement_proj.DAL
+    name: DAL
+    href: ClinicManagement_proj.DAL.html
+- uid: System.UnauthorizedAccessException
+  commentId: T:System.UnauthorizedAccessException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.unauthorizedaccessexception
+  name: UnauthorizedAccessException
+  nameWithType: UnauthorizedAccessException
+  fullName: System.UnauthorizedAccessException
+- uid: ClinicManagement_proj.BLL.Services.DoctorScheduleService.CreateSchedule*
+  commentId: Overload:ClinicManagement_proj.BLL.Services.DoctorScheduleService.CreateSchedule
+  href: ClinicManagement_proj.BLL.Services.DoctorScheduleService.html#ClinicManagement_proj_BLL_Services_DoctorScheduleService_CreateSchedule_ClinicManagement_proj_BLL_DTO_DoctorScheduleDTO_
+  name: CreateSchedule
+  nameWithType: DoctorScheduleService.CreateSchedule
+  fullName: ClinicManagement_proj.BLL.Services.DoctorScheduleService.CreateSchedule
+- uid: ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO
+  commentId: T:ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO
+  parent: ClinicManagement_proj.BLL.DTO
+  href: ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO.html
+  name: DoctorScheduleDTO
+  nameWithType: DoctorScheduleDTO
+  fullName: ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO
+- uid: ClinicManagement_proj.BLL.DTO
+  commentId: N:ClinicManagement_proj.BLL.DTO
+  href: ClinicManagement_proj.html
+  name: ClinicManagement_proj.BLL.DTO
+  nameWithType: ClinicManagement_proj.BLL.DTO
+  fullName: ClinicManagement_proj.BLL.DTO
+  spec.csharp:
+  - uid: ClinicManagement_proj
+    name: ClinicManagement_proj
+    href: ClinicManagement_proj.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL
+    name: BLL
+    href: ClinicManagement_proj.BLL.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL.DTO
+    name: DTO
+    href: ClinicManagement_proj.BLL.DTO.html
+  spec.vb:
+  - uid: ClinicManagement_proj
+    name: ClinicManagement_proj
+    href: ClinicManagement_proj.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL
+    name: BLL
+    href: ClinicManagement_proj.BLL.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL.DTO
+    name: DTO
+    href: ClinicManagement_proj.BLL.DTO.html
+- uid: ClinicManagement_proj.BLL.Services.DoctorScheduleService.UpdateSchedule*
+  commentId: Overload:ClinicManagement_proj.BLL.Services.DoctorScheduleService.UpdateSchedule
+  href: ClinicManagement_proj.BLL.Services.DoctorScheduleService.html#ClinicManagement_proj_BLL_Services_DoctorScheduleService_UpdateSchedule_ClinicManagement_proj_BLL_DTO_DoctorScheduleDTO_
+  name: UpdateSchedule
+  nameWithType: DoctorScheduleService.UpdateSchedule
+  fullName: ClinicManagement_proj.BLL.Services.DoctorScheduleService.UpdateSchedule
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: ClinicManagement_proj.BLL.Services.DoctorScheduleService.DeleteSchedule*
+  commentId: Overload:ClinicManagement_proj.BLL.Services.DoctorScheduleService.DeleteSchedule
+  href: ClinicManagement_proj.BLL.Services.DoctorScheduleService.html#ClinicManagement_proj_BLL_Services_DoctorScheduleService_DeleteSchedule_System_Int32_
+  name: DeleteSchedule
+  nameWithType: DoctorScheduleService.DeleteSchedule
+  fullName: ClinicManagement_proj.BLL.Services.DoctorScheduleService.DeleteSchedule
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: ClinicManagement_proj.BLL.Services.DoctorScheduleService.GetAllSchedules*
+  commentId: Overload:ClinicManagement_proj.BLL.Services.DoctorScheduleService.GetAllSchedules
+  href: ClinicManagement_proj.BLL.Services.DoctorScheduleService.html#ClinicManagement_proj_BLL_Services_DoctorScheduleService_GetAllSchedules
+  name: GetAllSchedules
+  nameWithType: DoctorScheduleService.GetAllSchedules
+  fullName: ClinicManagement_proj.BLL.Services.DoctorScheduleService.GetAllSchedules
+- uid: System.Collections.Generic.List{ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO}
+  commentId: T:System.Collections.Generic.List{ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<DoctorScheduleDTO>
+  nameWithType: List<DoctorScheduleDTO>
+  fullName: System.Collections.Generic.List<ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO>
+  nameWithType.vb: List(Of DoctorScheduleDTO)
+  fullName.vb: System.Collections.Generic.List(Of ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO)
+  name.vb: List(Of DoctorScheduleDTO)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO
+    name: DoctorScheduleDTO
+    href: ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO
+    name: DoctorScheduleDTO
+    href: ClinicManagement_proj.BLL.DTO.DoctorScheduleDTO.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: ClinicManagement_proj.BLL.Services.DoctorScheduleService.Search*
+  commentId: Overload:ClinicManagement_proj.BLL.Services.DoctorScheduleService.Search
+  href: ClinicManagement_proj.BLL.Services.DoctorScheduleService.html#ClinicManagement_proj_BLL_Services_DoctorScheduleService_Search_System_Int32_
+  name: Search
+  nameWithType: DoctorScheduleService.Search
+  fullName: ClinicManagement_proj.BLL.Services.DoctorScheduleService.Search
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

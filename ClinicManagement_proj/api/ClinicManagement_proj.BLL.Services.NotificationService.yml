@@ -1,0 +1,773 @@
+### YamlMime:ManagedReference
+items:
+- uid: ClinicManagement_proj.BLL.Services.NotificationService
+  commentId: T:ClinicManagement_proj.BLL.Services.NotificationService
+  id: NotificationService
+  parent: ClinicManagement_proj.BLL.Services
+  children:
+  - ClinicManagement_proj.BLL.Services.NotificationService.#ctor(ClinicManagement_proj.DAL.ClinicDbContext)
+  - ClinicManagement_proj.BLL.Services.NotificationService.AddNotification(System.String,ClinicManagement_proj.BLL.Utils.NotificationType)
+  - ClinicManagement_proj.BLL.Services.NotificationService.GetActiveNotifications
+  - ClinicManagement_proj.BLL.Services.NotificationService.GetAuditNotifications
+  - ClinicManagement_proj.BLL.Services.NotificationService.NotificationAdded
+  langs:
+  - csharp
+  - vb
+  name: NotificationService
+  nameWithType: NotificationService
+  fullName: ClinicManagement_proj.BLL.Services.NotificationService
+  type: Class
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/Services/NotificationService.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: NotificationService
+    path: BLL/Services/NotificationService.cs
+    startLine: 12
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.Services
+  summary: Service class to manage notifications.
+  example: []
+  syntax:
+    content: public class NotificationService
+    content.vb: Public Class NotificationService
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: ClinicManagement_proj.BLL.Services.NotificationService.NotificationAdded
+  commentId: E:ClinicManagement_proj.BLL.Services.NotificationService.NotificationAdded
+  id: NotificationAdded
+  parent: ClinicManagement_proj.BLL.Services.NotificationService
+  langs:
+  - csharp
+  - vb
+  name: NotificationAdded
+  nameWithType: NotificationService.NotificationAdded
+  fullName: ClinicManagement_proj.BLL.Services.NotificationService.NotificationAdded
+  type: Event
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/Services/NotificationService.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: NotificationAdded
+    path: BLL/Services/NotificationService.cs
+    startLine: 20
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.Services
+  summary: Event raised when a notification is added.
+  example: []
+  syntax:
+    content: public event Action<Notification> NotificationAdded
+    return:
+      type: System.Action{ClinicManagement_proj.BLL.Utils.Notification}
+    content.vb: Public Event NotificationAdded As Action(Of Notification)
+- uid: ClinicManagement_proj.BLL.Services.NotificationService.#ctor(ClinicManagement_proj.DAL.ClinicDbContext)
+  commentId: M:ClinicManagement_proj.BLL.Services.NotificationService.#ctor(ClinicManagement_proj.DAL.ClinicDbContext)
+  id: '#ctor(ClinicManagement_proj.DAL.ClinicDbContext)'
+  parent: ClinicManagement_proj.BLL.Services.NotificationService
+  langs:
+  - csharp
+  - vb
+  name: NotificationService(ClinicDbContext)
+  nameWithType: NotificationService.NotificationService(ClinicDbContext)
+  fullName: ClinicManagement_proj.BLL.Services.NotificationService.NotificationService(ClinicManagement_proj.DAL.ClinicDbContext)
+  type: Constructor
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/Services/NotificationService.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: .ctor
+    path: BLL/Services/NotificationService.cs
+    startLine: 26
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.Services
+  summary: Initializes a new instance of the NotificationService class.
+  example: []
+  syntax:
+    content: public NotificationService(ClinicDbContext dbContext)
+    parameters:
+    - id: dbContext
+      type: ClinicManagement_proj.DAL.ClinicDbContext
+      description: The database context.
+    content.vb: Public Sub New(dbContext As ClinicDbContext)
+  overload: ClinicManagement_proj.BLL.Services.NotificationService.#ctor*
+  nameWithType.vb: NotificationService.New(ClinicDbContext)
+  fullName.vb: ClinicManagement_proj.BLL.Services.NotificationService.New(ClinicManagement_proj.DAL.ClinicDbContext)
+  name.vb: New(ClinicDbContext)
+- uid: ClinicManagement_proj.BLL.Services.NotificationService.AddNotification(System.String,ClinicManagement_proj.BLL.Utils.NotificationType)
+  commentId: M:ClinicManagement_proj.BLL.Services.NotificationService.AddNotification(System.String,ClinicManagement_proj.BLL.Utils.NotificationType)
+  id: AddNotification(System.String,ClinicManagement_proj.BLL.Utils.NotificationType)
+  parent: ClinicManagement_proj.BLL.Services.NotificationService
+  langs:
+  - csharp
+  - vb
+  name: AddNotification(string, NotificationType)
+  nameWithType: NotificationService.AddNotification(string, NotificationType)
+  fullName: ClinicManagement_proj.BLL.Services.NotificationService.AddNotification(string, ClinicManagement_proj.BLL.Utils.NotificationType)
+  type: Method
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/Services/NotificationService.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: AddNotification
+    path: BLL/Services/NotificationService.cs
+    startLine: 36
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.Services
+  summary: Adds a new notification.
+  example: []
+  syntax:
+    content: public void AddNotification(string message, NotificationType type)
+    parameters:
+    - id: message
+      type: System.String
+      description: The notification message.
+    - id: type
+      type: ClinicManagement_proj.BLL.Utils.NotificationType
+      description: The type of notification.
+    content.vb: Public Sub AddNotification(message As String, type As NotificationType)
+  overload: ClinicManagement_proj.BLL.Services.NotificationService.AddNotification*
+  nameWithType.vb: NotificationService.AddNotification(String, NotificationType)
+  fullName.vb: ClinicManagement_proj.BLL.Services.NotificationService.AddNotification(String, ClinicManagement_proj.BLL.Utils.NotificationType)
+  name.vb: AddNotification(String, NotificationType)
+- uid: ClinicManagement_proj.BLL.Services.NotificationService.GetActiveNotifications
+  commentId: M:ClinicManagement_proj.BLL.Services.NotificationService.GetActiveNotifications
+  id: GetActiveNotifications
+  parent: ClinicManagement_proj.BLL.Services.NotificationService
+  langs:
+  - csharp
+  - vb
+  name: GetActiveNotifications()
+  nameWithType: NotificationService.GetActiveNotifications()
+  fullName: ClinicManagement_proj.BLL.Services.NotificationService.GetActiveNotifications()
+  type: Method
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/Services/NotificationService.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: GetActiveNotifications
+    path: BLL/Services/NotificationService.cs
+    startLine: 58
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.Services
+  summary: Gets the active notifications.
+  example: []
+  syntax:
+    content: public List<Notification> GetActiveNotifications()
+    return:
+      type: System.Collections.Generic.List{ClinicManagement_proj.BLL.Utils.Notification}
+      description: A list of active notifications.
+    content.vb: Public Function GetActiveNotifications() As List(Of Notification)
+  overload: ClinicManagement_proj.BLL.Services.NotificationService.GetActiveNotifications*
+- uid: ClinicManagement_proj.BLL.Services.NotificationService.GetAuditNotifications
+  commentId: M:ClinicManagement_proj.BLL.Services.NotificationService.GetAuditNotifications
+  id: GetAuditNotifications
+  parent: ClinicManagement_proj.BLL.Services.NotificationService
+  langs:
+  - csharp
+  - vb
+  name: GetAuditNotifications()
+  nameWithType: NotificationService.GetAuditNotifications()
+  fullName: ClinicManagement_proj.BLL.Services.NotificationService.GetAuditNotifications()
+  type: Method
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/Services/NotificationService.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: GetAuditNotifications
+    path: BLL/Services/NotificationService.cs
+    startLine: 78
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.Services
+  summary: Gets the audit notifications.
+  example: []
+  syntax:
+    content: public List<AuditAppointmentDTO> GetAuditNotifications()
+    return:
+      type: System.Collections.Generic.List{ClinicManagement_proj.BLL.DTO.AuditAppointmentDTO}
+      description: A list of audit appointment notifications.
+    content.vb: Public Function GetAuditNotifications() As List(Of AuditAppointmentDTO)
+  overload: ClinicManagement_proj.BLL.Services.NotificationService.GetAuditNotifications*
+references:
+- uid: ClinicManagement_proj.BLL.Services
+  commentId: N:ClinicManagement_proj.BLL.Services
+  href: ClinicManagement_proj.html
+  name: ClinicManagement_proj.BLL.Services
+  nameWithType: ClinicManagement_proj.BLL.Services
+  fullName: ClinicManagement_proj.BLL.Services
+  spec.csharp:
+  - uid: ClinicManagement_proj
+    name: ClinicManagement_proj
+    href: ClinicManagement_proj.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL
+    name: BLL
+    href: ClinicManagement_proj.BLL.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL.Services
+    name: Services
+    href: ClinicManagement_proj.BLL.Services.html
+  spec.vb:
+  - uid: ClinicManagement_proj
+    name: ClinicManagement_proj
+    href: ClinicManagement_proj.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL
+    name: BLL
+    href: ClinicManagement_proj.BLL.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL.Services
+    name: Services
+    href: ClinicManagement_proj.BLL.Services.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Action{ClinicManagement_proj.BLL.Utils.Notification}
+  commentId: T:System.Action{ClinicManagement_proj.BLL.Utils.Notification}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<Notification>
+  nameWithType: Action<Notification>
+  fullName: System.Action<ClinicManagement_proj.BLL.Utils.Notification>
+  nameWithType.vb: Action(Of Notification)
+  fullName.vb: System.Action(Of ClinicManagement_proj.BLL.Utils.Notification)
+  name.vb: Action(Of Notification)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: ClinicManagement_proj.BLL.Utils.Notification
+    name: Notification
+    href: ClinicManagement_proj.BLL.Utils.Notification.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ClinicManagement_proj.BLL.Utils.Notification
+    name: Notification
+    href: ClinicManagement_proj.BLL.Utils.Notification.html
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ClinicManagement_proj.BLL.Services.NotificationService.#ctor*
+  commentId: Overload:ClinicManagement_proj.BLL.Services.NotificationService.#ctor
+  href: ClinicManagement_proj.BLL.Services.NotificationService.html#ClinicManagement_proj_BLL_Services_NotificationService__ctor_ClinicManagement_proj_DAL_ClinicDbContext_
+  name: NotificationService
+  nameWithType: NotificationService.NotificationService
+  fullName: ClinicManagement_proj.BLL.Services.NotificationService.NotificationService
+  nameWithType.vb: NotificationService.New
+  fullName.vb: ClinicManagement_proj.BLL.Services.NotificationService.New
+  name.vb: New
+- uid: ClinicManagement_proj.DAL.ClinicDbContext
+  commentId: T:ClinicManagement_proj.DAL.ClinicDbContext
+  parent: ClinicManagement_proj.DAL
+  href: ClinicManagement_proj.DAL.ClinicDbContext.html
+  name: ClinicDbContext
+  nameWithType: ClinicDbContext
+  fullName: ClinicManagement_proj.DAL.ClinicDbContext
+- uid: ClinicManagement_proj.DAL
+  commentId: N:ClinicManagement_proj.DAL
+  href: ClinicManagement_proj.html
+  name: ClinicManagement_proj.DAL
+  nameWithType: ClinicManagement_proj.DAL
+  fullName: ClinicManagement_proj.DAL
+  spec.csharp:
+  - uid: ClinicManagement_proj
+    name: ClinicManagement_proj
+    href: ClinicManagement_proj.html
+  - name: .
+  - uid: ClinicManagement_proj.DAL
+    name: DAL
+    href: ClinicManagement_proj.DAL.html
+  spec.vb:
+  - uid: ClinicManagement_proj
+    name: ClinicManagement_proj
+    href: ClinicManagement_proj.html
+  - name: .
+  - uid: ClinicManagement_proj.DAL
+    name: DAL
+    href: ClinicManagement_proj.DAL.html
+- uid: ClinicManagement_proj.BLL.Services.NotificationService.AddNotification*
+  commentId: Overload:ClinicManagement_proj.BLL.Services.NotificationService.AddNotification
+  href: ClinicManagement_proj.BLL.Services.NotificationService.html#ClinicManagement_proj_BLL_Services_NotificationService_AddNotification_System_String_ClinicManagement_proj_BLL_Utils_NotificationType_
+  name: AddNotification
+  nameWithType: NotificationService.AddNotification
+  fullName: ClinicManagement_proj.BLL.Services.NotificationService.AddNotification
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ClinicManagement_proj.BLL.Utils.NotificationType
+  commentId: T:ClinicManagement_proj.BLL.Utils.NotificationType
+  parent: ClinicManagement_proj.BLL.Utils
+  href: ClinicManagement_proj.BLL.Utils.NotificationType.html
+  name: NotificationType
+  nameWithType: NotificationType
+  fullName: ClinicManagement_proj.BLL.Utils.NotificationType
+- uid: ClinicManagement_proj.BLL.Utils
+  commentId: N:ClinicManagement_proj.BLL.Utils
+  href: ClinicManagement_proj.html
+  name: ClinicManagement_proj.BLL.Utils
+  nameWithType: ClinicManagement_proj.BLL.Utils
+  fullName: ClinicManagement_proj.BLL.Utils
+  spec.csharp:
+  - uid: ClinicManagement_proj
+    name: ClinicManagement_proj
+    href: ClinicManagement_proj.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL
+    name: BLL
+    href: ClinicManagement_proj.BLL.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL.Utils
+    name: Utils
+    href: ClinicManagement_proj.BLL.Utils.html
+  spec.vb:
+  - uid: ClinicManagement_proj
+    name: ClinicManagement_proj
+    href: ClinicManagement_proj.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL
+    name: BLL
+    href: ClinicManagement_proj.BLL.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL.Utils
+    name: Utils
+    href: ClinicManagement_proj.BLL.Utils.html
+- uid: ClinicManagement_proj.BLL.Services.NotificationService.GetActiveNotifications*
+  commentId: Overload:ClinicManagement_proj.BLL.Services.NotificationService.GetActiveNotifications
+  href: ClinicManagement_proj.BLL.Services.NotificationService.html#ClinicManagement_proj_BLL_Services_NotificationService_GetActiveNotifications
+  name: GetActiveNotifications
+  nameWithType: NotificationService.GetActiveNotifications
+  fullName: ClinicManagement_proj.BLL.Services.NotificationService.GetActiveNotifications
+- uid: System.Collections.Generic.List{ClinicManagement_proj.BLL.Utils.Notification}
+  commentId: T:System.Collections.Generic.List{ClinicManagement_proj.BLL.Utils.Notification}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Notification>
+  nameWithType: List<Notification>
+  fullName: System.Collections.Generic.List<ClinicManagement_proj.BLL.Utils.Notification>
+  nameWithType.vb: List(Of Notification)
+  fullName.vb: System.Collections.Generic.List(Of ClinicManagement_proj.BLL.Utils.Notification)
+  name.vb: List(Of Notification)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: ClinicManagement_proj.BLL.Utils.Notification
+    name: Notification
+    href: ClinicManagement_proj.BLL.Utils.Notification.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ClinicManagement_proj.BLL.Utils.Notification
+    name: Notification
+    href: ClinicManagement_proj.BLL.Utils.Notification.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: ClinicManagement_proj.BLL.Services.NotificationService.GetAuditNotifications*
+  commentId: Overload:ClinicManagement_proj.BLL.Services.NotificationService.GetAuditNotifications
+  href: ClinicManagement_proj.BLL.Services.NotificationService.html#ClinicManagement_proj_BLL_Services_NotificationService_GetAuditNotifications
+  name: GetAuditNotifications
+  nameWithType: NotificationService.GetAuditNotifications
+  fullName: ClinicManagement_proj.BLL.Services.NotificationService.GetAuditNotifications
+- uid: System.Collections.Generic.List{ClinicManagement_proj.BLL.DTO.AuditAppointmentDTO}
+  commentId: T:System.Collections.Generic.List{ClinicManagement_proj.BLL.DTO.AuditAppointmentDTO}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<AuditAppointmentDTO>
+  nameWithType: List<AuditAppointmentDTO>
+  fullName: System.Collections.Generic.List<ClinicManagement_proj.BLL.DTO.AuditAppointmentDTO>
+  nameWithType.vb: List(Of AuditAppointmentDTO)
+  fullName.vb: System.Collections.Generic.List(Of ClinicManagement_proj.BLL.DTO.AuditAppointmentDTO)
+  name.vb: List(Of AuditAppointmentDTO)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: ClinicManagement_proj.BLL.DTO.AuditAppointmentDTO
+    name: AuditAppointmentDTO
+    href: ClinicManagement_proj.BLL.DTO.AuditAppointmentDTO.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ClinicManagement_proj.BLL.DTO.AuditAppointmentDTO
+    name: AuditAppointmentDTO
+    href: ClinicManagement_proj.BLL.DTO.AuditAppointmentDTO.html
+  - name: )

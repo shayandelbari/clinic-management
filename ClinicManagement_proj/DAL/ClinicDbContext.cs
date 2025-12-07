@@ -6,6 +6,9 @@ using System.Data.Entity.Infrastructure;
 
 namespace ClinicManagement_proj.DAL
 {
+    /// <summary>
+    /// Represents the database context for the clinic management application.
+    /// </summary>
     public class ClinicDbContext : DbContext
     {
         public DbSet<AuditAppointmentDTO> AuditAppointments { get; set; }

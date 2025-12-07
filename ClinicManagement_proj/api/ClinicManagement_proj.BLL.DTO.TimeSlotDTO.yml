@@ -1,0 +1,795 @@
+### YamlMime:ManagedReference
+items:
+- uid: ClinicManagement_proj.BLL.DTO.TimeSlotDTO
+  commentId: T:ClinicManagement_proj.BLL.DTO.TimeSlotDTO
+  id: TimeSlotDTO
+  parent: ClinicManagement_proj.BLL.DTO
+  children:
+  - ClinicManagement_proj.BLL.DTO.TimeSlotDTO.#ctor
+  - ClinicManagement_proj.BLL.DTO.TimeSlotDTO.#ctor(System.Int32,System.Int32)
+  - ClinicManagement_proj.BLL.DTO.TimeSlotDTO.Appointments
+  - ClinicManagement_proj.BLL.DTO.TimeSlotDTO.HourOfDay
+  - ClinicManagement_proj.BLL.DTO.TimeSlotDTO.Id
+  - ClinicManagement_proj.BLL.DTO.TimeSlotDTO.MinuteOfHour
+  - ClinicManagement_proj.BLL.DTO.TimeSlotDTO.ToString
+  - ClinicManagement_proj.BLL.DTO.TimeSlotDTO.ValidateHourOfDay(System.Int32)
+  - ClinicManagement_proj.BLL.DTO.TimeSlotDTO.ValidateMinuteOfHour(System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: TimeSlotDTO
+  nameWithType: TimeSlotDTO
+  fullName: ClinicManagement_proj.BLL.DTO.TimeSlotDTO
+  type: Class
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/TimeSlotDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: TimeSlotDTO
+    path: BLL/DTO/TimeSlotDTO.cs
+    startLine: 8
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  summary: Represents a time slot data transfer object.
+  example: []
+  syntax:
+    content: public class TimeSlotDTO
+    content.vb: Public Class TimeSlotDTO
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.Id
+  commentId: P:ClinicManagement_proj.BLL.DTO.TimeSlotDTO.Id
+  id: Id
+  parent: ClinicManagement_proj.BLL.DTO.TimeSlotDTO
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: TimeSlotDTO.Id
+  fullName: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.Id
+  type: Property
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/TimeSlotDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: Id
+    path: BLL/DTO/TimeSlotDTO.cs
+    startLine: 13
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  syntax:
+    content: public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Id As Integer
+  overload: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.Id*
+- uid: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.HourOfDay
+  commentId: P:ClinicManagement_proj.BLL.DTO.TimeSlotDTO.HourOfDay
+  id: HourOfDay
+  parent: ClinicManagement_proj.BLL.DTO.TimeSlotDTO
+  langs:
+  - csharp
+  - vb
+  name: HourOfDay
+  nameWithType: TimeSlotDTO.HourOfDay
+  fullName: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.HourOfDay
+  type: Property
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/TimeSlotDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: HourOfDay
+    path: BLL/DTO/TimeSlotDTO.cs
+    startLine: 14
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  syntax:
+    content: public int HourOfDay { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property HourOfDay As Integer
+  overload: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.HourOfDay*
+- uid: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.MinuteOfHour
+  commentId: P:ClinicManagement_proj.BLL.DTO.TimeSlotDTO.MinuteOfHour
+  id: MinuteOfHour
+  parent: ClinicManagement_proj.BLL.DTO.TimeSlotDTO
+  langs:
+  - csharp
+  - vb
+  name: MinuteOfHour
+  nameWithType: TimeSlotDTO.MinuteOfHour
+  fullName: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.MinuteOfHour
+  type: Property
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/TimeSlotDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: MinuteOfHour
+    path: BLL/DTO/TimeSlotDTO.cs
+    startLine: 19
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  syntax:
+    content: public int MinuteOfHour { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property MinuteOfHour As Integer
+  overload: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.MinuteOfHour*
+- uid: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.Appointments
+  commentId: P:ClinicManagement_proj.BLL.DTO.TimeSlotDTO.Appointments
+  id: Appointments
+  parent: ClinicManagement_proj.BLL.DTO.TimeSlotDTO
+  langs:
+  - csharp
+  - vb
+  name: Appointments
+  nameWithType: TimeSlotDTO.Appointments
+  fullName: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.Appointments
+  type: Property
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/TimeSlotDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: Appointments
+    path: BLL/DTO/TimeSlotDTO.cs
+    startLine: 24
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  syntax:
+    content: public ICollection<AppointmentDTO> Appointments { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{ClinicManagement_proj.BLL.DTO.AppointmentDTO}
+    content.vb: Public Property Appointments As ICollection(Of AppointmentDTO)
+  overload: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.Appointments*
+- uid: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.#ctor
+  commentId: M:ClinicManagement_proj.BLL.DTO.TimeSlotDTO.#ctor
+  id: '#ctor'
+  parent: ClinicManagement_proj.BLL.DTO.TimeSlotDTO
+  langs:
+  - csharp
+  - vb
+  name: TimeSlotDTO()
+  nameWithType: TimeSlotDTO.TimeSlotDTO()
+  fullName: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.TimeSlotDTO()
+  type: Constructor
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/TimeSlotDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: .ctor
+    path: BLL/DTO/TimeSlotDTO.cs
+    startLine: 29
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  summary: Initializes a new instance of the TimeSlotDTO class.
+  example: []
+  syntax:
+    content: public TimeSlotDTO()
+    content.vb: Public Sub New()
+  overload: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.#ctor*
+  nameWithType.vb: TimeSlotDTO.New()
+  fullName.vb: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.New()
+  name.vb: New()
+- uid: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.ValidateHourOfDay(System.Int32)
+  commentId: M:ClinicManagement_proj.BLL.DTO.TimeSlotDTO.ValidateHourOfDay(System.Int32)
+  id: ValidateHourOfDay(System.Int32)
+  parent: ClinicManagement_proj.BLL.DTO.TimeSlotDTO
+  langs:
+  - csharp
+  - vb
+  name: ValidateHourOfDay(int)
+  nameWithType: TimeSlotDTO.ValidateHourOfDay(int)
+  fullName: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.ValidateHourOfDay(int)
+  type: Method
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/TimeSlotDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: ValidateHourOfDay
+    path: BLL/DTO/TimeSlotDTO.cs
+    startLine: 40
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  summary: Validates the hour of the day.
+  example: []
+  syntax:
+    content: public static int ValidateHourOfDay(int hourOfDay)
+    parameters:
+    - id: hourOfDay
+      type: System.Int32
+      description: The hour to validate.
+    return:
+      type: System.Int32
+      description: The validated hour.
+    content.vb: Public Shared Function ValidateHourOfDay(hourOfDay As Integer) As Integer
+  overload: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.ValidateHourOfDay*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if hour is not between 0 and 23.
+  nameWithType.vb: TimeSlotDTO.ValidateHourOfDay(Integer)
+  fullName.vb: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.ValidateHourOfDay(Integer)
+  name.vb: ValidateHourOfDay(Integer)
+- uid: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.ValidateMinuteOfHour(System.Int32)
+  commentId: M:ClinicManagement_proj.BLL.DTO.TimeSlotDTO.ValidateMinuteOfHour(System.Int32)
+  id: ValidateMinuteOfHour(System.Int32)
+  parent: ClinicManagement_proj.BLL.DTO.TimeSlotDTO
+  langs:
+  - csharp
+  - vb
+  name: ValidateMinuteOfHour(int)
+  nameWithType: TimeSlotDTO.ValidateMinuteOfHour(int)
+  fullName: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.ValidateMinuteOfHour(int)
+  type: Method
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/TimeSlotDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: ValidateMinuteOfHour
+    path: BLL/DTO/TimeSlotDTO.cs
+    startLine: 53
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  summary: Validates the minute of the hour.
+  example: []
+  syntax:
+    content: public static int ValidateMinuteOfHour(int minuteOfHour)
+    parameters:
+    - id: minuteOfHour
+      type: System.Int32
+      description: The minute to validate.
+    return:
+      type: System.Int32
+      description: The validated minute.
+    content.vb: Public Shared Function ValidateMinuteOfHour(minuteOfHour As Integer) As Integer
+  overload: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.ValidateMinuteOfHour*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if minute is not between 0 and 59.
+  nameWithType.vb: TimeSlotDTO.ValidateMinuteOfHour(Integer)
+  fullName.vb: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.ValidateMinuteOfHour(Integer)
+  name.vb: ValidateMinuteOfHour(Integer)
+- uid: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.#ctor(System.Int32,System.Int32)
+  commentId: M:ClinicManagement_proj.BLL.DTO.TimeSlotDTO.#ctor(System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.Int32)'
+  parent: ClinicManagement_proj.BLL.DTO.TimeSlotDTO
+  langs:
+  - csharp
+  - vb
+  name: TimeSlotDTO(int, int)
+  nameWithType: TimeSlotDTO.TimeSlotDTO(int, int)
+  fullName: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.TimeSlotDTO(int, int)
+  type: Constructor
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/TimeSlotDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: .ctor
+    path: BLL/DTO/TimeSlotDTO.cs
+    startLine: 65
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  summary: Initializes a new instance of the TimeSlotDTO class with specified parameters.
+  example: []
+  syntax:
+    content: public TimeSlotDTO(int hourOfDay, int minuteOfHour)
+    parameters:
+    - id: hourOfDay
+      type: System.Int32
+      description: The hour of the day.
+    - id: minuteOfHour
+      type: System.Int32
+      description: The minute of the hour.
+    content.vb: Public Sub New(hourOfDay As Integer, minuteOfHour As Integer)
+  overload: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.#ctor*
+  nameWithType.vb: TimeSlotDTO.New(Integer, Integer)
+  fullName.vb: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.New(Integer, Integer)
+  name.vb: New(Integer, Integer)
+- uid: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.ToString
+  commentId: M:ClinicManagement_proj.BLL.DTO.TimeSlotDTO.ToString
+  id: ToString
+  parent: ClinicManagement_proj.BLL.DTO.TimeSlotDTO
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: TimeSlotDTO.ToString()
+  fullName: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.ToString()
+  type: Method
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/TimeSlotDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: ToString
+    path: BLL/DTO/TimeSlotDTO.cs
+    startLine: 76
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  summary: Returns a string representation of the time slot.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string in HH:MM format.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.ToString*
+references:
+- uid: ClinicManagement_proj.BLL.DTO
+  commentId: N:ClinicManagement_proj.BLL.DTO
+  href: ClinicManagement_proj.html
+  name: ClinicManagement_proj.BLL.DTO
+  nameWithType: ClinicManagement_proj.BLL.DTO
+  fullName: ClinicManagement_proj.BLL.DTO
+  spec.csharp:
+  - uid: ClinicManagement_proj
+    name: ClinicManagement_proj
+    href: ClinicManagement_proj.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL
+    name: BLL
+    href: ClinicManagement_proj.BLL.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL.DTO
+    name: DTO
+    href: ClinicManagement_proj.BLL.DTO.html
+  spec.vb:
+  - uid: ClinicManagement_proj
+    name: ClinicManagement_proj
+    href: ClinicManagement_proj.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL
+    name: BLL
+    href: ClinicManagement_proj.BLL.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL.DTO
+    name: DTO
+    href: ClinicManagement_proj.BLL.DTO.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.Id*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.TimeSlotDTO.Id
+  href: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.html#ClinicManagement_proj_BLL_DTO_TimeSlotDTO_Id
+  name: Id
+  nameWithType: TimeSlotDTO.Id
+  fullName: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.HourOfDay*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.TimeSlotDTO.HourOfDay
+  href: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.html#ClinicManagement_proj_BLL_DTO_TimeSlotDTO_HourOfDay
+  name: HourOfDay
+  nameWithType: TimeSlotDTO.HourOfDay
+  fullName: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.HourOfDay
+- uid: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.MinuteOfHour*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.TimeSlotDTO.MinuteOfHour
+  href: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.html#ClinicManagement_proj_BLL_DTO_TimeSlotDTO_MinuteOfHour
+  name: MinuteOfHour
+  nameWithType: TimeSlotDTO.MinuteOfHour
+  fullName: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.MinuteOfHour
+- uid: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.Appointments*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.TimeSlotDTO.Appointments
+  href: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.html#ClinicManagement_proj_BLL_DTO_TimeSlotDTO_Appointments
+  name: Appointments
+  nameWithType: TimeSlotDTO.Appointments
+  fullName: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.Appointments
+- uid: System.Collections.Generic.ICollection{ClinicManagement_proj.BLL.DTO.AppointmentDTO}
+  commentId: T:System.Collections.Generic.ICollection{ClinicManagement_proj.BLL.DTO.AppointmentDTO}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<AppointmentDTO>
+  nameWithType: ICollection<AppointmentDTO>
+  fullName: System.Collections.Generic.ICollection<ClinicManagement_proj.BLL.DTO.AppointmentDTO>
+  nameWithType.vb: ICollection(Of AppointmentDTO)
+  fullName.vb: System.Collections.Generic.ICollection(Of ClinicManagement_proj.BLL.DTO.AppointmentDTO)
+  name.vb: ICollection(Of AppointmentDTO)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO
+    name: AppointmentDTO
+    href: ClinicManagement_proj.BLL.DTO.AppointmentDTO.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ClinicManagement_proj.BLL.DTO.AppointmentDTO
+    name: AppointmentDTO
+    href: ClinicManagement_proj.BLL.DTO.AppointmentDTO.html
+  - name: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.#ctor*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.TimeSlotDTO.#ctor
+  href: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.html#ClinicManagement_proj_BLL_DTO_TimeSlotDTO__ctor
+  name: TimeSlotDTO
+  nameWithType: TimeSlotDTO.TimeSlotDTO
+  fullName: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.TimeSlotDTO
+  nameWithType.vb: TimeSlotDTO.New
+  fullName.vb: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.New
+  name.vb: New
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.ValidateHourOfDay*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.TimeSlotDTO.ValidateHourOfDay
+  href: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.html#ClinicManagement_proj_BLL_DTO_TimeSlotDTO_ValidateHourOfDay_System_Int32_
+  name: ValidateHourOfDay
+  nameWithType: TimeSlotDTO.ValidateHourOfDay
+  fullName: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.ValidateHourOfDay
+- uid: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.ValidateMinuteOfHour*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.TimeSlotDTO.ValidateMinuteOfHour
+  href: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.html#ClinicManagement_proj_BLL_DTO_TimeSlotDTO_ValidateMinuteOfHour_System_Int32_
+  name: ValidateMinuteOfHour
+  nameWithType: TimeSlotDTO.ValidateMinuteOfHour
+  fullName: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.ValidateMinuteOfHour
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.ToString*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.TimeSlotDTO.ToString
+  href: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.html#ClinicManagement_proj_BLL_DTO_TimeSlotDTO_ToString
+  name: ToString
+  nameWithType: TimeSlotDTO.ToString
+  fullName: ClinicManagement_proj.BLL.DTO.TimeSlotDTO.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

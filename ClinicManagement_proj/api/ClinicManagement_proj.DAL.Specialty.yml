@@ -1,0 +1,593 @@
+### YamlMime:ManagedReference
+items:
+- uid: ClinicManagement_proj.DAL.Specialty
+  commentId: T:ClinicManagement_proj.DAL.Specialty
+  id: Specialty
+  parent: ClinicManagement_proj.DAL
+  children:
+  - ClinicManagement_proj.DAL.Specialty.#ctor
+  - ClinicManagement_proj.DAL.Specialty.Doctors
+  - ClinicManagement_proj.DAL.Specialty.Id
+  - ClinicManagement_proj.DAL.Specialty.Name
+  langs:
+  - csharp
+  - vb
+  name: Specialty
+  nameWithType: Specialty
+  fullName: ClinicManagement_proj.DAL.Specialty
+  type: Class
+  source:
+    remote:
+      path: ClinicManagement_proj/DAL/Specialty.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: Specialty
+    path: DAL/Specialty.cs
+    startLine: 14
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.DAL
+  syntax:
+    content: public class Specialty
+    content.vb: Public Class Specialty
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: ClinicManagement_proj.DAL.Specialty.#ctor
+  commentId: M:ClinicManagement_proj.DAL.Specialty.#ctor
+  id: '#ctor'
+  parent: ClinicManagement_proj.DAL.Specialty
+  langs:
+  - csharp
+  - vb
+  name: Specialty()
+  nameWithType: Specialty.Specialty()
+  fullName: ClinicManagement_proj.DAL.Specialty.Specialty()
+  type: Constructor
+  source:
+    remote:
+      path: ClinicManagement_proj/DAL/Specialty.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: .ctor
+    path: DAL/Specialty.cs
+    startLine: 16
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.DAL
+  syntax:
+    content: >-
+      [SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+
+      public Specialty()
+    content.vb: >-
+      <SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")>
+
+      Public Sub New()
+  overload: ClinicManagement_proj.DAL.Specialty.#ctor*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.#ctor(System.String,System.String)
+    arguments:
+    - type: System.String
+      value: Microsoft.Usage
+    - type: System.String
+      value: CA2214:DoNotCallOverridableMethodsInConstructors
+  nameWithType.vb: Specialty.New()
+  fullName.vb: ClinicManagement_proj.DAL.Specialty.New()
+  name.vb: New()
+- uid: ClinicManagement_proj.DAL.Specialty.Id
+  commentId: P:ClinicManagement_proj.DAL.Specialty.Id
+  id: Id
+  parent: ClinicManagement_proj.DAL.Specialty
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Specialty.Id
+  fullName: ClinicManagement_proj.DAL.Specialty.Id
+  type: Property
+  source:
+    remote:
+      path: ClinicManagement_proj/DAL/Specialty.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: Id
+    path: DAL/Specialty.cs
+    startLine: 22
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.DAL
+  syntax:
+    content: public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Id As Integer
+  overload: ClinicManagement_proj.DAL.Specialty.Id*
+- uid: ClinicManagement_proj.DAL.Specialty.Name
+  commentId: P:ClinicManagement_proj.DAL.Specialty.Name
+  id: Name
+  parent: ClinicManagement_proj.DAL.Specialty
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Specialty.Name
+  fullName: ClinicManagement_proj.DAL.Specialty.Name
+  type: Property
+  source:
+    remote:
+      path: ClinicManagement_proj/DAL/Specialty.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: Name
+    path: DAL/Specialty.cs
+    startLine: 23
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.DAL
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: ClinicManagement_proj.DAL.Specialty.Name*
+- uid: ClinicManagement_proj.DAL.Specialty.Doctors
+  commentId: P:ClinicManagement_proj.DAL.Specialty.Doctors
+  id: Doctors
+  parent: ClinicManagement_proj.DAL.Specialty
+  langs:
+  - csharp
+  - vb
+  name: Doctors
+  nameWithType: Specialty.Doctors
+  fullName: ClinicManagement_proj.DAL.Specialty.Doctors
+  type: Property
+  source:
+    remote:
+      path: ClinicManagement_proj/DAL/Specialty.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: Doctors
+    path: DAL/Specialty.cs
+    startLine: 25
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.DAL
+  syntax:
+    content: >-
+      [SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+
+      public virtual ICollection<Doctor> Doctors { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{ClinicManagement_proj.DAL.Doctor}
+    content.vb: >-
+      <SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")>
+
+      Public Overridable Property Doctors As ICollection(Of Doctor)
+  overload: ClinicManagement_proj.DAL.Specialty.Doctors*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.#ctor(System.String,System.String)
+    arguments:
+    - type: System.String
+      value: Microsoft.Usage
+    - type: System.String
+      value: CA2227:CollectionPropertiesShouldBeReadOnly
+references:
+- uid: ClinicManagement_proj.DAL
+  commentId: N:ClinicManagement_proj.DAL
+  href: ClinicManagement_proj.html
+  name: ClinicManagement_proj.DAL
+  nameWithType: ClinicManagement_proj.DAL
+  fullName: ClinicManagement_proj.DAL
+  spec.csharp:
+  - uid: ClinicManagement_proj
+    name: ClinicManagement_proj
+    href: ClinicManagement_proj.html
+  - name: .
+  - uid: ClinicManagement_proj.DAL
+    name: DAL
+    href: ClinicManagement_proj.DAL.html
+  spec.vb:
+  - uid: ClinicManagement_proj
+    name: ClinicManagement_proj
+    href: ClinicManagement_proj.html
+  - name: .
+  - uid: ClinicManagement_proj.DAL
+    name: DAL
+    href: ClinicManagement_proj.DAL.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ClinicManagement_proj.DAL.Specialty.#ctor*
+  commentId: Overload:ClinicManagement_proj.DAL.Specialty.#ctor
+  href: ClinicManagement_proj.DAL.Specialty.html#ClinicManagement_proj_DAL_Specialty__ctor
+  name: Specialty
+  nameWithType: Specialty.Specialty
+  fullName: ClinicManagement_proj.DAL.Specialty.Specialty
+  nameWithType.vb: Specialty.New
+  fullName.vb: ClinicManagement_proj.DAL.Specialty.New
+  name.vb: New
+- uid: ClinicManagement_proj.DAL.Specialty.Id*
+  commentId: Overload:ClinicManagement_proj.DAL.Specialty.Id
+  href: ClinicManagement_proj.DAL.Specialty.html#ClinicManagement_proj_DAL_Specialty_Id
+  name: Id
+  nameWithType: Specialty.Id
+  fullName: ClinicManagement_proj.DAL.Specialty.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: ClinicManagement_proj.DAL.Specialty.Name*
+  commentId: Overload:ClinicManagement_proj.DAL.Specialty.Name
+  href: ClinicManagement_proj.DAL.Specialty.html#ClinicManagement_proj_DAL_Specialty_Name
+  name: Name
+  nameWithType: Specialty.Name
+  fullName: ClinicManagement_proj.DAL.Specialty.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ClinicManagement_proj.DAL.Specialty.Doctors*
+  commentId: Overload:ClinicManagement_proj.DAL.Specialty.Doctors
+  href: ClinicManagement_proj.DAL.Specialty.html#ClinicManagement_proj_DAL_Specialty_Doctors
+  name: Doctors
+  nameWithType: Specialty.Doctors
+  fullName: ClinicManagement_proj.DAL.Specialty.Doctors
+- uid: System.Collections.Generic.ICollection{ClinicManagement_proj.DAL.Doctor}
+  commentId: T:System.Collections.Generic.ICollection{ClinicManagement_proj.DAL.Doctor}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<Doctor>
+  nameWithType: ICollection<Doctor>
+  fullName: System.Collections.Generic.ICollection<ClinicManagement_proj.DAL.Doctor>
+  nameWithType.vb: ICollection(Of Doctor)
+  fullName.vb: System.Collections.Generic.ICollection(Of ClinicManagement_proj.DAL.Doctor)
+  name.vb: ICollection(Of Doctor)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: ClinicManagement_proj.DAL.Doctor
+    name: Doctor
+    href: ClinicManagement_proj.DAL.Doctor.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ClinicManagement_proj.DAL.Doctor
+    name: Doctor
+    href: ClinicManagement_proj.DAL.Doctor.html
+  - name: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

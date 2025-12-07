@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ClinicManagement_proj.BLL
+namespace ClinicManagement_proj.BLL.Services
 {
     /// <summary>
     /// Provides services for managing doctor schedules.

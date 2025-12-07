@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Clinic Management Application Documentation | Clinic Management App </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Clinic Management Application Documentation | Clinic Management App ">
+      
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/shayandelbari/clinic-management/blob/submission/ClinicManagement_proj/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="landing" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="Clinic Management App">
+            Clinic Management App
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="clinic-management-application-documentation">Clinic Management Application Documentation</h1>
+
+<p><img src="Static/HealthCareClinicPreview.gif" alt="Clinic Management Preview"></p>
+<p>A comprehensive multi-tier desktop application for managing clinic operations, developed using C# and .NET Framework.</p>
+<h2 id="overview">Overview</h2>
+<p>This application provides a complete solution for clinic management, including user authentication, appointment scheduling, patient records, doctor management, and reporting. It follows a layered architecture with Windows Forms UI, business logic services, and Entity Framework data access.</p>
+<h2 id="key-features">Key Features</h2>
+<ul>
+<li><strong>Role-Based Authentication</strong>: Secure login system for doctors, receptionists, and administrators</li>
+<li><strong>Appointment Management</strong>: Full CRUD operations for appointments with scheduling validation</li>
+<li><strong>Patient Records</strong>: Comprehensive patient data management with clinical summaries</li>
+<li><strong>Doctor Scheduling</strong>: Manage doctor availability, workloads, and time slots</li>
+<li><strong>Reports &amp; Analytics</strong>: Generate detailed reports on appointments, patients, and doctor statistics</li>
+<li><strong>Notifications</strong>: In-app notification system for updates and alerts</li>
+</ul>
+<h2 id="architecture">Architecture</h2>
+<p>The application is built using a multi-tier architecture:</p>
+<h3 id="presentation-layer-ui">Presentation Layer (UI)</h3>
+<ul>
+<li>Windows Forms with role-specific dashboards</li>
+<li>Controller pattern for panel management and navigation</li>
+<li>Responsive design for desktop clinic environment</li>
+</ul>
+<h3 id="business-logic-layer-bll">Business Logic Layer (BLL)</h3>
+<ul>
+<li>Service classes for business operations</li>
+<li>Data transfer objects (DTOs) for data exchange</li>
+<li>Validation and notification utilities</li>
+</ul>
+<h3 id="data-access-layer-dal">Data Access Layer (DAL)</h3>
+<ul>
+<li>Entity Framework 6 with Code-First approach</li>
+<li>SQL Server database with stored procedures and views</li>
+<li>Migration support for database schema updates</li>
+</ul>
+<h2 id="technologies-used">Technologies Used</h2>
+<ul>
+<li><strong>Framework</strong>: .NET Framework 4.8</li>
+<li><strong>Language</strong>: C# 7.3</li>
+<li><strong>UI</strong>: Windows Forms</li>
+<li><strong>ORM</strong>: Entity Framework 6.5.1</li>
+<li><strong>Database</strong>: SQL Server</li>
+<li><strong>Documentation</strong>: DocFX</li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li>.NET Framework 4.8 or later</li>
+<li>SQL Server (LocalDB or full instance)</li>
+</ul>
+<h3 id="installation">Installation</h3>
+<ol>
+<li>Clone the repository</li>
+<li>Run the database setup script (<code>DAL/HealthCareClinicDB_T2_Script.sql</code>)</li>
+<li>Build the solution in Visual Studio</li>
+<li>Run the application</li>
+</ol>
+<h3 id="usage">Usage</h3>
+<ul>
+<li>Launch the app and log in with appropriate credentials</li>
+<li>Access role-specific dashboards</li>
+<li>Manage appointments, patients, and schedules</li>
+<li>View reports and notifications</li>
+</ul>
+<h2 id="contributing">Contributing</h2>
+<p>This project is developed for educational purposes. For contributions or modifications, please refer to the source code and follow standard C# development practices.</p>
+<h2 id="license">License</h2>
+<p>This project is licensed under the MIT License - see the <a href="https://github.com/shayandelbari/clinic-management/blob/submission/LICENSE">LICENSE</a> file for details.</p>
+<hr>
+<p><em>Built with DocFX | .NET Framework 4.8 | C#</em></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/shayandelbari/clinic-management/blob/submission/ClinicManagement_proj/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

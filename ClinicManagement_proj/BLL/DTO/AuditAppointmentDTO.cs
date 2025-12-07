@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ClinicManagement_proj.BLL.DTO
 {
+    /// <summary>
+    /// Represents an audit appointment data transfer object.
+    /// </summary>
     public class AuditAppointmentDTO
     {
         public int AuditId { get; set; }

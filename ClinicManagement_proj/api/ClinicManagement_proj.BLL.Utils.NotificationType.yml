@@ -1,0 +1,147 @@
+### YamlMime:ManagedReference
+items:
+- uid: ClinicManagement_proj.BLL.Utils.NotificationType
+  commentId: T:ClinicManagement_proj.BLL.Utils.NotificationType
+  id: NotificationType
+  parent: ClinicManagement_proj.BLL.Utils
+  children:
+  - ClinicManagement_proj.BLL.Utils.NotificationType.Error
+  - ClinicManagement_proj.BLL.Utils.NotificationType.Info
+  - ClinicManagement_proj.BLL.Utils.NotificationType.Warning
+  langs:
+  - csharp
+  - vb
+  name: NotificationType
+  nameWithType: NotificationType
+  fullName: ClinicManagement_proj.BLL.Utils.NotificationType
+  type: Enum
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/Utils/Notification.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: NotificationType
+    path: BLL/Utils/Notification.cs
+    startLine: 4
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.Utils
+  syntax:
+    content: public enum NotificationType
+    content.vb: Public Enum NotificationType
+- uid: ClinicManagement_proj.BLL.Utils.NotificationType.Info
+  commentId: F:ClinicManagement_proj.BLL.Utils.NotificationType.Info
+  id: Info
+  parent: ClinicManagement_proj.BLL.Utils.NotificationType
+  langs:
+  - csharp
+  - vb
+  name: Info
+  nameWithType: NotificationType.Info
+  fullName: ClinicManagement_proj.BLL.Utils.NotificationType.Info
+  type: Field
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/Utils/Notification.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: Info
+    path: BLL/Utils/Notification.cs
+    startLine: 6
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.Utils
+  syntax:
+    content: Info = 0
+    return:
+      type: ClinicManagement_proj.BLL.Utils.NotificationType
+- uid: ClinicManagement_proj.BLL.Utils.NotificationType.Warning
+  commentId: F:ClinicManagement_proj.BLL.Utils.NotificationType.Warning
+  id: Warning
+  parent: ClinicManagement_proj.BLL.Utils.NotificationType
+  langs:
+  - csharp
+  - vb
+  name: Warning
+  nameWithType: NotificationType.Warning
+  fullName: ClinicManagement_proj.BLL.Utils.NotificationType.Warning
+  type: Field
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/Utils/Notification.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: Warning
+    path: BLL/Utils/Notification.cs
+    startLine: 7
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.Utils
+  syntax:
+    content: Warning = 1
+    return:
+      type: ClinicManagement_proj.BLL.Utils.NotificationType
+- uid: ClinicManagement_proj.BLL.Utils.NotificationType.Error
+  commentId: F:ClinicManagement_proj.BLL.Utils.NotificationType.Error
+  id: Error
+  parent: ClinicManagement_proj.BLL.Utils.NotificationType
+  langs:
+  - csharp
+  - vb
+  name: Error
+  nameWithType: NotificationType.Error
+  fullName: ClinicManagement_proj.BLL.Utils.NotificationType.Error
+  type: Field
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/Utils/Notification.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: Error
+    path: BLL/Utils/Notification.cs
+    startLine: 8
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.Utils
+  syntax:
+    content: Error = 2
+    return:
+      type: ClinicManagement_proj.BLL.Utils.NotificationType
+references:
+- uid: ClinicManagement_proj.BLL.Utils
+  commentId: N:ClinicManagement_proj.BLL.Utils
+  href: ClinicManagement_proj.html
+  name: ClinicManagement_proj.BLL.Utils
+  nameWithType: ClinicManagement_proj.BLL.Utils
+  fullName: ClinicManagement_proj.BLL.Utils
+  spec.csharp:
+  - uid: ClinicManagement_proj
+    name: ClinicManagement_proj
+    href: ClinicManagement_proj.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL
+    name: BLL
+    href: ClinicManagement_proj.BLL.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL.Utils
+    name: Utils
+    href: ClinicManagement_proj.BLL.Utils.html
+  spec.vb:
+  - uid: ClinicManagement_proj
+    name: ClinicManagement_proj
+    href: ClinicManagement_proj.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL
+    name: BLL
+    href: ClinicManagement_proj.BLL.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL.Utils
+    name: Utils
+    href: ClinicManagement_proj.BLL.Utils.html
+- uid: ClinicManagement_proj.BLL.Utils.NotificationType
+  commentId: T:ClinicManagement_proj.BLL.Utils.NotificationType
+  parent: ClinicManagement_proj.BLL.Utils
+  href: ClinicManagement_proj.BLL.Utils.NotificationType.html
+  name: NotificationType
+  nameWithType: NotificationType
+  fullName: ClinicManagement_proj.BLL.Utils.NotificationType

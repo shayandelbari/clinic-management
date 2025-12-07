@@ -5,6 +5,9 @@ using System.Text.RegularExpressions;
 
 namespace ClinicManagement_proj.BLL.DTO
 {
+    /// <summary>
+    /// Represents a user data transfer object.
+    /// </summary>
     public class UserDTO
     {
         public static int USERNAME_MAX_LENGTH = 32;

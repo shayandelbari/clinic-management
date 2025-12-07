@@ -1,0 +1,163 @@
+### YamlMime:ManagedReference
+items:
+- uid: ClinicManagement_proj.BLL.Services.UserService.UserRoles
+  commentId: T:ClinicManagement_proj.BLL.Services.UserService.UserRoles
+  id: UserService.UserRoles
+  parent: ClinicManagement_proj.BLL.Services
+  children:
+  - ClinicManagement_proj.BLL.Services.UserService.UserRoles.Administrator
+  - ClinicManagement_proj.BLL.Services.UserService.UserRoles.Doctor
+  - ClinicManagement_proj.BLL.Services.UserService.UserRoles.Receptionist
+  langs:
+  - csharp
+  - vb
+  name: UserService.UserRoles
+  nameWithType: UserService.UserRoles
+  fullName: ClinicManagement_proj.BLL.Services.UserService.UserRoles
+  type: Enum
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/Services/UserService.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: UserRoles
+    path: BLL/Services/UserService.cs
+    startLine: 26
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.Services
+  syntax:
+    content: public enum UserService.UserRoles
+    content.vb: Public Enum UserService.UserRoles
+- uid: ClinicManagement_proj.BLL.Services.UserService.UserRoles.Administrator
+  commentId: F:ClinicManagement_proj.BLL.Services.UserService.UserRoles.Administrator
+  id: Administrator
+  parent: ClinicManagement_proj.BLL.Services.UserService.UserRoles
+  langs:
+  - csharp
+  - vb
+  name: Administrator
+  nameWithType: UserService.UserRoles.Administrator
+  fullName: ClinicManagement_proj.BLL.Services.UserService.UserRoles.Administrator
+  type: Field
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/Services/UserService.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: Administrator
+    path: BLL/Services/UserService.cs
+    startLine: 28
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.Services
+  syntax:
+    content: Administrator = 0
+    return:
+      type: ClinicManagement_proj.BLL.Services.UserService.UserRoles
+- uid: ClinicManagement_proj.BLL.Services.UserService.UserRoles.Doctor
+  commentId: F:ClinicManagement_proj.BLL.Services.UserService.UserRoles.Doctor
+  id: Doctor
+  parent: ClinicManagement_proj.BLL.Services.UserService.UserRoles
+  langs:
+  - csharp
+  - vb
+  name: Doctor
+  nameWithType: UserService.UserRoles.Doctor
+  fullName: ClinicManagement_proj.BLL.Services.UserService.UserRoles.Doctor
+  type: Field
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/Services/UserService.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: Doctor
+    path: BLL/Services/UserService.cs
+    startLine: 29
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.Services
+  syntax:
+    content: Doctor = 1
+    return:
+      type: ClinicManagement_proj.BLL.Services.UserService.UserRoles
+- uid: ClinicManagement_proj.BLL.Services.UserService.UserRoles.Receptionist
+  commentId: F:ClinicManagement_proj.BLL.Services.UserService.UserRoles.Receptionist
+  id: Receptionist
+  parent: ClinicManagement_proj.BLL.Services.UserService.UserRoles
+  langs:
+  - csharp
+  - vb
+  name: Receptionist
+  nameWithType: UserService.UserRoles.Receptionist
+  fullName: ClinicManagement_proj.BLL.Services.UserService.UserRoles.Receptionist
+  type: Field
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/Services/UserService.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: Receptionist
+    path: BLL/Services/UserService.cs
+    startLine: 30
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.Services
+  syntax:
+    content: Receptionist = 2
+    return:
+      type: ClinicManagement_proj.BLL.Services.UserService.UserRoles
+references:
+- uid: ClinicManagement_proj.BLL.Services
+  commentId: N:ClinicManagement_proj.BLL.Services
+  href: ClinicManagement_proj.html
+  name: ClinicManagement_proj.BLL.Services
+  nameWithType: ClinicManagement_proj.BLL.Services
+  fullName: ClinicManagement_proj.BLL.Services
+  spec.csharp:
+  - uid: ClinicManagement_proj
+    name: ClinicManagement_proj
+    href: ClinicManagement_proj.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL
+    name: BLL
+    href: ClinicManagement_proj.BLL.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL.Services
+    name: Services
+    href: ClinicManagement_proj.BLL.Services.html
+  spec.vb:
+  - uid: ClinicManagement_proj
+    name: ClinicManagement_proj
+    href: ClinicManagement_proj.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL
+    name: BLL
+    href: ClinicManagement_proj.BLL.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL.Services
+    name: Services
+    href: ClinicManagement_proj.BLL.Services.html
+- uid: ClinicManagement_proj.BLL.Services.UserService.UserRoles
+  commentId: T:ClinicManagement_proj.BLL.Services.UserService.UserRoles
+  parent: ClinicManagement_proj.BLL.Services
+  href: ClinicManagement_proj.BLL.Services.UserService.html
+  name: UserService.UserRoles
+  nameWithType: UserService.UserRoles
+  fullName: ClinicManagement_proj.BLL.Services.UserService.UserRoles
+  spec.csharp:
+  - uid: ClinicManagement_proj.BLL.Services.UserService
+    name: UserService
+    href: ClinicManagement_proj.BLL.Services.UserService.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL.Services.UserService.UserRoles
+    name: UserRoles
+    href: ClinicManagement_proj.BLL.Services.UserService.UserRoles.html
+  spec.vb:
+  - uid: ClinicManagement_proj.BLL.Services.UserService
+    name: UserService
+    href: ClinicManagement_proj.BLL.Services.UserService.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL.Services.UserService.UserRoles
+    name: UserRoles
+    href: ClinicManagement_proj.BLL.Services.UserService.UserRoles.html

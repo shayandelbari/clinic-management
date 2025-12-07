@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>User Guide | Clinic Management App </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="User Guide | Clinic Management App ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/shayandelbari/clinic-management/blob/submission/ClinicManagement_proj/docs/user-guide.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Clinic Management App">
+            Clinic Management App
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="user-guide">User Guide</h1>
+
+<p>This guide covers the main features and workflows of the Clinic Management Application.</p>
+<h2 id="login">Login</h2>
+<ol>
+<li>Launch the application</li>
+<li>Enter your username and password</li>
+<li>Click <strong>Login</strong></li>
+<li>You will be directed to your role-specific dashboard</li>
+</ol>
+<h2 id="role-specific-features">Role-Specific Features</h2>
+<h3 id="administrator-dashboard">Administrator Dashboard</h3>
+<p>Administrators have full access to all system features:</p>
+<h4 id="user-management">User Management</h4>
+<ul>
+<li><strong>Add User</strong>: Create new user accounts</li>
+<li><strong>Edit User</strong>: Modify existing user details</li>
+<li><strong>Delete User</strong>: Remove user accounts</li>
+<li><strong>Assign Roles</strong>: Set user permissions</li>
+</ul>
+<h4 id="doctor-management">Doctor Management</h4>
+<ul>
+<li><strong>Add Doctor</strong>: Register new doctors</li>
+<li><strong>Edit Doctor</strong>: Update doctor information</li>
+<li><strong>Manage Specialties</strong>: Assign medical specialties</li>
+<li><strong>View Workload</strong>: Monitor doctor schedules</li>
+</ul>
+<h4 id="system-reports">System Reports</h4>
+<ul>
+<li><strong>Appointment Reports</strong>: View appointment statistics</li>
+<li><strong>Patient Reports</strong>: Patient data summaries</li>
+<li><strong>Doctor Reports</strong>: Doctor activity reports</li>
+</ul>
+<h3 id="receptionist-dashboard">Receptionist Dashboard</h3>
+<p>Receptionists manage day-to-day clinic operations:</p>
+<h4 id="patient-registration">Patient Registration</h4>
+<ol>
+<li>Click <strong>New Patient</strong></li>
+<li>Fill in patient details:
+<ul>
+<li>First Name (required, max 64 characters)</li>
+<li>Last Name (required, max 64 characters)</li>
+<li>Date of Birth</li>
+<li>Phone Number (required, max 20 characters)</li>
+<li>Insurance Number (required, max 24 characters)</li>
+</ul>
+</li>
+<li>Click <strong>Save</strong></li>
+</ol>
+<h4 id="appointment-scheduling">Appointment Scheduling</h4>
+<ol>
+<li>Select a patient from the list</li>
+<li>Click <strong>New Appointment</strong></li>
+<li>Choose:
+<ul>
+<li>Doctor</li>
+<li>Date</li>
+<li>Available Time Slot</li>
+</ul>
+</li>
+<li>Add optional notes</li>
+<li>Click <strong>Schedule</strong></li>
+</ol>
+<h4 id="appointment-management">Appointment Management</h4>
+<ul>
+<li><strong>View Appointments</strong>: See all scheduled appointments</li>
+<li><strong>Edit Appointment</strong>: Modify appointment details</li>
+<li><strong>Cancel Appointment</strong>: Remove an appointment</li>
+<li><strong>Check-in Patient</strong>: Mark patient as arrived</li>
+</ul>
+<h3 id="doctor-dashboard">Doctor Dashboard</h3>
+<p>Doctors view their schedules and patient information:</p>
+<h4 id="todays-schedule">Today's Schedule</h4>
+<ul>
+<li>View all appointments for the current day</li>
+<li>See patient details for each appointment</li>
+<li>View appointment notes</li>
+</ul>
+<h4 id="patient-information">Patient Information</h4>
+<ul>
+<li>Access patient clinical summaries</li>
+<li>View appointment history</li>
+<li>Review patient records</li>
+</ul>
+<h2 id="common-tasks">Common Tasks</h2>
+<h3 id="searching-for-patients">Searching for Patients</h3>
+<ol>
+<li>Use the search box in the patient list</li>
+<li>Enter patient name, phone, or insurance number</li>
+<li>Results filter automatically</li>
+</ol>
+<h3 id="scheduling-an-appointment">Scheduling an Appointment</h3>
+<ol>
+<li>Navigate to <strong>Appointments</strong> section</li>
+<li>Click <strong>New Appointment</strong></li>
+<li>Select patient (or register new patient first)</li>
+<li>Choose doctor and specialty</li>
+<li>Pick available date and time slot</li>
+<li>Add any relevant notes</li>
+<li>Confirm the appointment</li>
+</ol>
+<h3 id="modifying-an-appointment">Modifying an Appointment</h3>
+<ol>
+<li>Find the appointment in the list</li>
+<li>Double-click or select <strong>Edit</strong></li>
+<li>Update the necessary fields</li>
+<li>Save changes</li>
+</ol>
+<h3 id="canceling-an-appointment">Canceling an Appointment</h3>
+<ol>
+<li>Select the appointment</li>
+<li>Click <strong>Cancel</strong></li>
+<li>Confirm the cancellation</li>
+</ol>
+<h3 id="viewing-reports">Viewing Reports</h3>
+<ol>
+<li>Navigate to <strong>Reports</strong> section</li>
+<li>Select report type:
+<ul>
+<li>Daily Appointments</li>
+<li>Weekly Summary</li>
+<li>Patient Statistics</li>
+<li>Doctor Workload</li>
+</ul>
+</li>
+<li>Choose date range if applicable</li>
+<li>Click <strong>Generate</strong></li>
+</ol>
+<h2 id="data-validation">Data Validation</h2>
+<p>The application validates all input data:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Validation Rules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First Name</td>
+<td>Required, max 64 characters</td>
+</tr>
+<tr>
+<td>Last Name</td>
+<td>Required, max 64 characters</td>
+</tr>
+<tr>
+<td>Phone Number</td>
+<td>Required, max 20 characters</td>
+</tr>
+<tr>
+<td>Insurance Number</td>
+<td>Required, max 24 characters</td>
+</tr>
+<tr>
+<td>Appointment Notes</td>
+<td>Max 512 characters</td>
+</tr>
+<tr>
+<td>License Number</td>
+<td>Required, max 24 characters</td>
+</tr>
+</tbody>
+</table>
+<h2 id="notifications">Notifications</h2>
+<p>The notification system alerts users to:</p>
+<ul>
+<li>Upcoming appointments</li>
+<li>Schedule changes</li>
+<li>System updates</li>
+<li>Important reminders</li>
+</ul>
+<p>Access notifications via the bell icon in the dashboard header.</p>
+<h2 id="keyboard-shortcuts">Keyboard Shortcuts</h2>
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F5</td>
+<td>Refresh current view</td>
+</tr>
+<tr>
+<td>Ctrl+N</td>
+<td>New record</td>
+</tr>
+<tr>
+<td>Ctrl+S</td>
+<td>Save changes</td>
+</tr>
+<tr>
+<td>Escape</td>
+<td>Cancel/Close dialog</td>
+</tr>
+</tbody>
+</table>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="cannot-login">Cannot Login</h3>
+<ul>
+<li>Verify username and password</li>
+<li>Check if account is active</li>
+<li>Contact administrator if locked out</li>
+</ul>
+<h3 id="appointment-not-saving">Appointment Not Saving</h3>
+<ul>
+<li>Ensure all required fields are filled</li>
+<li>Verify selected time slot is available</li>
+<li>Check patient and doctor are valid</li>
+</ul>
+<h3 id="data-not-loading">Data Not Loading</h3>
+<ul>
+<li>Check database connection</li>
+<li>Verify network connectivity</li>
+<li>Restart the application</li>
+</ul>
+<h2 id="support">Support</h2>
+<p>For technical support or bug reports, contact your system administrator or refer to the <a href="../api/index.html">API Reference</a> for developer documentation.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/shayandelbari/clinic-management/blob/submission/ClinicManagement_proj/docs/user-guide.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

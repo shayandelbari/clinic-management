@@ -1,0 +1,972 @@
+### YamlMime:ManagedReference
+items:
+- uid: ClinicManagement_proj.BLL.DTO.UserDTO
+  commentId: T:ClinicManagement_proj.BLL.DTO.UserDTO
+  id: UserDTO
+  parent: ClinicManagement_proj.BLL.DTO
+  children:
+  - ClinicManagement_proj.BLL.DTO.UserDTO.#ctor
+  - ClinicManagement_proj.BLL.DTO.UserDTO.CreatedAt
+  - ClinicManagement_proj.BLL.DTO.UserDTO.Id
+  - ClinicManagement_proj.BLL.DTO.UserDTO.ModifiedAt
+  - ClinicManagement_proj.BLL.DTO.UserDTO.PASSWORDHASH_MAX_LENGTH
+  - ClinicManagement_proj.BLL.DTO.UserDTO.PASSWORD_MAX_LENGTH
+  - ClinicManagement_proj.BLL.DTO.UserDTO.PasswordHash
+  - ClinicManagement_proj.BLL.DTO.UserDTO.Roles
+  - ClinicManagement_proj.BLL.DTO.UserDTO.ToString
+  - ClinicManagement_proj.BLL.DTO.UserDTO.USERNAME_MAX_LENGTH
+  - ClinicManagement_proj.BLL.DTO.UserDTO.Username
+  - ClinicManagement_proj.BLL.DTO.UserDTO.ValidatePassword(System.String)
+  - ClinicManagement_proj.BLL.DTO.UserDTO.ValidatePasswordHash(System.String)
+  - ClinicManagement_proj.BLL.DTO.UserDTO.ValidateUsername(System.String)
+  langs:
+  - csharp
+  - vb
+  name: UserDTO
+  nameWithType: UserDTO
+  fullName: ClinicManagement_proj.BLL.DTO.UserDTO
+  type: Class
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/UserDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: UserDTO
+    path: BLL/DTO/UserDTO.cs
+    startLine: 10
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  summary: Represents a user data transfer object.
+  example: []
+  syntax:
+    content: public class UserDTO
+    content.vb: Public Class UserDTO
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: ClinicManagement_proj.BLL.DTO.UserDTO.USERNAME_MAX_LENGTH
+  commentId: F:ClinicManagement_proj.BLL.DTO.UserDTO.USERNAME_MAX_LENGTH
+  id: USERNAME_MAX_LENGTH
+  parent: ClinicManagement_proj.BLL.DTO.UserDTO
+  langs:
+  - csharp
+  - vb
+  name: USERNAME_MAX_LENGTH
+  nameWithType: UserDTO.USERNAME_MAX_LENGTH
+  fullName: ClinicManagement_proj.BLL.DTO.UserDTO.USERNAME_MAX_LENGTH
+  type: Field
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/UserDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: USERNAME_MAX_LENGTH
+    path: BLL/DTO/UserDTO.cs
+    startLine: 12
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  syntax:
+    content: public static int USERNAME_MAX_LENGTH
+    return:
+      type: System.Int32
+    content.vb: Public Shared USERNAME_MAX_LENGTH As Integer
+- uid: ClinicManagement_proj.BLL.DTO.UserDTO.PASSWORD_MAX_LENGTH
+  commentId: F:ClinicManagement_proj.BLL.DTO.UserDTO.PASSWORD_MAX_LENGTH
+  id: PASSWORD_MAX_LENGTH
+  parent: ClinicManagement_proj.BLL.DTO.UserDTO
+  langs:
+  - csharp
+  - vb
+  name: PASSWORD_MAX_LENGTH
+  nameWithType: UserDTO.PASSWORD_MAX_LENGTH
+  fullName: ClinicManagement_proj.BLL.DTO.UserDTO.PASSWORD_MAX_LENGTH
+  type: Field
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/UserDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: PASSWORD_MAX_LENGTH
+    path: BLL/DTO/UserDTO.cs
+    startLine: 13
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  syntax:
+    content: public static int PASSWORD_MAX_LENGTH
+    return:
+      type: System.Int32
+    content.vb: Public Shared PASSWORD_MAX_LENGTH As Integer
+- uid: ClinicManagement_proj.BLL.DTO.UserDTO.PASSWORDHASH_MAX_LENGTH
+  commentId: F:ClinicManagement_proj.BLL.DTO.UserDTO.PASSWORDHASH_MAX_LENGTH
+  id: PASSWORDHASH_MAX_LENGTH
+  parent: ClinicManagement_proj.BLL.DTO.UserDTO
+  langs:
+  - csharp
+  - vb
+  name: PASSWORDHASH_MAX_LENGTH
+  nameWithType: UserDTO.PASSWORDHASH_MAX_LENGTH
+  fullName: ClinicManagement_proj.BLL.DTO.UserDTO.PASSWORDHASH_MAX_LENGTH
+  type: Field
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/UserDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: PASSWORDHASH_MAX_LENGTH
+    path: BLL/DTO/UserDTO.cs
+    startLine: 14
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  syntax:
+    content: public static int PASSWORDHASH_MAX_LENGTH
+    return:
+      type: System.Int32
+    content.vb: Public Shared PASSWORDHASH_MAX_LENGTH As Integer
+- uid: ClinicManagement_proj.BLL.DTO.UserDTO.Id
+  commentId: P:ClinicManagement_proj.BLL.DTO.UserDTO.Id
+  id: Id
+  parent: ClinicManagement_proj.BLL.DTO.UserDTO
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: UserDTO.Id
+  fullName: ClinicManagement_proj.BLL.DTO.UserDTO.Id
+  type: Property
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/UserDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: Id
+    path: BLL/DTO/UserDTO.cs
+    startLine: 19
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  syntax:
+    content: public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Id As Integer
+  overload: ClinicManagement_proj.BLL.DTO.UserDTO.Id*
+- uid: ClinicManagement_proj.BLL.DTO.UserDTO.Username
+  commentId: P:ClinicManagement_proj.BLL.DTO.UserDTO.Username
+  id: Username
+  parent: ClinicManagement_proj.BLL.DTO.UserDTO
+  langs:
+  - csharp
+  - vb
+  name: Username
+  nameWithType: UserDTO.Username
+  fullName: ClinicManagement_proj.BLL.DTO.UserDTO.Username
+  type: Property
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/UserDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: Username
+    path: BLL/DTO/UserDTO.cs
+    startLine: 20
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  syntax:
+    content: public string Username { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Username As String
+  overload: ClinicManagement_proj.BLL.DTO.UserDTO.Username*
+- uid: ClinicManagement_proj.BLL.DTO.UserDTO.PasswordHash
+  commentId: P:ClinicManagement_proj.BLL.DTO.UserDTO.PasswordHash
+  id: PasswordHash
+  parent: ClinicManagement_proj.BLL.DTO.UserDTO
+  langs:
+  - csharp
+  - vb
+  name: PasswordHash
+  nameWithType: UserDTO.PasswordHash
+  fullName: ClinicManagement_proj.BLL.DTO.UserDTO.PasswordHash
+  type: Property
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/UserDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: PasswordHash
+    path: BLL/DTO/UserDTO.cs
+    startLine: 25
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  syntax:
+    content: public string PasswordHash { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PasswordHash As String
+  overload: ClinicManagement_proj.BLL.DTO.UserDTO.PasswordHash*
+- uid: ClinicManagement_proj.BLL.DTO.UserDTO.CreatedAt
+  commentId: P:ClinicManagement_proj.BLL.DTO.UserDTO.CreatedAt
+  id: CreatedAt
+  parent: ClinicManagement_proj.BLL.DTO.UserDTO
+  langs:
+  - csharp
+  - vb
+  name: CreatedAt
+  nameWithType: UserDTO.CreatedAt
+  fullName: ClinicManagement_proj.BLL.DTO.UserDTO.CreatedAt
+  type: Property
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/UserDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: CreatedAt
+    path: BLL/DTO/UserDTO.cs
+    startLine: 30
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  syntax:
+    content: public DateTime CreatedAt { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property CreatedAt As Date
+  overload: ClinicManagement_proj.BLL.DTO.UserDTO.CreatedAt*
+- uid: ClinicManagement_proj.BLL.DTO.UserDTO.ModifiedAt
+  commentId: P:ClinicManagement_proj.BLL.DTO.UserDTO.ModifiedAt
+  id: ModifiedAt
+  parent: ClinicManagement_proj.BLL.DTO.UserDTO
+  langs:
+  - csharp
+  - vb
+  name: ModifiedAt
+  nameWithType: UserDTO.ModifiedAt
+  fullName: ClinicManagement_proj.BLL.DTO.UserDTO.ModifiedAt
+  type: Property
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/UserDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: ModifiedAt
+    path: BLL/DTO/UserDTO.cs
+    startLine: 31
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  syntax:
+    content: public DateTime ModifiedAt { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property ModifiedAt As Date
+  overload: ClinicManagement_proj.BLL.DTO.UserDTO.ModifiedAt*
+- uid: ClinicManagement_proj.BLL.DTO.UserDTO.Roles
+  commentId: P:ClinicManagement_proj.BLL.DTO.UserDTO.Roles
+  id: Roles
+  parent: ClinicManagement_proj.BLL.DTO.UserDTO
+  langs:
+  - csharp
+  - vb
+  name: Roles
+  nameWithType: UserDTO.Roles
+  fullName: ClinicManagement_proj.BLL.DTO.UserDTO.Roles
+  type: Property
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/UserDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: Roles
+    path: BLL/DTO/UserDTO.cs
+    startLine: 32
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  syntax:
+    content: public ICollection<RoleDTO> Roles { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{ClinicManagement_proj.BLL.DTO.RoleDTO}
+    content.vb: Public Property Roles As ICollection(Of RoleDTO)
+  overload: ClinicManagement_proj.BLL.DTO.UserDTO.Roles*
+- uid: ClinicManagement_proj.BLL.DTO.UserDTO.#ctor
+  commentId: M:ClinicManagement_proj.BLL.DTO.UserDTO.#ctor
+  id: '#ctor'
+  parent: ClinicManagement_proj.BLL.DTO.UserDTO
+  langs:
+  - csharp
+  - vb
+  name: UserDTO()
+  nameWithType: UserDTO.UserDTO()
+  fullName: ClinicManagement_proj.BLL.DTO.UserDTO.UserDTO()
+  type: Constructor
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/UserDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: .ctor
+    path: BLL/DTO/UserDTO.cs
+    startLine: 37
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  summary: Initializes a new instance of the UserDTO class.
+  example: []
+  syntax:
+    content: public UserDTO()
+    content.vb: Public Sub New()
+  overload: ClinicManagement_proj.BLL.DTO.UserDTO.#ctor*
+  nameWithType.vb: UserDTO.New()
+  fullName.vb: ClinicManagement_proj.BLL.DTO.UserDTO.New()
+  name.vb: New()
+- uid: ClinicManagement_proj.BLL.DTO.UserDTO.ValidateUsername(System.String)
+  commentId: M:ClinicManagement_proj.BLL.DTO.UserDTO.ValidateUsername(System.String)
+  id: ValidateUsername(System.String)
+  parent: ClinicManagement_proj.BLL.DTO.UserDTO
+  langs:
+  - csharp
+  - vb
+  name: ValidateUsername(string)
+  nameWithType: UserDTO.ValidateUsername(string)
+  fullName: ClinicManagement_proj.BLL.DTO.UserDTO.ValidateUsername(string)
+  type: Method
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/UserDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: ValidateUsername
+    path: BLL/DTO/UserDTO.cs
+    startLine: 48
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  summary: Validates the username string.
+  example: []
+  syntax:
+    content: public static string ValidateUsername(string username)
+    parameters:
+    - id: username
+      type: System.String
+      description: The username to validate.
+    return:
+      type: System.String
+      description: The validated username.
+    content.vb: Public Shared Function ValidateUsername(username As String) As String
+  overload: ClinicManagement_proj.BLL.DTO.UserDTO.ValidateUsername*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if username is invalid.
+  nameWithType.vb: UserDTO.ValidateUsername(String)
+  fullName.vb: ClinicManagement_proj.BLL.DTO.UserDTO.ValidateUsername(String)
+  name.vb: ValidateUsername(String)
+- uid: ClinicManagement_proj.BLL.DTO.UserDTO.ValidatePasswordHash(System.String)
+  commentId: M:ClinicManagement_proj.BLL.DTO.UserDTO.ValidatePasswordHash(System.String)
+  id: ValidatePasswordHash(System.String)
+  parent: ClinicManagement_proj.BLL.DTO.UserDTO
+  langs:
+  - csharp
+  - vb
+  name: ValidatePasswordHash(string)
+  nameWithType: UserDTO.ValidatePasswordHash(string)
+  fullName: ClinicManagement_proj.BLL.DTO.UserDTO.ValidatePasswordHash(string)
+  type: Method
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/UserDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: ValidatePasswordHash
+    path: BLL/DTO/UserDTO.cs
+    startLine: 71
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  summary: Validates the password hash string.
+  example: []
+  syntax:
+    content: public static string ValidatePasswordHash(string passwordHash)
+    parameters:
+    - id: passwordHash
+      type: System.String
+      description: The password hash to validate.
+    return:
+      type: System.String
+      description: The validated password hash.
+    content.vb: Public Shared Function ValidatePasswordHash(passwordHash As String) As String
+  overload: ClinicManagement_proj.BLL.DTO.UserDTO.ValidatePasswordHash*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if password hash is null, empty, or exceeds max length.
+  nameWithType.vb: UserDTO.ValidatePasswordHash(String)
+  fullName.vb: ClinicManagement_proj.BLL.DTO.UserDTO.ValidatePasswordHash(String)
+  name.vb: ValidatePasswordHash(String)
+- uid: ClinicManagement_proj.BLL.DTO.UserDTO.ValidatePassword(System.String)
+  commentId: M:ClinicManagement_proj.BLL.DTO.UserDTO.ValidatePassword(System.String)
+  id: ValidatePassword(System.String)
+  parent: ClinicManagement_proj.BLL.DTO.UserDTO
+  langs:
+  - csharp
+  - vb
+  name: ValidatePassword(string)
+  nameWithType: UserDTO.ValidatePassword(string)
+  fullName: ClinicManagement_proj.BLL.DTO.UserDTO.ValidatePassword(string)
+  type: Method
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/UserDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: ValidatePassword
+    path: BLL/DTO/UserDTO.cs
+    startLine: 86
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  summary: Validates the password string.
+  example: []
+  syntax:
+    content: public static string ValidatePassword(string password)
+    parameters:
+    - id: password
+      type: System.String
+      description: The password to validate.
+    return:
+      type: System.String
+      description: The validated password.
+    content.vb: Public Shared Function ValidatePassword(password As String) As String
+  overload: ClinicManagement_proj.BLL.DTO.UserDTO.ValidatePassword*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if password does not meet requirements.
+  nameWithType.vb: UserDTO.ValidatePassword(String)
+  fullName.vb: ClinicManagement_proj.BLL.DTO.UserDTO.ValidatePassword(String)
+  name.vb: ValidatePassword(String)
+- uid: ClinicManagement_proj.BLL.DTO.UserDTO.ToString
+  commentId: M:ClinicManagement_proj.BLL.DTO.UserDTO.ToString
+  id: ToString
+  parent: ClinicManagement_proj.BLL.DTO.UserDTO
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: UserDTO.ToString()
+  fullName: ClinicManagement_proj.BLL.DTO.UserDTO.ToString()
+  type: Method
+  source:
+    remote:
+      path: ClinicManagement_proj/BLL/DTO/UserDTO.cs
+      branch: submission
+      repo: https://github.com/shayandelbari/clinic-management.git
+    id: ToString
+    path: BLL/DTO/UserDTO.cs
+    startLine: 107
+  assemblies:
+  - ClinicManagement_proj
+  namespace: ClinicManagement_proj.BLL.DTO
+  summary: Returns a string representation of the user.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string describing the user.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: ClinicManagement_proj.BLL.DTO.UserDTO.ToString*
+references:
+- uid: ClinicManagement_proj.BLL.DTO
+  commentId: N:ClinicManagement_proj.BLL.DTO
+  href: ClinicManagement_proj.html
+  name: ClinicManagement_proj.BLL.DTO
+  nameWithType: ClinicManagement_proj.BLL.DTO
+  fullName: ClinicManagement_proj.BLL.DTO
+  spec.csharp:
+  - uid: ClinicManagement_proj
+    name: ClinicManagement_proj
+    href: ClinicManagement_proj.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL
+    name: BLL
+    href: ClinicManagement_proj.BLL.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL.DTO
+    name: DTO
+    href: ClinicManagement_proj.BLL.DTO.html
+  spec.vb:
+  - uid: ClinicManagement_proj
+    name: ClinicManagement_proj
+    href: ClinicManagement_proj.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL
+    name: BLL
+    href: ClinicManagement_proj.BLL.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL.DTO
+    name: DTO
+    href: ClinicManagement_proj.BLL.DTO.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: ClinicManagement_proj.BLL.DTO.UserDTO.Id*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.UserDTO.Id
+  href: ClinicManagement_proj.BLL.DTO.UserDTO.html#ClinicManagement_proj_BLL_DTO_UserDTO_Id
+  name: Id
+  nameWithType: UserDTO.Id
+  fullName: ClinicManagement_proj.BLL.DTO.UserDTO.Id
+- uid: ClinicManagement_proj.BLL.DTO.UserDTO.Username*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.UserDTO.Username
+  href: ClinicManagement_proj.BLL.DTO.UserDTO.html#ClinicManagement_proj_BLL_DTO_UserDTO_Username
+  name: Username
+  nameWithType: UserDTO.Username
+  fullName: ClinicManagement_proj.BLL.DTO.UserDTO.Username
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ClinicManagement_proj.BLL.DTO.UserDTO.PasswordHash*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.UserDTO.PasswordHash
+  href: ClinicManagement_proj.BLL.DTO.UserDTO.html#ClinicManagement_proj_BLL_DTO_UserDTO_PasswordHash
+  name: PasswordHash
+  nameWithType: UserDTO.PasswordHash
+  fullName: ClinicManagement_proj.BLL.DTO.UserDTO.PasswordHash
+- uid: ClinicManagement_proj.BLL.DTO.UserDTO.CreatedAt*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.UserDTO.CreatedAt
+  href: ClinicManagement_proj.BLL.DTO.UserDTO.html#ClinicManagement_proj_BLL_DTO_UserDTO_CreatedAt
+  name: CreatedAt
+  nameWithType: UserDTO.CreatedAt
+  fullName: ClinicManagement_proj.BLL.DTO.UserDTO.CreatedAt
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: ClinicManagement_proj.BLL.DTO.UserDTO.ModifiedAt*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.UserDTO.ModifiedAt
+  href: ClinicManagement_proj.BLL.DTO.UserDTO.html#ClinicManagement_proj_BLL_DTO_UserDTO_ModifiedAt
+  name: ModifiedAt
+  nameWithType: UserDTO.ModifiedAt
+  fullName: ClinicManagement_proj.BLL.DTO.UserDTO.ModifiedAt
+- uid: ClinicManagement_proj.BLL.DTO.UserDTO.Roles*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.UserDTO.Roles
+  href: ClinicManagement_proj.BLL.DTO.UserDTO.html#ClinicManagement_proj_BLL_DTO_UserDTO_Roles
+  name: Roles
+  nameWithType: UserDTO.Roles
+  fullName: ClinicManagement_proj.BLL.DTO.UserDTO.Roles
+- uid: System.Collections.Generic.ICollection{ClinicManagement_proj.BLL.DTO.RoleDTO}
+  commentId: T:System.Collections.Generic.ICollection{ClinicManagement_proj.BLL.DTO.RoleDTO}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<RoleDTO>
+  nameWithType: ICollection<RoleDTO>
+  fullName: System.Collections.Generic.ICollection<ClinicManagement_proj.BLL.DTO.RoleDTO>
+  nameWithType.vb: ICollection(Of RoleDTO)
+  fullName.vb: System.Collections.Generic.ICollection(Of ClinicManagement_proj.BLL.DTO.RoleDTO)
+  name.vb: ICollection(Of RoleDTO)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: ClinicManagement_proj.BLL.DTO.RoleDTO
+    name: RoleDTO
+    href: ClinicManagement_proj.BLL.DTO.RoleDTO.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ClinicManagement_proj.BLL.DTO.RoleDTO
+    name: RoleDTO
+    href: ClinicManagement_proj.BLL.DTO.RoleDTO.html
+  - name: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: ClinicManagement_proj.BLL.DTO.UserDTO.#ctor*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.UserDTO.#ctor
+  href: ClinicManagement_proj.BLL.DTO.UserDTO.html#ClinicManagement_proj_BLL_DTO_UserDTO__ctor
+  name: UserDTO
+  nameWithType: UserDTO.UserDTO
+  fullName: ClinicManagement_proj.BLL.DTO.UserDTO.UserDTO
+  nameWithType.vb: UserDTO.New
+  fullName.vb: ClinicManagement_proj.BLL.DTO.UserDTO.New
+  name.vb: New
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: ClinicManagement_proj.BLL.DTO.UserDTO.ValidateUsername*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.UserDTO.ValidateUsername
+  href: ClinicManagement_proj.BLL.DTO.UserDTO.html#ClinicManagement_proj_BLL_DTO_UserDTO_ValidateUsername_System_String_
+  name: ValidateUsername
+  nameWithType: UserDTO.ValidateUsername
+  fullName: ClinicManagement_proj.BLL.DTO.UserDTO.ValidateUsername
+- uid: ClinicManagement_proj.BLL.DTO.UserDTO.ValidatePasswordHash*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.UserDTO.ValidatePasswordHash
+  href: ClinicManagement_proj.BLL.DTO.UserDTO.html#ClinicManagement_proj_BLL_DTO_UserDTO_ValidatePasswordHash_System_String_
+  name: ValidatePasswordHash
+  nameWithType: UserDTO.ValidatePasswordHash
+  fullName: ClinicManagement_proj.BLL.DTO.UserDTO.ValidatePasswordHash
+- uid: ClinicManagement_proj.BLL.DTO.UserDTO.ValidatePassword*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.UserDTO.ValidatePassword
+  href: ClinicManagement_proj.BLL.DTO.UserDTO.html#ClinicManagement_proj_BLL_DTO_UserDTO_ValidatePassword_System_String_
+  name: ValidatePassword
+  nameWithType: UserDTO.ValidatePassword
+  fullName: ClinicManagement_proj.BLL.DTO.UserDTO.ValidatePassword
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: ClinicManagement_proj.BLL.DTO.UserDTO.ToString*
+  commentId: Overload:ClinicManagement_proj.BLL.DTO.UserDTO.ToString
+  href: ClinicManagement_proj.BLL.DTO.UserDTO.html#ClinicManagement_proj_BLL_DTO_UserDTO_ToString
+  name: ToString
+  nameWithType: UserDTO.ToString
+  fullName: ClinicManagement_proj.BLL.DTO.UserDTO.ToString

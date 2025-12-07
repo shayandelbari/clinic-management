@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace ClinicManagement_proj.BLL.DTO
 {
+    /// <summary>
+    /// Represents a patient data transfer object.
+    /// </summary>
     public class PatientDTO
     {
         public static int FIRSTNAME_MAX_LENGTH = 64;

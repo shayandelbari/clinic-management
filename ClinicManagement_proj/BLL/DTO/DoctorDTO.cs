@@ -4,6 +4,9 @@ using System.Linq;
 
 namespace ClinicManagement_proj.BLL.DTO
 {
+    /// <summary>
+    /// Represents a doctor data transfer object.
+    /// </summary>
     public class DoctorDTO
     {
         public static int FIRSTNAME_MAX_LENGTH = 64;

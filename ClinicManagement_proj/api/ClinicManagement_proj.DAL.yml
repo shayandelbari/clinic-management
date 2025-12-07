@@ -1,0 +1,154 @@
+### YamlMime:ManagedReference
+items:
+- uid: ClinicManagement_proj.DAL
+  commentId: N:ClinicManagement_proj.DAL
+  id: ClinicManagement_proj.DAL
+  children:
+  - ClinicManagement_proj.DAL.Appointment
+  - ClinicManagement_proj.DAL.Audit_Appointment
+  - ClinicManagement_proj.DAL.ClinicDbContext
+  - ClinicManagement_proj.DAL.Doctor
+  - ClinicManagement_proj.DAL.DoctorSchedule
+  - ClinicManagement_proj.DAL.HealthCareClinicDB_T2Entities
+  - ClinicManagement_proj.DAL.Patient
+  - ClinicManagement_proj.DAL.Role
+  - ClinicManagement_proj.DAL.Specialty
+  - ClinicManagement_proj.DAL.TimeSlot
+  - ClinicManagement_proj.DAL.User
+  - ClinicManagement_proj.DAL.sp_GetAvailableSlots_Result
+  - ClinicManagement_proj.DAL.vw_DoctorTodaySchedule
+  - ClinicManagement_proj.DAL.vw_PatientClinicalSummary
+  - ClinicManagement_proj.DAL.vw_PatientRecordsSummary
+  - ClinicManagement_proj.DAL.vw_UpcomingAppointments
+  langs:
+  - csharp
+  - vb
+  name: ClinicManagement_proj.DAL
+  nameWithType: ClinicManagement_proj.DAL
+  fullName: ClinicManagement_proj.DAL
+  type: Namespace
+  assemblies:
+  - ClinicManagement_proj
+references:
+- uid: ClinicManagement_proj.DAL.Appointment
+  commentId: T:ClinicManagement_proj.DAL.Appointment
+  href: ClinicManagement_proj.DAL.Appointment.html
+  name: Appointment
+  nameWithType: Appointment
+  fullName: ClinicManagement_proj.DAL.Appointment
+- uid: ClinicManagement_proj.DAL.Audit_Appointment
+  commentId: T:ClinicManagement_proj.DAL.Audit_Appointment
+  href: ClinicManagement_proj.DAL.Audit_Appointment.html
+  name: Audit_Appointment
+  nameWithType: Audit_Appointment
+  fullName: ClinicManagement_proj.DAL.Audit_Appointment
+- uid: ClinicManagement_proj.DAL.ClinicDbContext
+  commentId: T:ClinicManagement_proj.DAL.ClinicDbContext
+  parent: ClinicManagement_proj.DAL
+  href: ClinicManagement_proj.DAL.ClinicDbContext.html
+  name: ClinicDbContext
+  nameWithType: ClinicDbContext
+  fullName: ClinicManagement_proj.DAL.ClinicDbContext
+- uid: ClinicManagement_proj.DAL.Doctor
+  commentId: T:ClinicManagement_proj.DAL.Doctor
+  parent: ClinicManagement_proj.DAL
+  href: ClinicManagement_proj.DAL.Doctor.html
+  name: Doctor
+  nameWithType: Doctor
+  fullName: ClinicManagement_proj.DAL.Doctor
+- uid: ClinicManagement_proj.DAL.DoctorSchedule
+  commentId: T:ClinicManagement_proj.DAL.DoctorSchedule
+  href: ClinicManagement_proj.DAL.DoctorSchedule.html
+  name: DoctorSchedule
+  nameWithType: DoctorSchedule
+  fullName: ClinicManagement_proj.DAL.DoctorSchedule
+- uid: ClinicManagement_proj.DAL.HealthCareClinicDB_T2Entities
+  commentId: T:ClinicManagement_proj.DAL.HealthCareClinicDB_T2Entities
+  href: ClinicManagement_proj.DAL.HealthCareClinicDB_T2Entities.html
+  name: HealthCareClinicDB_T2Entities
+  nameWithType: HealthCareClinicDB_T2Entities
+  fullName: ClinicManagement_proj.DAL.HealthCareClinicDB_T2Entities
+- uid: ClinicManagement_proj.DAL.Patient
+  commentId: T:ClinicManagement_proj.DAL.Patient
+  parent: ClinicManagement_proj.DAL
+  href: ClinicManagement_proj.DAL.Patient.html
+  name: Patient
+  nameWithType: Patient
+  fullName: ClinicManagement_proj.DAL.Patient
+- uid: ClinicManagement_proj.DAL.Role
+  commentId: T:ClinicManagement_proj.DAL.Role
+  href: ClinicManagement_proj.DAL.Role.html
+  name: Role
+  nameWithType: Role
+  fullName: ClinicManagement_proj.DAL.Role
+- uid: ClinicManagement_proj.DAL.Specialty
+  commentId: T:ClinicManagement_proj.DAL.Specialty
+  href: ClinicManagement_proj.DAL.Specialty.html
+  name: Specialty
+  nameWithType: Specialty
+  fullName: ClinicManagement_proj.DAL.Specialty
+- uid: ClinicManagement_proj.DAL.sp_GetAvailableSlots_Result
+  commentId: T:ClinicManagement_proj.DAL.sp_GetAvailableSlots_Result
+  href: ClinicManagement_proj.DAL.sp_GetAvailableSlots_Result.html
+  name: sp_GetAvailableSlots_Result
+  nameWithType: sp_GetAvailableSlots_Result
+  fullName: ClinicManagement_proj.DAL.sp_GetAvailableSlots_Result
+- uid: ClinicManagement_proj.DAL.TimeSlot
+  commentId: T:ClinicManagement_proj.DAL.TimeSlot
+  parent: ClinicManagement_proj.DAL
+  href: ClinicManagement_proj.DAL.TimeSlot.html
+  name: TimeSlot
+  nameWithType: TimeSlot
+  fullName: ClinicManagement_proj.DAL.TimeSlot
+- uid: ClinicManagement_proj.DAL.User
+  commentId: T:ClinicManagement_proj.DAL.User
+  href: ClinicManagement_proj.DAL.User.html
+  name: User
+  nameWithType: User
+  fullName: ClinicManagement_proj.DAL.User
+- uid: ClinicManagement_proj.DAL.vw_DoctorTodaySchedule
+  commentId: T:ClinicManagement_proj.DAL.vw_DoctorTodaySchedule
+  href: ClinicManagement_proj.DAL.vw_DoctorTodaySchedule.html
+  name: vw_DoctorTodaySchedule
+  nameWithType: vw_DoctorTodaySchedule
+  fullName: ClinicManagement_proj.DAL.vw_DoctorTodaySchedule
+- uid: ClinicManagement_proj.DAL.vw_PatientClinicalSummary
+  commentId: T:ClinicManagement_proj.DAL.vw_PatientClinicalSummary
+  href: ClinicManagement_proj.DAL.vw_PatientClinicalSummary.html
+  name: vw_PatientClinicalSummary
+  nameWithType: vw_PatientClinicalSummary
+  fullName: ClinicManagement_proj.DAL.vw_PatientClinicalSummary
+- uid: ClinicManagement_proj.DAL.vw_PatientRecordsSummary
+  commentId: T:ClinicManagement_proj.DAL.vw_PatientRecordsSummary
+  href: ClinicManagement_proj.DAL.vw_PatientRecordsSummary.html
+  name: vw_PatientRecordsSummary
+  nameWithType: vw_PatientRecordsSummary
+  fullName: ClinicManagement_proj.DAL.vw_PatientRecordsSummary
+- uid: ClinicManagement_proj.DAL.vw_UpcomingAppointments
+  commentId: T:ClinicManagement_proj.DAL.vw_UpcomingAppointments
+  href: ClinicManagement_proj.DAL.vw_UpcomingAppointments.html
+  name: vw_UpcomingAppointments
+  nameWithType: vw_UpcomingAppointments
+  fullName: ClinicManagement_proj.DAL.vw_UpcomingAppointments
+- uid: ClinicManagement_proj.DAL
+  commentId: N:ClinicManagement_proj.DAL
+  href: ClinicManagement_proj.html
+  name: ClinicManagement_proj.DAL
+  nameWithType: ClinicManagement_proj.DAL
+  fullName: ClinicManagement_proj.DAL
+  spec.csharp:
+  - uid: ClinicManagement_proj
+    name: ClinicManagement_proj
+    href: ClinicManagement_proj.html
+  - name: .
+  - uid: ClinicManagement_proj.DAL
+    name: DAL
+    href: ClinicManagement_proj.DAL.html
+  spec.vb:
+  - uid: ClinicManagement_proj
+    name: ClinicManagement_proj
+    href: ClinicManagement_proj.html
+  - name: .
+  - uid: ClinicManagement_proj.DAL
+    name: DAL
+    href: ClinicManagement_proj.DAL.html

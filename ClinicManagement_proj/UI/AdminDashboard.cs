@@ -1,12 +1,13 @@
 ﻿using ClinicManagement_proj.BLL;
-using ClinicManagement_proj.BLL.Utils;
 using System;
 using System.Drawing;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace ClinicManagement_proj.UI
 {
+    /// <summary>
+    /// Represents the main dashboard for administrators.
+    /// </summary>
     public partial class AdminDashboard : Form
     {
         private readonly Color SIDEBAR_BG = Color.FromArgb(44, 62, 80);
@@ -47,7 +48,7 @@ namespace ClinicManagement_proj.UI
 
             notificationController.Initialize();
         }
-        
+
 
         /// <summary>
         /// Setup navigation between panels
@@ -118,7 +119,7 @@ namespace ClinicManagement_proj.UI
             navigationManager.NavigateTo(btnAppointmentManagement);
         }
 
-        
+
         /// <summary>
         /// Cleanup resources on form closing
         /// </summary>

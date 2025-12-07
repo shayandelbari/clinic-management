@@ -1,0 +1,137 @@
+### YamlMime:ManagedReference
+items:
+- uid: ClinicManagement_proj.UI
+  commentId: N:ClinicManagement_proj.UI
+  id: ClinicManagement_proj.UI
+  children:
+  - ClinicManagement_proj.UI.AdminDashboard
+  - ClinicManagement_proj.UI.ApptMgmtController
+  - ClinicManagement_proj.UI.DoctorDashboard
+  - ClinicManagement_proj.UI.DoctorManagementController
+  - ClinicManagement_proj.UI.IPanelController
+  - ClinicManagement_proj.UI.ImageHelper
+  - ClinicManagement_proj.UI.LoginForm
+  - ClinicManagement_proj.UI.NavigationManager
+  - ClinicManagement_proj.UI.NotificationsController
+  - ClinicManagement_proj.UI.PatientRegistrationController
+  - ClinicManagement_proj.UI.ReceptionistDashboard
+  - ClinicManagement_proj.UI.ReportsController
+  - ClinicManagement_proj.UI.SchedulingController
+  - ClinicManagement_proj.UI.UserManagementController
+  langs:
+  - csharp
+  - vb
+  name: ClinicManagement_proj.UI
+  nameWithType: ClinicManagement_proj.UI
+  fullName: ClinicManagement_proj.UI
+  type: Namespace
+  assemblies:
+  - ClinicManagement_proj
+references:
+- uid: ClinicManagement_proj.UI.AdminDashboard
+  commentId: T:ClinicManagement_proj.UI.AdminDashboard
+  href: ClinicManagement_proj.UI.AdminDashboard.html
+  name: AdminDashboard
+  nameWithType: AdminDashboard
+  fullName: ClinicManagement_proj.UI.AdminDashboard
+- uid: ClinicManagement_proj.UI.ApptMgmtController
+  commentId: T:ClinicManagement_proj.UI.ApptMgmtController
+  href: ClinicManagement_proj.UI.ApptMgmtController.html
+  name: ApptMgmtController
+  nameWithType: ApptMgmtController
+  fullName: ClinicManagement_proj.UI.ApptMgmtController
+- uid: ClinicManagement_proj.UI.DoctorManagementController
+  commentId: T:ClinicManagement_proj.UI.DoctorManagementController
+  href: ClinicManagement_proj.UI.DoctorManagementController.html
+  name: DoctorManagementController
+  nameWithType: DoctorManagementController
+  fullName: ClinicManagement_proj.UI.DoctorManagementController
+- uid: ClinicManagement_proj.UI.NotificationsController
+  commentId: T:ClinicManagement_proj.UI.NotificationsController
+  href: ClinicManagement_proj.UI.NotificationsController.html
+  name: NotificationsController
+  nameWithType: NotificationsController
+  fullName: ClinicManagement_proj.UI.NotificationsController
+- uid: ClinicManagement_proj.UI.ImageHelper
+  commentId: T:ClinicManagement_proj.UI.ImageHelper
+  href: ClinicManagement_proj.UI.ImageHelper.html
+  name: ImageHelper
+  nameWithType: ImageHelper
+  fullName: ClinicManagement_proj.UI.ImageHelper
+- uid: ClinicManagement_proj.UI.IPanelController
+  commentId: T:ClinicManagement_proj.UI.IPanelController
+  parent: ClinicManagement_proj.UI
+  href: ClinicManagement_proj.UI.IPanelController.html
+  name: IPanelController
+  nameWithType: IPanelController
+  fullName: ClinicManagement_proj.UI.IPanelController
+- uid: ClinicManagement_proj.UI.NavigationManager
+  commentId: T:ClinicManagement_proj.UI.NavigationManager
+  href: ClinicManagement_proj.UI.NavigationManager.html
+  name: NavigationManager
+  nameWithType: NavigationManager
+  fullName: ClinicManagement_proj.UI.NavigationManager
+- uid: ClinicManagement_proj.UI.PatientRegistrationController
+  commentId: T:ClinicManagement_proj.UI.PatientRegistrationController
+  href: ClinicManagement_proj.UI.PatientRegistrationController.html
+  name: PatientRegistrationController
+  nameWithType: PatientRegistrationController
+  fullName: ClinicManagement_proj.UI.PatientRegistrationController
+- uid: ClinicManagement_proj.UI.ReportsController
+  commentId: T:ClinicManagement_proj.UI.ReportsController
+  href: ClinicManagement_proj.UI.ReportsController.html
+  name: ReportsController
+  nameWithType: ReportsController
+  fullName: ClinicManagement_proj.UI.ReportsController
+- uid: ClinicManagement_proj.UI.SchedulingController
+  commentId: T:ClinicManagement_proj.UI.SchedulingController
+  href: ClinicManagement_proj.UI.SchedulingController.html
+  name: SchedulingController
+  nameWithType: SchedulingController
+  fullName: ClinicManagement_proj.UI.SchedulingController
+- uid: ClinicManagement_proj.UI.UserManagementController
+  commentId: T:ClinicManagement_proj.UI.UserManagementController
+  href: ClinicManagement_proj.UI.UserManagementController.html
+  name: UserManagementController
+  nameWithType: UserManagementController
+  fullName: ClinicManagement_proj.UI.UserManagementController
+- uid: ClinicManagement_proj.UI.DoctorDashboard
+  commentId: T:ClinicManagement_proj.UI.DoctorDashboard
+  href: ClinicManagement_proj.UI.DoctorDashboard.html
+  name: DoctorDashboard
+  nameWithType: DoctorDashboard
+  fullName: ClinicManagement_proj.UI.DoctorDashboard
+- uid: ClinicManagement_proj.UI.LoginForm
+  commentId: T:ClinicManagement_proj.UI.LoginForm
+  href: ClinicManagement_proj.UI.LoginForm.html
+  name: LoginForm
+  nameWithType: LoginForm
+  fullName: ClinicManagement_proj.UI.LoginForm
+- uid: ClinicManagement_proj.UI.ReceptionistDashboard
+  commentId: T:ClinicManagement_proj.UI.ReceptionistDashboard
+  href: ClinicManagement_proj.UI.ReceptionistDashboard.html
+  name: ReceptionistDashboard
+  nameWithType: ReceptionistDashboard
+  fullName: ClinicManagement_proj.UI.ReceptionistDashboard
+- uid: ClinicManagement_proj.UI
+  commentId: N:ClinicManagement_proj.UI
+  href: ClinicManagement_proj.html
+  name: ClinicManagement_proj.UI
+  nameWithType: ClinicManagement_proj.UI
+  fullName: ClinicManagement_proj.UI
+  spec.csharp:
+  - uid: ClinicManagement_proj
+    name: ClinicManagement_proj
+    href: ClinicManagement_proj.html
+  - name: .
+  - uid: ClinicManagement_proj.UI
+    name: UI
+    href: ClinicManagement_proj.UI.html
+  spec.vb:
+  - uid: ClinicManagement_proj
+    name: ClinicManagement_proj
+    href: ClinicManagement_proj.html
+  - name: .
+  - uid: ClinicManagement_proj.UI
+    name: UI
+    href: ClinicManagement_proj.UI.html

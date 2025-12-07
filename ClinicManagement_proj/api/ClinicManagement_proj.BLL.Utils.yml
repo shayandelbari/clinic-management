@@ -1,0 +1,61 @@
+### YamlMime:ManagedReference
+items:
+- uid: ClinicManagement_proj.BLL.Utils
+  commentId: N:ClinicManagement_proj.BLL.Utils
+  id: ClinicManagement_proj.BLL.Utils
+  children:
+  - ClinicManagement_proj.BLL.Utils.Notification
+  - ClinicManagement_proj.BLL.Utils.NotificationType
+  langs:
+  - csharp
+  - vb
+  name: ClinicManagement_proj.BLL.Utils
+  nameWithType: ClinicManagement_proj.BLL.Utils
+  fullName: ClinicManagement_proj.BLL.Utils
+  type: Namespace
+  assemblies:
+  - ClinicManagement_proj
+references:
+- uid: ClinicManagement_proj.BLL.Utils.NotificationType
+  commentId: T:ClinicManagement_proj.BLL.Utils.NotificationType
+  parent: ClinicManagement_proj.BLL.Utils
+  href: ClinicManagement_proj.BLL.Utils.NotificationType.html
+  name: NotificationType
+  nameWithType: NotificationType
+  fullName: ClinicManagement_proj.BLL.Utils.NotificationType
+- uid: ClinicManagement_proj.BLL.Utils.Notification
+  commentId: T:ClinicManagement_proj.BLL.Utils.Notification
+  href: ClinicManagement_proj.BLL.Utils.Notification.html
+  name: Notification
+  nameWithType: Notification
+  fullName: ClinicManagement_proj.BLL.Utils.Notification
+- uid: ClinicManagement_proj.BLL.Utils
+  commentId: N:ClinicManagement_proj.BLL.Utils
+  href: ClinicManagement_proj.html
+  name: ClinicManagement_proj.BLL.Utils
+  nameWithType: ClinicManagement_proj.BLL.Utils
+  fullName: ClinicManagement_proj.BLL.Utils
+  spec.csharp:
+  - uid: ClinicManagement_proj
+    name: ClinicManagement_proj
+    href: ClinicManagement_proj.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL
+    name: BLL
+    href: ClinicManagement_proj.BLL.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL.Utils
+    name: Utils
+    href: ClinicManagement_proj.BLL.Utils.html
+  spec.vb:
+  - uid: ClinicManagement_proj
+    name: ClinicManagement_proj
+    href: ClinicManagement_proj.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL
+    name: BLL
+    href: ClinicManagement_proj.BLL.html
+  - name: .
+  - uid: ClinicManagement_proj.BLL.Utils
+    name: Utils
+    href: ClinicManagement_proj.BLL.Utils.html
