@@ -1,104 +1,87 @@
-# Clinic Management Application
+# Clinic Management Application – EF Database First 
+                    (WinForms, 3-Tiers Architecture)
 
-> **EF Database First | WinForms | 3-Tier Architecture**
 
----
+######################
+## 1. Introduction ##
+######################
 
-## ?? Table of Contents
+This project is a Clinic Management Application built using:
 
-1. [Introduction](#1-introduction)
-2. [Project Architecture](#2-project-architecture-3-tier)
-3. [SQL Database Script](#3-sql-database-script)
-4. [Step-by-Step Build Guide](#4-step-by-step-guide-building-the-project)
-5. [Features Implemented](#5-features-implemented)
-6. [Conclusion](#6-conclusion)
+    - Windows Forms (.Net Framework) - Language C#
+    - Entity Framework 6 (Database First)
+    - Microsoft SQL Server 2022/2019
+    - 3-Tiers Architecture (UI ? BLL ? DAL)
+        - DTO (Data Transfer Objects) objects for safe communication between layers
 
----
+The application manages:
 
-## 1. Introduction
+    - Users (with roles: Administrator, Doctor, Receptionist)
+    - Patients
+    - Doctors
+    - Specialties
+    - Doctor Schedules
+    - Appointments
+    - Time Slots
+    - Audit_Appointment (audit table)
 
-This project is a **Clinic Management Application** built using:
+It includes full CRUD operations:
 
-| Technology | Description |
-|------------|-------------|
-| **UI Framework** | Windows Forms (.NET Framework) |
-| **Language** | C# |
-| **ORM** | Entity Framework 6 (Database First) |
-| **Database** | Microsoft SQL Server 2022/2019 |
-| **Architecture** | 3-Tier (UI ? BLL ? DAL) |
-| **Data Transfer** | DTO (Data Transfer Objects) |
+    - Add
+    - Update
+    - Delete
+    - Search (GetEntity() function)
+    - Display (GetEntities() function)
 
-### Application Manages
 
-- ?? **Users** (with roles: Administrator, Doctor, Receptionist)
-- ?? **Patients**
-- ????? **Doctors**
-- ?? **Specialties**
-- ?? **Doctor Schedules**
-- ?? **Appointments**
-- ? **Time Slots**
-- ?? **Audit_Appointment** (audit table)
-
-### CRUD Operations
-
-| Operation | Description |
-|-----------|-------------|
-| **Add** | Create new records |
-| **Update** | Modify existing records |
-| **Delete** | Remove records |
-| **Search** | `GetEntity()` function |
-| **Display** | `GetEntities()` function |
-
----
-
-## 2. Project Architecture (3-Tier)
-
-```
+######################################
+## 2. Project Architecture (3-Tier) ##
+######################################
 Solution
+ ?
+ ??? UI
+    ??? Login.cs
+    ??? AdminDashboard.cs
+    ??? DoctorDashboard.cs
+    ??? ReceptionistDashboard.cs
+    ??? Controllers/
+    ?   ??? PatientRegistrationController.cs
+    ?   ??? SchedulingController.cs
+    ?   ??? ApptMgmtController.cs
+    ?   ??? DoctorManagementController.cs
+    ?   ??? UserManagementController.cs
+    ?   ??? ReportsController.cs
+    ?   ??? NotificationController.cs
+    ??? Utils/
+    ?   ??? NavigationManager.cs
+    ?   ??? ImageHelper.cs
+    ??? Program.cs
 ?
-??? ?? UI
-?   ??? Login.cs
-?   ??? AdminDashboard.cs
-?   ??? DoctorDashboard.cs
-?   ??? ReceptionistDashboard.cs
-?   ??? ?? Controllers/
-?   ?   ??? PatientRegistrationController.cs
-?   ?   ??? SchedulingController.cs
-?   ?   ??? ApptMgmtController.cs
-?   ?   ??? DoctorManagementController.cs
-?   ?   ??? UserManagementController.cs
-?   ?   ??? ReportsController.cs
-?   ?   ??? NotificationController.cs
-?   ??? ?? Utils/
-?   ?   ??? NavigationManager.cs
-?   ?   ??? ImageHelper.cs
-?   ??? Program.cs
+??? BLL
+   ??? DTO
+     ??? UserDTO.cs
+     ??? RoleDTO.cs
+     ??? PatientDTO.cs
+     ??? DoctorDTO.cs
+     ??? SpecialtyDTO.cs
+     ??? DoctorScheduleDTO.cs
+     ??? TimeSlotDTO.cs
+     ??? AppointmentDTO.cs
+     ??? AuditAppointmentDTO.cs
+     ??? DaysOfWeekEnum.cs
+   ??? SERVICES 
+         ??? UserService.cs
+         ??? PatientService.cs
+         ??? DoctorService.cs
+         ??? AppointmentService.cs
+         ??? DoctorScheduleService.cs
+         ??? NotificationService.cs
+         ??? ViewsService.cs
+   ??? Utils/
+     ??? Notification.cs
+   ??? ClinicManagementApp.cs
 ?
-??? ?? BLL
-?   ??? ?? DTO/
-?   ?   ??? UserDTO.cs
-?   ?   ??? RoleDTO.cs
-? ?   ??? PatientDTO.cs
-?   ?   ??? DoctorDTO.cs
-?   ?   ??? SpecialtyDTO.cs
-?   ? ??? DoctorScheduleDTO.cs
-?   ?   ??? TimeSlotDTO.cs
-?   ?   ??? AppointmentDTO.cs
-?   ?   ??? AuditAppointmentDTO.cs
-?   ?   ??? DaysOfWeekEnum.cs
-?   ??? ?? Services/
-?   ?   ??? UserService.cs
-?   ?   ??? PatientService.cs
-?   ?   ??? DoctorService.cs
-?   ?   ??? AppointmentService.cs
-? ?   ??? DoctorScheduleService.cs
-?   ?   ??? NotificationService.cs
-?   ?   ??? ViewsService.cs
-?   ??? ?? Utils/
-?   ?   ??? Notification.cs
-?   ??? ClinicManagementApp.cs
-?
-??? ?? DAL
+??? DAL
     ??? HealthCareClinicModel.edmx
     ??? HealthCareClinicModel.Context.cs
     ??? HealthCareClinicModel.Designer.cs
@@ -108,7 +91,7 @@ Solution
     ??? UserRole.cs (junction)
     ??? Patient.cs
     ??? Specialty.cs
- ??? Doctor.cs
+    ??? Doctor.cs
     ??? DoctorSpecialty.cs (junction)
     ??? DoctorSchedule.cs
     ??? TimeSlot.cs
@@ -119,13 +102,11 @@ Solution
     ??? vw_UpcomingAppointments.cs
     ??? vw_PatientRecordsSummary.cs
     ??? sp_GetAvailableSlots_Result.cs
-```
 
----
 
-## 3. SQL Database Script
-
-### 3.1 Database Setup
+############################
+## 3. SQL Database Script ##
+############################
 
 ```sql
 -- Close all connections and drop database if exists
@@ -141,11 +122,7 @@ GO
 
 USE HealthCareClinicDB_T2;
 GO
-```
 
-### 3.2 Drop Existing Objects
-
-```sql
 -- DROP STORED PROCEDURES
 IF OBJECT_ID('dbo.sp_GetAvailableSlots', 'P') IS NOT NULL
     DROP PROCEDURE dbo.sp_GetAvailableSlots;
@@ -161,15 +138,15 @@ IF OBJECT_ID('dbo.vw_UpcomingAppointments', 'V') IS NOT NULL
 GO
 
 IF OBJECT_ID('dbo.vw_DoctorTodaySchedule', 'V') IS NOT NULL
- DROP VIEW dbo.vw_DoctorTodaySchedule;
+  DROP VIEW dbo.vw_DoctorTodaySchedule;
 GO
 
 IF OBJECT_ID('dbo.vw_PatientClinicalSummary', 'V') IS NOT NULL
- DROP VIEW dbo.vw_PatientClinicalSummary;
+    DROP VIEW dbo.vw_PatientClinicalSummary;
 GO
 
 IF OBJECT_ID('dbo.Audit_Appointment', 'U') IS NOT NULL
- DROP TABLE dbo.Audit_Appointment;
+    DROP TABLE dbo.Audit_Appointment;
 GO
 
 -- DROP TABLES (correct FK order: children ? parents)
@@ -194,7 +171,7 @@ IF OBJECT_ID('dbo.Patient', 'U') IS NOT NULL
 GO
 
 IF OBJECT_ID('dbo.Doctor', 'U') IS NOT NULL
- DROP TABLE dbo.Doctor;
+    DROP TABLE dbo.Doctor;
 GO
 
 IF OBJECT_ID('dbo.Specialties', 'U') IS NOT NULL
@@ -213,15 +190,11 @@ IF OBJECT_ID('dbo.Roles', 'U') IS NOT NULL
     DROP TABLE dbo.Roles;
 GO
 
+
 PRINT 'All views, tables, and stored procedures have been dropped successfully.';
 GO
-```
 
-### 3.3 Create Tables
-
-#### Users Table
-
-```sql
+-- TABLE: Users
 CREATE TABLE dbo.Users (
     Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
     Username VARCHAR(32) NOT NULL UNIQUE,
@@ -230,11 +203,8 @@ CREATE TABLE dbo.Users (
     ModifiedAt DATETIME2(7) NOT NULL DEFAULT(GETDATE())
 );
 GO
-```
 
-#### Roles Table
-
-```sql
+-- TABLE: Roles
 CREATE TABLE dbo.Roles (
     Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
     RoleName VARCHAR(64) NOT NULL UNIQUE,
@@ -242,11 +212,8 @@ CREATE TABLE dbo.Roles (
     ModifiedAt DATETIME2(7) NOT NULL DEFAULT(GETDATE())
 );
 GO
-```
 
-#### UserRoles Table (Junction)
-
-```sql
+-- TABLE: UserRoles (junction table)
 CREATE TABLE dbo.UserRoles (
     UserId INT NOT NULL,
     RoleId INT NOT NULL,
@@ -255,11 +222,8 @@ CREATE TABLE dbo.UserRoles (
     CONSTRAINT FK_UserRoles_Roles FOREIGN KEY (RoleId) REFERENCES dbo.Roles(Id) ON DELETE CASCADE
 );
 GO
-```
 
-#### Patient Table
-
-```sql
+-- TABLE: Patient
 CREATE TABLE dbo.Patient(
     Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
     FirstName VARCHAR(64) NOT NULL,
@@ -270,7 +234,7 @@ CREATE TABLE dbo.Patient(
     CreatedAt DATETIME2(7) NOT NULL DEFAULT(GETDATE()),
     ModifiedAt DATETIME2(7) NOT NULL DEFAULT(GETDATE()),
     CONSTRAINT CK_Patient_InsuranceNumber CHECK (
-        -- Quebec Health Card: 4 letters + 8 digits + 2 digits
+        -- Quebec Health Card: 4 letters + 8 digits + 2 digits (AAAA12345678 with space before last 2 digits)
         (InsuranceNumber LIKE '[A-Z][A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9] [0-9][0-9]'
         OR
         InsuranceNumber LIKE '[A-Z][A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]')
@@ -278,42 +242,33 @@ CREATE TABLE dbo.Patient(
         -- Canadian Health Card (generic): 10 digits
         InsuranceNumber LIKE '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
         OR
-  -- Ontario Health Card: 10 digits + 2 letters
-     (InsuranceNumber LIKE '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]-[A-Z][A-Z]'
+        -- Ontario Health Card: 10 digits + 2 letters (1234567890-AB with optional hyphen)
+        (InsuranceNumber LIKE '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]-[A-Z][A-Z]'
         OR
         InsuranceNumber LIKE '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][A-Z][A-Z]')
     )
 );
 GO
-```
 
-#### Specialties Table
-
-```sql
+-- TABLE: Specialties
 CREATE TABLE dbo.Specialties (
     Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
     Name VARCHAR(64) NOT NULL UNIQUE
 );
 GO
-```
 
-#### Doctor Table
-
-```sql
+-- TABLE: Doctor
 CREATE TABLE dbo.Doctor(
     Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
- FirstName VARCHAR(64) NOT NULL,
+    FirstName VARCHAR(64) NOT NULL,
     LastName VARCHAR(64) NOT NULL,
     LicenseNumber VARCHAR(24) NOT NULL UNIQUE,
     CreatedAt DATETIME2(7) NOT NULL DEFAULT(GETDATE()),
     ModifiedAt DATETIME2(7) NOT NULL DEFAULT(GETDATE())
 );
 GO
-```
 
-#### DoctorSpecialties Table (Junction)
-
-```sql
+-- TABLE: DoctorSpecialties (junction table)
 CREATE TABLE dbo.DoctorSpecialties (
     DoctorId INT NOT NULL,
     SpecialtyId INT NOT NULL,
@@ -322,11 +277,8 @@ CREATE TABLE dbo.DoctorSpecialties (
     CONSTRAINT FK_DoctorSpecialties_Specialties FOREIGN KEY (SpecialtyId) REFERENCES dbo.Specialties(Id) ON DELETE CASCADE
 );
 GO
-```
 
-#### DoctorSchedule Table
-
-```sql
+-- TABLE: DoctorSchedule
 CREATE TABLE dbo.DoctorSchedule(
     Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
     DoctorId INT NOT NULL,
@@ -338,11 +290,8 @@ CREATE TABLE dbo.DoctorSchedule(
     CONSTRAINT FK_DoctorSchedule_Doctor FOREIGN KEY (DoctorId) REFERENCES dbo.Doctor(Id) ON DELETE CASCADE
 );
 GO
-```
 
-#### TimeSlots Table
-
-```sql
+-- TABLE: TimeSlots
 CREATE TABLE dbo.TimeSlots(
     Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
     HourOfDay INT NOT NULL,
@@ -352,20 +301,17 @@ CREATE TABLE dbo.TimeSlots(
     CONSTRAINT CK_TimeSlots_Minute CHECK (MinuteOfHour >= 0 AND MinuteOfHour <= 59)
 );
 GO
-```
 
-#### Appointment Table
-
-```sql
+-- TABLE: Appointment
 CREATE TABLE dbo.Appointment(
     Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
     Date DATE NOT NULL,
-Notes VARCHAR(512) NULL,
+    Notes VARCHAR(512) NULL,
     PatientId INT NOT NULL,
     DoctorId INT NOT NULL,
     TimeSlotId INT NOT NULL,
     Status VARCHAR(20) NOT NULL DEFAULT('PENDING') CHECK (Status IN ('PENDING', 'CONFIRMED', 'COMPLETED', 'CANCELLED')),
-CreatedAt DATETIME2(7) NOT NULL DEFAULT(GETDATE()),
+    CreatedAt DATETIME2(7) NOT NULL DEFAULT(GETDATE()),
     ModifiedAt DATETIME2(7) NOT NULL DEFAULT(GETDATE()),
     CONSTRAINT FK_Appointment_Doctor FOREIGN KEY (DoctorId) REFERENCES dbo.Doctor(Id) ON DELETE NO ACTION,
     CONSTRAINT FK_Appointment_Patient FOREIGN KEY (PatientId) REFERENCES dbo.Patient(Id) ON DELETE NO ACTION,
@@ -373,12 +319,9 @@ CreatedAt DATETIME2(7) NOT NULL DEFAULT(GETDATE()),
     CONSTRAINT UQ_Appointment_DateTime UNIQUE (DoctorId, Date, TimeSlotId)
 );
 GO
-```
 
-#### Audit_Appointment Table
-
-```sql
-CREATE TABLE dbo.Audit_Appointment (
+-- TABLE: Audit_Appointment
+ CREATE TABLE dbo.Audit_Appointment (
     AuditId INT IDENTITY(1,1) PRIMARY KEY,
     AppointmentId INT NOT NULL,
     PatientName VARCHAR(255) NOT NULL,
@@ -387,11 +330,7 @@ CREATE TABLE dbo.Audit_Appointment (
     AuditDate DATETIME2(7) NOT NULL DEFAULT(GETDATE())
 );
 GO
-```
 
-### 3.4 Create Trigger
-
-```sql
 CREATE TRIGGER trg_AuditAppointmentStatus
 ON dbo.Appointment
 AFTER UPDATE
@@ -401,26 +340,20 @@ BEGIN
 
     INSERT INTO dbo.Audit_Appointment (AppointmentId, PatientName, DoctorName, NewStatus)
     SELECT 
-i.Id,
-   p.FirstName + ' ' + p.LastName AS PatientName,
-   d.FirstName + ' ' + d.LastName AS DoctorName,
+        i.Id,
+        p.FirstName + ' ' + p.LastName AS PatientName,
+        d.FirstName + ' ' + d.LastName AS DoctorName,
         i.Status
     FROM inserted i
     INNER JOIN deleted d_old ON i.Id = d_old.Id
     INNER JOIN dbo.Patient p ON i.PatientId = p.Id
     INNER JOIN dbo.Doctor d ON i.DoctorId = d.Id
     WHERE i.Status IN ('CONFIRMED', 'CANCELLED')
-      AND i.Status <> d_old.Status;
+      AND i.Status <> d_old.Status; -- ensure status actually changed
 END;
 GO
-```
 
-### 3.5 Insert Sample Data
 
-<details>
-<summary>?? Click to expand sample data insertion script</summary>
-
-```sql
 -- INSERT SAMPLE DATA
 
 DECLARE @RoleId1 INT, @RoleId2 INT, @RoleId3 INT;
@@ -520,12 +453,12 @@ BEGIN
 END
 
 INSERT INTO dbo.Appointment (PatientId, DoctorId, TimeSlotId, Date, Notes, Status, CreatedAt, ModifiedAt) VALUES
-(@PatientId1, @DoctorId1, 5, '2025-11-25', 'Annual checkup', 'COMPLETED', GETDATE(), GETDATE()),
-(@PatientId2, @DoctorId2, 13, '2025-11-26', 'Heart consultation', 'COMPLETED', GETDATE(), GETDATE()),
-(@PatientId3, @DoctorId1, 7, '2025-11-22', 'Follow-up visit', 'COMPLETED', GETDATE(), GETDATE()),
-(@PatientId4, @DoctorId3, 15, '2025-11-27', 'Child vaccination', 'CANCELLED', GETDATE(), GETDATE()),
-(@PatientId5, @DoctorId2, 3, '2025-11-23', 'Cardiac screening', 'CANCELLED', GETDATE(), GETDATE()),
-(@PatientId1, @DoctorId2, 6, '2025-12-01', 'Blood pressure check', 'PENDING', GETDATE(), GETDATE());
+(@PatientId1, @DoctorId1, 5, '2025-11-25', 'Annual checkup', 'COMPLETED', GETDATE(), GETDATE()), -- 10:00 AM
+(@PatientId2, @DoctorId2, 13, '2025-11-26', 'Heart consultation', 'COMPLETED', GETDATE(), GETDATE()), -- 2:00 PM
+(@PatientId3, @DoctorId1, 7, '2025-11-22', 'Follow-up visit', 'COMPLETED', GETDATE(), GETDATE()), -- 11:00 AM
+(@PatientId4, @DoctorId3, 15, '2025-11-27', 'Child vaccination', 'CANCELLED', GETDATE(), GETDATE()), -- 3:00 PM
+(@PatientId5, @DoctorId2, 3, '2025-11-23', 'Cardiac screening', 'CANCELLED', GETDATE(), GETDATE()), -- 9:00 AM
+(@PatientId1, @DoctorId2, 6, '2025-12-01', 'Blood pressure check', 'PENDING', GETDATE(), GETDATE()); -- 10:30 AM
 
 -- Add more specialties
 INSERT INTO dbo.Specialties (Name) VALUES ('Dermatology');
@@ -543,11 +476,11 @@ SET @DoctorId6 = SCOPE_IDENTITY();
 
 -- Associate new doctors with specialties
 INSERT INTO dbo.DoctorSpecialties (DoctorId, SpecialtyId) VALUES
-(@DoctorId4, @SpecialtyId1),
-(@DoctorId5, @SpecialtyId2),
-(@DoctorId6, @SpecialtyId3);
+(@DoctorId4, @SpecialtyId1), -- Alice Johnson -> General Practice
+(@DoctorId5, @SpecialtyId2), -- Robert Lee -> Cardiology
+(@DoctorId6, @SpecialtyId3); -- Emily Clark -> Pediatrics
 
--- Add more patients with valid insurance numbers (Ontario format)
+-- Add more patients with valid insurance numbers (using Ontario format: 10 digits + 2 letters)
 DECLARE @PatientId6 INT, @PatientId7 INT, @PatientId8 INT, @PatientId9 INT, @PatientId10 INT;
 INSERT INTO dbo.Patient (FirstName, LastName, DateOfBirth, InsuranceNumber, PhoneNumber, CreatedAt, ModifiedAt) VALUES ('Liam', 'Taylor', '1982-01-05', '1234567890AB', '555-0106', GETDATE(), GETDATE());
 SET @PatientId6 = SCOPE_IDENTITY();
@@ -578,32 +511,24 @@ INSERT INTO dbo.DoctorSchedule (DoctorId, DayOfWeek, WorkStartTime, WorkEndTime,
 (@DoctorId6, 'WEDNESDAY', '10:00:00', '18:00:00', GETDATE(), GETDATE()),
 (@DoctorId6, 'FRIDAY', '10:00:00', '18:00:00', GETDATE(), GETDATE());
 
--- Add more appointments
+-- Add more appointments (mix of past and future, ensuring no conflicts)
 INSERT INTO dbo.Appointment (PatientId, DoctorId, TimeSlotId, Date, Notes, Status, CreatedAt, ModifiedAt) VALUES
 -- Past appointments
-(@PatientId6, @DoctorId4, 5, '2025-11-20', 'Routine checkup', 'COMPLETED', GETDATE(), GETDATE()),
-(@PatientId7, @DoctorId5, 13, '2025-11-21', 'Cardiac evaluation', 'COMPLETED', GETDATE(), GETDATE()),
-(@PatientId8, @DoctorId6, 7, '2025-11-19', 'Pediatric consultation', 'COMPLETED', GETDATE(), GETDATE()),
-(@PatientId9, @DoctorId4, 15, '2025-11-18', 'Skin check', 'CANCELLED', GETDATE(), GETDATE()),
-(@PatientId10, @DoctorId5, 3, '2025-11-17', 'Follow-up', 'CANCELLED', GETDATE(), GETDATE()),
+(@PatientId6, @DoctorId4, 5, '2025-11-20', 'Routine checkup', 'COMPLETED', GETDATE(), GETDATE()), -- 10:00 AM
+(@PatientId7, @DoctorId5, 13, '2025-11-21', 'Cardiac evaluation', 'COMPLETED', GETDATE(), GETDATE()), -- 2:00 PM
+(@PatientId8, @DoctorId6, 7, '2025-11-19', 'Pediatric consultation', 'COMPLETED', GETDATE(), GETDATE()), -- 11:00 AM
+(@PatientId9, @DoctorId4, 15, '2025-11-18', 'Skin check', 'CANCELLED', GETDATE(), GETDATE()), -- 3:00 PM
+(@PatientId10, @DoctorId5, 3, '2025-11-17', 'Follow-up', 'CANCELLED', GETDATE(), GETDATE()), -- 9:00 AM
 -- Future appointments
-(@PatientId1, @DoctorId4, 6, '2025-12-02', 'Follow-up check', 'PENDING', GETDATE(), GETDATE()),
-(@PatientId2, @DoctorId5, 14, '2025-12-03', 'Blood test review', 'CONFIRMED', GETDATE(), GETDATE()),
-(@PatientId3, @DoctorId6, 8, '2025-12-04', 'Vaccination', 'PENDING', GETDATE(), GETDATE()),
-(@PatientId4, @DoctorId4, 16, '2025-12-05', 'Annual physical', 'CONFIRMED', GETDATE(), GETDATE()),
-(@PatientId5, @DoctorId5, 4, '2025-12-06', 'Consultation', 'PENDING', GETDATE(), GETDATE());
+(@PatientId1, @DoctorId4, 6, '2025-12-02', 'Follow-up check', 'PENDING', GETDATE(), GETDATE()), -- 10:30 AM
+(@PatientId2, @DoctorId5, 14, '2025-12-03', 'Blood test review', 'CONFIRMED', GETDATE(), GETDATE()), -- 2:30 PM
+(@PatientId3, @DoctorId6, 8, '2025-12-04', 'Vaccination', 'PENDING', GETDATE(), GETDATE()), -- 11:30 AM
+(@PatientId4, @DoctorId4, 16, '2025-12-05', 'Annual physical', 'CONFIRMED', GETDATE(), GETDATE()), -- 3:30 PM
+(@PatientId5, @DoctorId5, 4, '2025-12-06', 'Consultation', 'PENDING', GETDATE(), GETDATE()); -- 9:30 AM
+
 GO
-```
 
-</details>
-
-### 3.6 Create Views
-
-#### View 1: Doctor's Today Schedule
-
-Shows all appointments for today organized by doctor.
-
-```sql
+-- VIEW 1: Doctor's Today Schedule - Shows all appointments for today organized by doctor
 CREATE VIEW dbo.vw_DoctorTodaySchedule
 AS
 SELECT 
@@ -612,20 +537,20 @@ SELECT
     d.FirstName + ' ' + d.LastName AS DoctorName,
     s.Name AS Specialization,
     p.Id AS PatientId,
-    p.FirstName + ' ' + p.LastName AS PatientName,
+ p.FirstName + ' ' + p.LastName AS PatientName,
     p.PhoneNumber AS PatientPhone,
     p.DateOfBirth,
     DATEDIFF(YEAR, p.DateOfBirth, GETDATE()) - 
         CASE 
-   WHEN MONTH(p.DateOfBirth) > MONTH(GETDATE()) 
-       OR (MONTH(p.DateOfBirth) = MONTH(GETDATE()) AND DAY(p.DateOfBirth) > DAY(GETDATE()))
-  THEN 1 
-            ELSE 0 
-        END AS PatientAge,
+            WHEN MONTH(p.DateOfBirth) > MONTH(GETDATE()) 
+     OR (MONTH(p.DateOfBirth) = MONTH(GETDATE()) AND DAY(p.DateOfBirth) > DAY(GETDATE()))
+          THEN 1 
+      ELSE 0 
+END AS PatientAge,
     a.Date AS AppointmentDate,
     CAST(CAST(ts.HourOfDay AS VARCHAR) + ':' + RIGHT('0' + CAST(ts.MinuteOfHour AS VARCHAR), 2) AS VARCHAR(5)) AS AppointmentTime,
     ts.HourOfDay,
-    ts.MinuteOfHour,
+  ts.MinuteOfHour,
     a.Status,
     a.Notes
 FROM 
@@ -639,13 +564,8 @@ WHERE
     a.Date = CAST(GETDATE() AS DATE)
     AND a.Status IN ('PENDING', 'CONFIRMED');
 GO
-```
 
-#### View 2: Patient Clinical Summary
-
-Comprehensive patient health overview.
-
-```sql
+-- VIEW 2: Patient Clinical Summary - Comprehensive patient health overview
 CREATE VIEW dbo.vw_PatientClinicalSummary
 AS
 SELECT 
@@ -653,42 +573,37 @@ SELECT
     p.FirstName + ' ' + p.LastName AS PatientName,
     p.DateOfBirth,
     DATEDIFF(YEAR, p.DateOfBirth, GETDATE()) - 
-      CASE 
-     WHEN MONTH(p.DateOfBirth) > MONTH(GETDATE()) 
-     OR (MONTH(p.DateOfBirth) = MONTH(GETDATE()) AND DAY(p.DateOfBirth) > DAY(GETDATE()))
-            THEN 1 
-            ELSE 0 
+        CASE 
+            WHEN MONTH(p.DateOfBirth) > MONTH(GETDATE()) 
+       OR (MONTH(p.DateOfBirth) = MONTH(GETDATE()) AND DAY(p.DateOfBirth) > DAY(GETDATE()))
+    THEN 1 
+       ELSE 0 
         END AS Age,
     p.InsuranceNumber,
     p.PhoneNumber,
     (SELECT COUNT(*) FROM dbo.Appointment WHERE PatientId = p.Id AND Status = 'COMPLETED') AS CompletedVisits,
     (SELECT COUNT(*) FROM dbo.Appointment WHERE PatientId = p.Id AND Status = 'CANCELLED') AS CancelledVisits,
     (SELECT MAX(Date) FROM dbo.Appointment WHERE PatientId = p.Id AND Status = 'COMPLETED') AS LastVisitDate,
-    (SELECT TOP 1 d.FirstName + ' ' + d.LastName 
-        FROM dbo.Appointment a
-        INNER JOIN dbo.Doctor d ON a.DoctorId = d.Id
-        WHERE a.PatientId = p.Id AND a.Status = 'COMPLETED'
-        ORDER BY a.Date DESC, a.TimeSlotId DESC) AS LastSeenDoctor,
- (SELECT MIN(Date) FROM dbo.Appointment WHERE PatientId = p.Id AND Date >= CAST(GETDATE() AS DATE) AND Status IN ('PENDING', 'CONFIRMED')) AS NextAppointmentDate
+  (SELECT TOP 1 d.FirstName + ' ' + d.LastName 
+     FROM dbo.Appointment a
+     INNER JOIN dbo.Doctor d ON a.DoctorId = d.Id
+     WHERE a.PatientId = p.Id AND a.Status = 'COMPLETED'
+     ORDER BY a.Date DESC, a.TimeSlotId DESC) AS LastSeenDoctor,
+    (SELECT MIN(Date) FROM dbo.Appointment WHERE PatientId = p.Id AND Date >= CAST(GETDATE() AS DATE) AND Status IN ('PENDING', 'CONFIRMED')) AS NextAppointmentDate
 FROM 
     dbo.Patient p;
 GO
-```
 
-#### View 3: Upcoming Appointments (Next 7 Days)
-
-For scheduling and planning.
-
-```sql
+-- VIEW 3: Upcoming Appointments (Next 7 Days) - For scheduling and planning
 CREATE VIEW dbo.vw_UpcomingAppointments
 AS
 SELECT 
     a.Id AS AppointmentId,
     d.Id AS DoctorId,
     d.FirstName + ' ' + d.LastName AS DoctorName,
-  s.Name AS Specialization,
+    s.Name AS Specialization,
     p.Id AS PatientId,
-p.FirstName + ' ' + p.LastName AS PatientName,
+    p.FirstName + ' ' + p.LastName AS PatientName,
     p.PhoneNumber AS PatientPhone,
     p.DateOfBirth,
     a.Date AS AppointmentDate,
@@ -697,11 +612,11 @@ p.FirstName + ' ' + p.LastName AS PatientName,
     ts.HourOfDay,
     ts.MinuteOfHour,
     a.Status,
-  a.Notes,
+    a.Notes,
     CASE 
-        WHEN a.Date = CAST(GETDATE() AS DATE) THEN 'Today'
+    WHEN a.Date = CAST(GETDATE() AS DATE) THEN 'Today'
         WHEN a.Date = CAST(DATEADD(DAY, 1, GETDATE()) AS DATE) THEN 'Tomorrow'
-        ELSE CAST(DATEDIFF(DAY, GETDATE(), a.Date) AS VARCHAR(10)) + ' days'
+     ELSE CAST(DATEDIFF(DAY, GETDATE(), a.Date) AS VARCHAR(10)) + ' days'
     END AS DaysUntil
 FROM 
     dbo.Appointment a
@@ -715,13 +630,8 @@ WHERE
     AND a.Date <= CAST(DATEADD(DAY, 7, GETDATE()) AS DATE)
     AND a.Status IN ('PENDING', 'CONFIRMED');
 GO
-```
 
-#### View 4: Patient Recent Visit History
-
-Last 5 visits with clinical notes.
-
-```sql
+-- VIEW 4: Patient Recent Visit History - Last 5 visits with clinical notes
 CREATE VIEW dbo.vw_PatientRecordsSummary
 AS
 SELECT 
@@ -732,18 +642,18 @@ SELECT
     p.DateOfBirth,
     DATEDIFF(YEAR, p.DateOfBirth, GETDATE()) - 
         CASE 
-  WHEN MONTH(p.DateOfBirth) > MONTH(GETDATE()) 
-      OR (MONTH(p.DateOfBirth) = MONTH(GETDATE()) AND DAY(p.DateOfBirth) > DAY(GETDATE()))
-    THEN 1 
+         WHEN MONTH(p.DateOfBirth) > MONTH(GETDATE()) 
+            OR (MONTH(p.DateOfBirth) = MONTH(GETDATE()) AND DAY(p.DateOfBirth) > DAY(GETDATE()))
+            THEN 1 
             ELSE 0 
         END AS Age,
     p.PhoneNumber,
-    a.Id AS AppointmentId,
+a.Id AS AppointmentId,
     a.Date AS VisitDate,
     d.FirstName + ' ' + d.LastName AS DoctorName,
     s.Name AS Specialization,
     a.Status AS VisitStatus,
-    a.Notes AS ClinicalNotes,
+  a.Notes AS ClinicalNotes,
     DATEDIFF(DAY, a.Date, GETDATE()) AS DaysSinceVisit
 FROM 
     dbo.Patient p
@@ -755,13 +665,8 @@ FROM
 WHERE 
     a.Status IN ('COMPLETED', 'CANCELLED');
 GO
-```
 
-### 3.7 Create Stored Procedure
-
-#### Get Available Appointment Slots
-
-```sql
+-- PROCEDURE 1: Get Available Appointment Slots
 CREATE PROCEDURE dbo.sp_GetAvailableSlots
     @DoctorId INT,
     @Date DATE
@@ -791,170 +696,166 @@ BEGIN
         ts.MinuteOfHour
     FROM 
         dbo.Doctor d
-   LEFT JOIN dbo.DoctorSpecialties ds ON d.Id = ds.DoctorId
+        LEFT JOIN dbo.DoctorSpecialties ds ON d.Id = ds.DoctorId
         LEFT JOIN dbo.Specialties s ON ds.SpecialtyId = s.Id
         INNER JOIN dbo.DoctorSchedule sc ON d.Id = sc.DoctorId AND sc.DayOfWeek = @DayName
-     CROSS JOIN dbo.TimeSlots ts
-   LEFT JOIN dbo.Appointment a ON d.Id = a.DoctorId 
-         AND a.Date = @Date
+        CROSS JOIN dbo.TimeSlots ts
+        LEFT JOIN dbo.Appointment a ON d.Id = a.DoctorId 
+            AND a.Date = @Date
             AND a.TimeSlotId = ts.Id
     WHERE 
         d.Id = @DoctorId
         AND CAST(CAST(ts.HourOfDay AS VARCHAR) + ':' + CAST(ts.MinuteOfHour AS VARCHAR) AS TIME) >= CAST(sc.WorkStartTime AS TIME)
         AND CAST(CAST(ts.HourOfDay AS VARCHAR) + ':' + CAST(ts.MinuteOfHour AS VARCHAR) AS TIME) < CAST(sc.WorkEndTime AS TIME)
         AND a.Id IS NULL
- ORDER BY 
+    ORDER BY 
         ts.HourOfDay, ts.MinuteOfHour;
 END
 GO
 ```
 
----
 
-## 4. Step-by-Step Guide: Building the Project
+###########################
+## 4. Step-by-Step Guide: ##
+#    Building the project ##
+###########################
 
-### Step 1: Create the SQL Database
+Step 1: Create the SQL Database
 
-> Run the script above in **SQL Server Management Studio**.
+      Run the script above in SQL Server Management Studio.
 
-### Step 2: Create the Windows Forms Project
+Step 2: Create the Windows Forms Project
 
-```
-File ? New ? Project ? Windows Forms App (.NET Framework)
-```
+        File --> New --> Project --> Windows Forms App (.NET Framework)
 
-### Step 3: Create the Folder Structure
+Step 3: Create the Folder Structure
 
-```
-?? DAL/
-?? BLL/
-   ?? DTO/
-   ?? SERVICES/
-?? UI/
-   ?? Controllers/
-   ?? Utils/
-```
+        DAL/
+        BLL/
+          DTO/
+          SERVICES/
+        UI/
+          Controllers/
+          Utils/
 
-### Step 4: Add Entity Framework DB-First
+Step 4: Add Entity Framework DB-First
 
-Inside the **DAL** folder:
+        Inside the DAL folder:
 
-1. **Right-click** ? Add ? New Item
-2. Select **"ADO.NET Entity Data Model"**
-3. Choose **"EF Designer from database"**
-4. Connect to `HealthCareClinicDB_T2`
-5. Select the following tables and views:
+            1. Right-click --> Add --> New Item
 
-| Tables | Views |
-|--------|-------|
-| Users | vw_DoctorTodaySchedule |
-| Roles | vw_PatientClinicalSummary |
-| UserRoles | vw_UpcomingAppointments |
-| Patient | vw_PatientRecordsSummary |
-| Specialties | |
-| Doctor | |
-| DoctorSpecialties | |
-| DoctorSchedule | |
-| TimeSlots | |
-| Appointment | |
-| Audit_Appointment | |
+            2. Select "ADO.NET Entity Data Model"
 
-**EF automatically generates:**
-- ? Entity classes
-- ? DbContext
-- ? Mappings
+            3. Choose "EF Designer from database"
 
-### Step 5: Create DTO Classes
+            4. Connect to HealthCareClinicDB_T2
 
-> Separate lightweight classes used by the UI.
+                    Select the following tables and views:
 
-### Step 6: Create Service Classes in BLL
+                    Users
+                    Roles
+                    UserRoles
+                    Patient
+                    Specialties
+                    Doctor
+                    DoctorSpecialties
+                    DoctorSchedule
+                    TimeSlots
+                    Appointment
+                    Audit_Appointment
+                    vw_DoctorTodaySchedule
+                    vw_PatientClinicalSummary
+                    vw_UpcomingAppointments
+                    vw_PatientRecordsSummary
 
-Each entity gets its own Service class implementing:
+         EF automatically generates:
 
-| Operation | Method |
-|-----------|--------|
-| Add | `Add()` |
-| Update | `Update()` |
-| Delete | `Delete()` |
-| Search | `GetEntity()` |
-| GetAll | `GetEntities()` |
+                            - Entity classes
+                            - DbContext
+                            - Mappings
 
-### Step 7: Build the Windows Forms UI
+Step 5: Create DTO Classes
 
-**Create:**
+        Separate lightweight classes used by the UI.
 
-| Component | Description |
-|-----------|-------------|
-| **Login Form** | Authentication |
-| **Admin Dashboard** | User and doctor management |
-| **Doctor Dashboard** | View schedule, manage appointments |
-| **Receptionist Dashboard** | Patient registration, appointment booking |
-| **Controllers** | Panel management |
-| **Utils** | Navigation and image handling |
+Step 6: Create Service Classes in BLL
 
-> ?? The Appointment management includes special logic for scheduling and status updates.
+        Each entity gets its own Service class implementing:
 
----
+            - Add
+            - Update
+            - Delete
+            - Search - GetEntity() operation
+            - GetAll - GetEntities() operation
 
-## 5. Features Implemented
+Step 7: Build the Windows Forms UI
 
-### Core Features
+  Create:
+            - Login Form (authentication)
+            - Admin Dashboard (user and doctor management)
+            - Doctor Dashboard (view schedule, manage appointments)
+            - Receptionist Dashboard (patient registration, appointment booking)
+            - Controllers for panel management
+            - Utils for navigation and image handling
 
-| Feature | Description |
-|---------|-------------|
-| ? Entity Framework 6 | Database First approach |
-| ? 3-Tier Architecture | UI ? BLL ? DAL |
-| ? DTO Classes | Layer communication |
-| ? CRUD Operations | Users, Patients, Doctors, Appointments, etc. |
-| ? Many-to-Many | Junction tables (UserRoles, DoctorSpecialties) |
-| ? Appointment Scheduling | Time slots and doctor availability |
-| ? Audit Trail | Appointment status changes |
-| ? Role-Based Access | Administrator, Doctor, Receptionist |
-| ? Views | Reporting and summaries |
-| ? Stored Procedures | Complex queries |
-| ? Update Logic | Related entities |
-| ? Clean Architecture | Maintainable service-layer logic |
-| ? WinForms UI | Dashboards |
+  The Appointment management includes special logic for scheduling and status updates.
 
----
 
-## 6. Conclusion
+############################
+## 5. Features Implemented ##
+############################
 
-### This Project Demonstrates:
+- Entity Framework 6 Database First approach
+- 3-tiers (3-Layers) software architecture
+- DTO classes for layer communication
+- CRUD operations for Users, Patients, Doctors, Appointments, etc.
+- Many-to-many relationships implemented using junction tables (UserRoles, DoctorSpecialties)
+- Appointment scheduling with time slots and doctor availability
+- Audit trail for appointment status changes
+- Role-based access control (Administrator, Doctor, Receptionist)
+- Views for reporting and summaries
+- Stored procedures for complex queries
+- Update logic for related entities
+- Clean and maintainable service-layer logic
+- Full WinForms User Interface with dashboards
 
-- ? Proper use of **Entity Framework Database First**
-- ? Strong understanding of **SQL database modeling** with constraints and triggers
-- ? Implementation of a **clean 3-tier architecture**
-- ? Practical use of **DTO and Service classes**
-- ? Working **CRUD operations** in a desktop environment
-- ? Handling **many-to-many relationships** with junction tables
-- ? Integration of **SQL Server views and stored procedures** into EF
-- ? **Role-based authentication and authorization**
-- ? **Appointment scheduling logic** with availability checks
 
-### Project Characteristics
+##################
+## 6. Conclusion ##
+##################
 
-> The project is **modular**, **scalable**, and follows **industry development patterns**.
+This project demonstrates:
 
-### Future Enhancements
+Proper use of Entity Framework Database First
 
-The project can be extended by adding:
+Strong understanding of SQL database modeling with constraints and triggers
 
-| Enhancement | Description |
-|-------------|-------------|
-| ?? More User Roles | Extended role hierarchy |
-| ?? Advanced Reporting | Detailed analytics and reports |
-| ?? Authentication Enhancements | Password policies, MFA |
-| ?? Pagination | Advanced filtering for large datasets |
-| ?? External Integration | Billing, EHR systems |
-| ?? Mobile App | Companion application |
-| ?? Cloud Migration | Azure SQL, etc. |
+Implementation of a clean 3-tiers architecture
 
----
+Practical use of DTO and Service classes
 
-<div align="center">
+Working CRUD operations in a desktop environment
 
-**Built with ?? using .NET Framework, Entity Framework 6, and SQL Server**
+Handling many-to-many relationships with junction tables
 
-</div>
+Integration of SQL Server views and stored procedures into EF
+
+Role-based authentication and authorization
+
+Appointment scheduling logic with availability checks
+
+The project is modular, scalable, and follows industry development patterns.
+
+It can be extended by adding:
+
+           More user roles, Advanced reporting
+
+Authentication enhancements (e.g., password policies)
+
+Pagination and advanced filtering for large datasets
+
+Integration with external systems (e.g., billing, EHR)
+
+Mobile app companion
+
+Cloud migration (Azure SQL, etc.)

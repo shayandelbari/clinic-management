@@ -205,6 +205,7 @@
     </None>
     <None Include="Documentation\420-DA3-AS_Fall2025_ExamFinal_gr03200_EN_HouriaHoumel.pdf" />
     <None Include="Documentation\ClinicMgmt_SystemAnalysis_Refined.pdf" />
+    <None Include="Documentation\TechnicalDocumentation.md" />
     <None Include="Documentation\TechnicalDocumentation.pdf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -216,7 +217,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Documentation\TechnicalDocumentation.md" />
+    <Content Include="Documentation\readme.txt" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
