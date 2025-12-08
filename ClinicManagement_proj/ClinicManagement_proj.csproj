@@ -205,7 +205,9 @@
     </None>
     <None Include="Documentation\420-DA3-AS_Fall2025_ExamFinal_gr03200_EN_HouriaHoumel.pdf" />
     <None Include="Documentation\ClinicMgmt_SystemAnalysis_Refined.pdf" />
-    <None Include="Documentation\TechnicalDocumentation.md" />
+    <None Include="Documentation\executiontest.pdf" />
+    <None Include="Documentation\HealthCareClinicReport_T2.pdf" />
+    <None Include="Documentation\readme.md" />
     <None Include="Documentation\TechnicalDocumentation.pdf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -217,6 +219,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Content Include="Documentation\ExecutionTest_CHECK_THIS_FIRST.mp4" />
     <Content Include="Documentation\readme.txt" />
   </ItemGroup>
   <ItemGroup />
@@ -235,7 +238,6 @@
       <DependentUpon>HealthCareClinicModel.edmx</DependentUpon>
       <LastGenOutput>HealthCareClinicModel.cs</LastGenOutput>
     </Content>
-    <Content Include="Documentation\HealthCareClinicPreview.mp4" />
     <Content Include="Static\appointment_icon_light.png" />
     <Content Include="Static\bell-solid-full.svg" />
     <Content Include="Static\calendar-days-solid-full.svg" />
