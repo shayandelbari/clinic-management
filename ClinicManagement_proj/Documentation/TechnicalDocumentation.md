@@ -1,10 +1,10 @@
-# Clinic Management Application
+﻿# Clinic Management Application
 
 > **EF Database First | WinForms | 3-Tier Architecture**
 
 ---
 
-## ?? Table of Contents
+## Table of Contents
 
 1. [Introduction](#1-introduction)
 2. [Project Architecture](#2-project-architecture-3-tier)
@@ -25,19 +25,19 @@ This project is a **Clinic Management Application** built using:
 | **Language** | C# |
 | **ORM** | Entity Framework 6 (Database First) |
 | **Database** | Microsoft SQL Server 2022/2019 |
-| **Architecture** | 3-Tier (UI ? BLL ? DAL) |
+| **Architecture** | 3-Tier (UI -> BLL -> DAL) |
 | **Data Transfer** | DTO (Data Transfer Objects) |
 
 ### Application Manages
 
-- ?? **Users** (with roles: Administrator, Doctor, Receptionist)
-- ?? **Patients**
-- ????? **Doctors**
-- ?? **Specialties**
-- ?? **Doctor Schedules**
-- ?? **Appointments**
-- ? **Time Slots**
-- ?? **Audit_Appointment** (audit table)
+- **Users** (with roles: Administrator, Doctor, Receptionist)
+- **Patients**
+- **Doctors**
+- **Specialties**
+- **Doctor Schedules**
+- **Appointments**
+- **Time Slots**
+- **Audit_Appointment** (audit table)
 
 ### CRUD Operations
 
@@ -55,72 +55,71 @@ This project is a **Clinic Management Application** built using:
 
 ```
 Solution
-?
-??? ?? UI
-?   ??? Login.cs
-?   ??? AdminDashboard.cs
-?   ??? DoctorDashboard.cs
-?   ??? ReceptionistDashboard.cs
-?   ??? ?? Controllers/
-?   ?   ??? PatientRegistrationController.cs
-?   ?   ??? SchedulingController.cs
-?   ?   ??? ApptMgmtController.cs
-?   ?   ??? DoctorManagementController.cs
-?   ?   ??? UserManagementController.cs
-?   ?   ??? ReportsController.cs
-?   ?   ??? NotificationController.cs
-?   ??? ?? Utils/
-?   ?   ??? NavigationManager.cs
-?   ?   ??? ImageHelper.cs
-?   ??? Program.cs
-?
-??? ?? BLL
-?   ??? ?? DTO/
-?   ?   ??? UserDTO.cs
-?   ?   ??? RoleDTO.cs
-? ?   ??? PatientDTO.cs
-?   ?   ??? DoctorDTO.cs
-?   ?   ??? SpecialtyDTO.cs
-?   ? ??? DoctorScheduleDTO.cs
-?   ?   ??? TimeSlotDTO.cs
-?   ?   ??? AppointmentDTO.cs
-?   ?   ??? AuditAppointmentDTO.cs
-?   ?   ??? DaysOfWeekEnum.cs
-?   ??? ?? Services/
-?   ?   ??? UserService.cs
-?   ?   ??? PatientService.cs
-?   ?   ??? DoctorService.cs
-?   ?   ??? AppointmentService.cs
-? ?   ??? DoctorScheduleService.cs
-?   ?   ??? NotificationService.cs
-?   ?   ??? ViewsService.cs
-?   ??? ?? Utils/
-?   ?   ??? Notification.cs
-?   ??? ClinicManagementApp.cs
-?
-??? ?? DAL
-    ??? HealthCareClinicModel.edmx
-    ??? HealthCareClinicModel.Context.cs
-    ??? HealthCareClinicModel.Designer.cs
-    ??? ClinicDbContext.cs
-    ??? User.cs
-    ??? Role.cs
-    ??? UserRole.cs (junction)
-    ??? Patient.cs
-    ??? Specialty.cs
- ??? Doctor.cs
-    ??? DoctorSpecialty.cs (junction)
-    ??? DoctorSchedule.cs
-    ??? TimeSlot.cs
-    ??? Appointment.cs
-    ??? Audit_Appointment.cs
-    ??? vw_DoctorTodaySchedule.cs
-    ??? vw_PatientClinicalSummary.cs
-    ??? vw_UpcomingAppointments.cs
-    ??? vw_PatientRecordsSummary.cs
-    ??? sp_GetAvailableSlots_Result.cs
+│
+├── UI
+│   ├── Login.cs
+│   ├── AdminDashboard.cs
+│   ├── DoctorDashboard.cs
+│   ├── ReceptionistDashboard.cs
+│   ├── Controllers/
+│   │   ├── PatientRegistrationController.cs
+│   │   ├── SchedulingController.cs
+│   │   ├── ApptMgmtController.cs
+│   │   ├── DoctorManagementController.cs
+│   │   ├── UserManagementController.cs
+│   │   ├── ReportsController.cs
+│   │   └── NotificationController.cs
+│   ├── Utils/
+│   │   ├── NavigationManager.cs
+│   │   └── ImageHelper.cs
+│   └── Program.cs
+│
+├── BLL
+│   ├── DTO/
+│   │   ├── UserDTO.cs
+│   │   ├── RoleDTO.cs
+│   │   ├── PatientDTO.cs
+│   │   ├── DoctorDTO.cs
+│   │   ├── SpecialtyDTO.cs
+│   │   ├── DoctorScheduleDTO.cs
+│   │   ├── TimeSlotDTO.cs
+│   │   ├── AppointmentDTO.cs
+│   │   ├── AuditAppointmentDTO.cs
+│   │   └── DaysOfWeekEnum.cs
+│   ├── Services/
+│   │   ├── UserService.cs
+│   │   ├── PatientService.cs
+│   │   ├── DoctorService.cs
+│   │   ├── AppointmentService.cs
+│   │   ├── DoctorScheduleService.cs
+│   │   ├── NotificationService.cs
+│   │   └── ViewsService.cs
+│   ├── Utils/
+│   │   └── Notification.cs
+│   └── ClinicManagementApp.cs
+│
+└── DAL
+    ├── HealthCareClinicModel.edmx
+    ├── HealthCareClinicModel.Context.cs
+    ├── HealthCareClinicModel.Designer.cs
+    ├── ClinicDbContext.cs
+    ├── User.cs
+    ├── Role.cs
+    ├── UserRole.cs (junction)
+    ├── Patient.cs
+    ├── Specialty.cs
+    ├── Doctor.cs
+    ├── DoctorSpecialty.cs (junction)
+    ├── DoctorSchedule.cs
+    ├── TimeSlot.cs
+    ├── Appointment.cs
+    ├── Audit_Appointment.cs
+    ├── vw_DoctorTodaySchedule.cs
+    ├── vw_PatientClinicalSummary.cs
+    ├── vw_UpcomingAppointments.cs
+    ├── vw_PatientRecordsSummary.cs
+    └── sp_GetAvailableSlots_Result.cs
 ```
-
 ---
 
 ## 3. SQL Database Script
@@ -172,7 +171,7 @@ IF OBJECT_ID('dbo.Audit_Appointment', 'U') IS NOT NULL
  DROP TABLE dbo.Audit_Appointment;
 GO
 
--- DROP TABLES (correct FK order: children ? parents)
+-- DROP TABLES (correct FK order: children -> parents)
 IF OBJECT_ID('dbo.Appointment', 'U') IS NOT NULL
     DROP TABLE dbo.Appointment;
 GO
@@ -418,7 +417,7 @@ GO
 ### 3.5 Insert Sample Data
 
 <details>
-<summary>?? Click to expand sample data insertion script</summary>
+<summary>Click to expand sample data insertion script</summary>
 
 ```sql
 -- INSERT SAMPLE DATA
@@ -820,19 +819,19 @@ GO
 ### Step 2: Create the Windows Forms Project
 
 ```
-File ? New ? Project ? Windows Forms App (.NET Framework)
+File -> New -> Project -> Windows Forms App (.NET Framework)
 ```
 
 ### Step 3: Create the Folder Structure
 
 ```
-?? DAL/
-?? BLL/
-   ?? DTO/
-   ?? SERVICES/
-?? UI/
-   ?? Controllers/
-   ?? Utils/
+DAL/
+BLL/
+   DTO/
+   SERVICES/
+UI/
+   Controllers/
+   Utils/
 ```
 
 ### Step 4: Add Entity Framework DB-First
@@ -860,9 +859,9 @@ Inside the **DAL** folder:
 | Audit_Appointment | |
 
 **EF automatically generates:**
-- ? Entity classes
-- ? DbContext
-- ? Mappings
+- * Entity classes
+- * DbContext
+- * Mappings
 
 ### Step 5: Create DTO Classes
 
@@ -893,7 +892,7 @@ Each entity gets its own Service class implementing:
 | **Controllers** | Panel management |
 | **Utils** | Navigation and image handling |
 
-> ?? The Appointment management includes special logic for scheduling and status updates.
+> Warning: The Appointment management includes special logic for scheduling and status updates.
 
 ---
 
@@ -903,19 +902,19 @@ Each entity gets its own Service class implementing:
 
 | Feature | Description |
 |---------|-------------|
-| ? Entity Framework 6 | Database First approach |
-| ? 3-Tier Architecture | UI ? BLL ? DAL |
-| ? DTO Classes | Layer communication |
-| ? CRUD Operations | Users, Patients, Doctors, Appointments, etc. |
-| ? Many-to-Many | Junction tables (UserRoles, DoctorSpecialties) |
-| ? Appointment Scheduling | Time slots and doctor availability |
-| ? Audit Trail | Appointment status changes |
-| ? Role-Based Access | Administrator, Doctor, Receptionist |
-| ? Views | Reporting and summaries |
-| ? Stored Procedures | Complex queries |
-| ? Update Logic | Related entities |
-| ? Clean Architecture | Maintainable service-layer logic |
-| ? WinForms UI | Dashboards |
+| * Entity Framework 6 | Database First approach |
+| * 3-Tier Architecture | UI -> BLL -> DAL |
+| * DTO Classes | Layer communication |
+| * CRUD Operations | Users, Patients, Doctors, Appointments, etc. |
+| * Many-to-Many | Junction tables (UserRoles, DoctorSpecialties) |
+| * Appointment Scheduling | Time slots and doctor availability |
+| * Audit Trail | Appointment status changes |
+| * Role-Based Access | Administrator, Doctor, Receptionist |
+| * Views | Reporting and summaries |
+| * Stored Procedures | Complex queries |
+| * Update Logic | Related entities |
+| * Clean Architecture | Maintainable service-layer logic |
+| * WinForms UI | Dashboards |
 
 ---
 
@@ -923,15 +922,15 @@ Each entity gets its own Service class implementing:
 
 ### This Project Demonstrates:
 
-- ? Proper use of **Entity Framework Database First**
-- ? Strong understanding of **SQL database modeling** with constraints and triggers
-- ? Implementation of a **clean 3-tier architecture**
-- ? Practical use of **DTO and Service classes**
-- ? Working **CRUD operations** in a desktop environment
-- ? Handling **many-to-many relationships** with junction tables
-- ? Integration of **SQL Server views and stored procedures** into EF
-- ? **Role-based authentication and authorization**
-- ? **Appointment scheduling logic** with availability checks
+- * Proper use of **Entity Framework Database First**
+- * Strong understanding of **SQL database modeling** with constraints and triggers
+- * Implementation of a **clean 3-tier architecture**
+- * Practical use of **DTO and Service classes**
+- * Working **CRUD operations** in a desktop environment
+- * Handling **many-to-many relationships** with junction tables
+- * Integration of **SQL Server views and stored procedures** into EF
+- * **Role-based authentication and authorization**
+- * **Appointment scheduling logic** with availability checks
 
 ### Project Characteristics
 
@@ -943,18 +942,20 @@ The project can be extended by adding:
 
 | Enhancement | Description |
 |-------------|-------------|
-| ?? More User Roles | Extended role hierarchy |
-| ?? Advanced Reporting | Detailed analytics and reports |
-| ?? Authentication Enhancements | Password policies, MFA |
-| ?? Pagination | Advanced filtering for large datasets |
-| ?? External Integration | Billing, EHR systems |
-| ?? Mobile App | Companion application |
-| ?? Cloud Migration | Azure SQL, etc. |
+| More User Roles | Extended role hierarchy |
+| Advanced Reporting | Detailed analytics and reports |
+| Authentication Enhancements | Password policies, MFA |
+| Pagination | Advanced filtering for large datasets |
+| External Integration | Billing, EHR systems |
+| Mobile App | Companion application |
+| Cloud Migration | Azure SQL, etc. |
 
 ---
 
 <div align="center">
 
-**Built with ?? using .NET Framework, Entity Framework 6, and SQL Server**
+**Built with love using .NET Framework, Entity Framework 6, and SQL Server**
 
 </div>
+
+
