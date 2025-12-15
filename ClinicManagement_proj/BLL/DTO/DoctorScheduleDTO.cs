@@ -37,14 +37,20 @@ namespace ClinicManagement_proj.BLL.DTO
         /// </summary>
         /// <param name="dayOfWeek">The day of the week to validate.</param>
         /// <returns>The validated day of the week.</returns>
-        /// <exception cref="ArgumentException">Thrown if day of week is null, empty, or exceeds max length.</exception>
+        /// <exception cref="ArgumentException">Thrown if day of week is null, empty, exceeds max length, or not a valid day.</exception>
         public static string ValidateDayOfWeek(string dayOfWeek)
         {
             if (string.IsNullOrWhiteSpace(dayOfWeek))
                 throw new ArgumentException("DayOfWeek cannot be null or empty.");
             if (dayOfWeek.Length > DAYOFWEEK_MAX_LENGTH)
                 throw new ArgumentException($"DayOfWeek must be at most {DAYOFWEEK_MAX_LENGTH} characters.");
-            return dayOfWeek;
+
+            // Check if it's a valid day
+            var validDays = Enum.GetNames(typeof(DaysOfWeekEnum));
+            if (!Array.Exists(validDays, d => d == dayOfWeek.ToUpper()))
+                throw new ArgumentException("DayOfWeek must be one of: SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY.");
+
+            return dayOfWeek.ToUpper();
         }
 
         /// <summary>

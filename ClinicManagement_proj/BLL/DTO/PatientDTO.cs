@@ -87,13 +87,30 @@ namespace ClinicManagement_proj.BLL.DTO
         /// </summary>
         /// <param name="insuranceNumber">The insurance number to validate.</param>
         /// <returns>The validated insurance number.</returns>
-        /// <exception cref="ArgumentException">Thrown if insurance number is null, empty, or exceeds max length.</exception>
+        /// <exception cref="ArgumentException">Thrown if insurance number is null, empty, exceeds max length, or does not match valid formats.</exception>
         public static string ValidateInsuranceNumber(string insuranceNumber)
         {
             if (string.IsNullOrWhiteSpace(insuranceNumber))
                 throw new ArgumentException("InsuranceNumber cannot be null or empty.");
             if (insuranceNumber.Length > INSURANCE_MAX_LENGTH)
                 throw new ArgumentException($"InsuranceNumber must be at most {INSURANCE_MAX_LENGTH} characters.");
+            
+            // Check against valid formats
+            var quebecPattern1 = @"^[A-Z]{4}\d{8} \d{2}$";
+            var quebecPattern2 = @"^[A-Z]{4}\d{10}$";
+            var genericPattern = @"^\d{10}$";
+            var ontarioPattern1 = @"^\d{10}-[A-Z]{2}$";
+            var ontarioPattern2 = @"^\d{10}[A-Z]{2}$";
+            
+            if (!System.Text.RegularExpressions.Regex.IsMatch(insuranceNumber, quebecPattern1) &&
+                !System.Text.RegularExpressions.Regex.IsMatch(insuranceNumber, quebecPattern2) &&
+                !System.Text.RegularExpressions.Regex.IsMatch(insuranceNumber, genericPattern) &&
+                !System.Text.RegularExpressions.Regex.IsMatch(insuranceNumber, ontarioPattern1) &&
+                !System.Text.RegularExpressions.Regex.IsMatch(insuranceNumber, ontarioPattern2))
+            {
+                throw new ArgumentException("InsuranceNumber does not match a valid Canadian health card format.");
+            }
+            
             return insuranceNumber;
         }
 
@@ -102,12 +119,10 @@ namespace ClinicManagement_proj.BLL.DTO
         /// </summary>
         /// <param name="phoneNumber">The phone number to validate.</param>
         /// <returns>The validated phone number.</returns>
-        /// <exception cref="ArgumentException">Thrown if phone number is null, empty, or exceeds max length.</exception>
+        /// <exception cref="ArgumentException">Thrown if phone number exceeds max length.</exception>
         public static string ValidatePhoneNumber(string phoneNumber)
         {
-            if (string.IsNullOrWhiteSpace(phoneNumber))
-                throw new ArgumentException("PhoneNumber cannot be null or empty.");
-            if (phoneNumber.Length > PHONE_MAX_LENGTH)
+            if (phoneNumber != null && phoneNumber.Length > PHONE_MAX_LENGTH)
                 throw new ArgumentException($"PhoneNumber must be at most {PHONE_MAX_LENGTH} characters.");
             return phoneNumber;
         }

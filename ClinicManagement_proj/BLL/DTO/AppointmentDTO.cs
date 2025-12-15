@@ -10,6 +10,7 @@ namespace ClinicManagement_proj.BLL.DTO
         public static int NOTES_MAX_LENGTH = 512;
 
         private string _notes;
+        private string _status;
 
         public int Id { get; set; }
         public DateTime Date { get; set; }
@@ -22,7 +23,11 @@ namespace ClinicManagement_proj.BLL.DTO
         public int DoctorId { get; set; }
         public int PatientId { get; set; }
         public int TimeSlotId { get; set; }
-        public string Status { get; set; }
+        public string Status
+        {
+            get { return _status; }
+            set { _status = ValidateStatus(value); }
+        }
         public DateTime CreatedAt { get; set; }
         public DateTime ModifiedAt { get; set; }
         public PatientDTO Patient { get; set; }
@@ -47,6 +52,22 @@ namespace ClinicManagement_proj.BLL.DTO
             if (notes != null && notes.Length > NOTES_MAX_LENGTH)
                 throw new ArgumentException($"Notes must be at most {NOTES_MAX_LENGTH} characters.");
             return notes;
+        }
+
+        /// <summary>
+        /// Validates the status string to ensure it is not null or empty and matches allowed values.
+        /// </summary>
+        /// <param name="status">The status string to validate.</param>
+        /// <returns>The status string if valid.</returns>
+        /// <exception cref="ArgumentException">Thrown if the status is null, empty, or not in the allowed list.</exception>
+        public static string ValidateStatus(string status)
+        {
+            if (string.IsNullOrWhiteSpace(status))
+                throw new ArgumentException("Status cannot be null or empty.");
+            var allowedStatuses = new[] { "PENDING", "CONFIRMED", "COMPLETED", "CANCELLED" };
+            if (!Array.Exists(allowedStatuses, s => s == status.ToUpper()))
+                throw new ArgumentException("Status must be one of: PENDING, CONFIRMED, COMPLETED, CANCELLED.");
+            return status.ToUpper();
         }
 
         /// <summary>
